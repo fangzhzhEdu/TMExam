@@ -16,6 +16,11 @@
 		8459AC96177F33E700646992 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8459AC95177F33E700646992 /* Default.png */; };
 		8459AC98177F33E700646992 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8459AC97177F33E700646992 /* Default@2x.png */; };
 		8459AC9A177F33E700646992 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8459AC99177F33E700646992 /* Default-568h@2x.png */; };
+		8459ACA2177F344300646992 /* TMWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8459ACA1177F344300646992 /* TMWelcomeViewController.m */; };
+		8459ACAF177F360400646992 /* TMHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8459ACAE177F360400646992 /* TMHomeViewController.m */; };
+		8459ACB2177F361600646992 /* TMTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8459ACB1177F361600646992 /* TMTestViewController.m */; };
+		8459ACB5177F362800646992 /* TMScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8459ACB4177F362800646992 /* TMScoreViewController.m */; };
+		8459ACB9177F39B800646992 /* model.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8459ACB8177F39B800646992 /* model.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +37,15 @@
 		8459AC95177F33E700646992 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		8459AC97177F33E700646992 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		8459AC99177F33E700646992 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		8459ACA0177F344300646992 /* TMWelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMWelcomeViewController.h; sourceTree = "<group>"; };
+		8459ACA1177F344300646992 /* TMWelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMWelcomeViewController.m; sourceTree = "<group>"; };
+		8459ACAD177F360400646992 /* TMHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMHomeViewController.h; sourceTree = "<group>"; };
+		8459ACAE177F360400646992 /* TMHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMHomeViewController.m; sourceTree = "<group>"; };
+		8459ACB0177F361600646992 /* TMTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMTestViewController.h; sourceTree = "<group>"; };
+		8459ACB1177F361600646992 /* TMTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMTestViewController.m; sourceTree = "<group>"; };
+		8459ACB3177F362800646992 /* TMScoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMScoreViewController.h; sourceTree = "<group>"; };
+		8459ACB4177F362800646992 /* TMScoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMScoreViewController.m; sourceTree = "<group>"; };
+		8459ACB8177F39B800646992 /* model.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = model.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +92,8 @@
 		8459AC89177F33E700646992 /* TMExam */ = {
 			isa = PBXGroup;
 			children = (
-				8459AC92177F33E700646992 /* AppDelegate.h */,
-				8459AC93177F33E700646992 /* AppDelegate.m */,
+				8459ACB7177F39A200646992 /* res */,
+				8459ACAC177F34CD00646992 /* src */,
 				8459AC8A177F33E700646992 /* Supporting Files */,
 			);
 			path = TMExam;
@@ -97,6 +111,31 @@
 				8459AC99177F33E700646992 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8459ACAC177F34CD00646992 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				8459AC92177F33E700646992 /* AppDelegate.h */,
+				8459AC93177F33E700646992 /* AppDelegate.m */,
+				8459ACA0177F344300646992 /* TMWelcomeViewController.h */,
+				8459ACA1177F344300646992 /* TMWelcomeViewController.m */,
+				8459ACAD177F360400646992 /* TMHomeViewController.h */,
+				8459ACAE177F360400646992 /* TMHomeViewController.m */,
+				8459ACB0177F361600646992 /* TMTestViewController.h */,
+				8459ACB1177F361600646992 /* TMTestViewController.m */,
+				8459ACB3177F362800646992 /* TMScoreViewController.h */,
+				8459ACB4177F362800646992 /* TMScoreViewController.m */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		8459ACB7177F39A200646992 /* res */ = {
+			isa = PBXGroup;
+			children = (
+				8459ACB8177F39B800646992 /* model.jpg */,
+			);
+			path = res;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +193,7 @@
 				8459AC96177F33E700646992 /* Default.png in Resources */,
 				8459AC98177F33E700646992 /* Default@2x.png in Resources */,
 				8459AC9A177F33E700646992 /* Default-568h@2x.png in Resources */,
+				8459ACB9177F39B800646992 /* model.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,6 +206,10 @@
 			files = (
 				8459AC90177F33E700646992 /* main.m in Sources */,
 				8459AC94177F33E700646992 /* AppDelegate.m in Sources */,
+				8459ACA2177F344300646992 /* TMWelcomeViewController.m in Sources */,
+				8459ACAF177F360400646992 /* TMHomeViewController.m in Sources */,
+				8459ACB2177F361600646992 /* TMTestViewController.m in Sources */,
+				8459ACB5177F362800646992 /* TMScoreViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
