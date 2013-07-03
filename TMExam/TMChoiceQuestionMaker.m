@@ -65,7 +65,7 @@
     
     if (self.next)
     {
-        bodyString = [bodyString stringByAppendingFormat:@"<div class='next'><a href='%@'>%@</a></div>", [self next], self.next];
+        bodyString = [bodyString stringByAppendingFormat:@"<div class='next'><a href='%@'>%@</a></div>", [self nextLink], self.next];
     }
     
     return bodyString;
