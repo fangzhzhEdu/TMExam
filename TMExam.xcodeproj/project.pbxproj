@@ -29,7 +29,11 @@
 		87B79BCB17846A1F00482EC4 /* PCHalfPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 87B79BC317846A1F00482EC4 /* PCHalfPieChart.m */; };
 		87B79BCC17846A1F00482EC4 /* PCLineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 87B79BC517846A1F00482EC4 /* PCLineChartView.m */; };
 		87B79BCD17846A1F00482EC4 /* PCPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 87B79BC717846A1F00482EC4 /* PCPieChart.m */; };
-		87B79BCE17846A1F00482EC4 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 87B79BCA17846A1F00482EC4 /* JSONKit.m */; };
+		87B79BCE17846A1F00482EC4 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 87B79BCA17846A1F00482EC4 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		87B79BDA1784A33700482EC4 /* ChartListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87B79BD31784A33700482EC4 /* ChartListViewController.m */; };
+		87B79BDB1784A33700482EC4 /* LineChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87B79BD51784A33700482EC4 /* LineChartViewController.m */; };
+		87B79BDC1784A33700482EC4 /* PieChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87B79BD71784A33700482EC4 /* PieChartViewController.m */; };
+		87B79BDD1784A33700482EC4 /* PieChartViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 87B79BD91784A33700482EC4 /* PieChartViewController2.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +75,14 @@
 		87B79BC717846A1F00482EC4 /* PCPieChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCPieChart.m; sourceTree = "<group>"; };
 		87B79BC917846A1F00482EC4 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		87B79BCA17846A1F00482EC4 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		87B79BD21784A33700482EC4 /* ChartListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartListViewController.h; sourceTree = "<group>"; };
+		87B79BD31784A33700482EC4 /* ChartListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChartListViewController.m; sourceTree = "<group>"; };
+		87B79BD41784A33700482EC4 /* LineChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineChartViewController.h; sourceTree = "<group>"; };
+		87B79BD51784A33700482EC4 /* LineChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineChartViewController.m; sourceTree = "<group>"; };
+		87B79BD61784A33700482EC4 /* PieChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PieChartViewController.h; sourceTree = "<group>"; };
+		87B79BD71784A33700482EC4 /* PieChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PieChartViewController.m; sourceTree = "<group>"; };
+		87B79BD81784A33700482EC4 /* PieChartViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PieChartViewController2.h; sourceTree = "<group>"; };
+		87B79BD91784A33700482EC4 /* PieChartViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PieChartViewController2.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +153,14 @@
 		8459ACAC177F34CD00646992 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				87B79BD21784A33700482EC4 /* ChartListViewController.h */,
+				87B79BD31784A33700482EC4 /* ChartListViewController.m */,
+				87B79BD41784A33700482EC4 /* LineChartViewController.h */,
+				87B79BD51784A33700482EC4 /* LineChartViewController.m */,
+				87B79BD61784A33700482EC4 /* PieChartViewController.h */,
+				87B79BD71784A33700482EC4 /* PieChartViewController.m */,
+				87B79BD81784A33700482EC4 /* PieChartViewController2.h */,
+				87B79BD91784A33700482EC4 /* PieChartViewController2.m */,
 				87B79BC017846A1F00482EC4 /* vendor */,
 				8459AC92177F33E700646992 /* AppDelegate.h */,
 				8459AC93177F33E700646992 /* AppDelegate.m */,
@@ -284,6 +304,10 @@
 				8411472B17846E4E0075F01D /* TMQuestionMaker.m in Sources */,
 				8411472E17846EC70075F01D /* TMChoiceQuestionMaker.m in Sources */,
 				8411473117846F810075F01D /* TMTestViewController.m in Sources */,
+				87B79BDA1784A33700482EC4 /* ChartListViewController.m in Sources */,
+				87B79BDB1784A33700482EC4 /* LineChartViewController.m in Sources */,
+				87B79BDC1784A33700482EC4 /* PieChartViewController.m in Sources */,
+				87B79BDD1784A33700482EC4 /* PieChartViewController2.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
