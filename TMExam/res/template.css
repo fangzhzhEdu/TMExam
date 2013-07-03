@@ -1,0 +1,116 @@
+body {
+    background: #EFEDEB;
+    color: #4C4C4C;
+    margin: 0;
+    padding: 0 20px;
+    font-family: Helvetica, Arial, Verdana, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: 16px;
+    background: url(file:///var/mobile/Applications/459BDA50-15F4-4E99-8958-75AA310857DE/TMEnglish.app/bg.png);
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    bottom: 2px;
+    right: 2px;
+}
+
+a {
+    text-decoration: none;
+}
+
+#head {
+    padding: 0;
+    border-bottom: solid 1px #E4E2E0;
+}
+
+#head h1 {
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+#head h1 a {
+    color: #4C4C4C;
+    display: block;
+    padding-right: 50px;
+}
+
+#head .info {
+    color: #999999;
+    font-size: 12px;
+    padding: 13px 0;
+}
+        
+#head .info a {
+    color: #999999;
+    font-size: 12px;
+}
+        
+#head .top span.newsItemCreator,
+#head .top span.newsItemCommentsLink,
+#head .top span.newsItemSource,
+#head .top span.newsItemSubject {
+    display: none;
+}
+        
+#head .bottom span.newsItemSource img {
+    display: none;
+}
+        
+#head .bottom span.newsItemDate {
+    display: none;
+}
+        
+#head .bottom span:after {
+    content: ', ';
+}
+        
+#head .bottom span:last-child:after {
+    content: '';
+}
+
+#description {
+    padding: 30px 0;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+#description a {
+    font-weight: bold;
+    color: #4C4C4C;
+    border-bottom: solid 1px #E4E2E0;
+    -webkit-transition: border 0.3s;
+}
+    
+#description a:hover {
+    border-bottom: solid 1px #4C4C4C;
+}
+
+#description p {
+    margin: 0;
+    padding: 0 0 13px;
+}
+    
+#description blockquote {
+    padding: 5px 0;
+    margin: 0 30px;
+}
+
+img {
+    display: block;
+    width: 100%;
+    padding: 5px;
+    background: #fff;
+    border: solid 1px #dddddd;
+    -webkit-border-radius: 4px;
+}
+
+.imagedes {
+    margin: 0;
+    padding: 0 0 13px;      
+}
+        
+#extras {
+    border-top: solid 1px #E4E2E0;
+    padding: 13px 0;
+}
