@@ -21,6 +21,10 @@
 		8459ACB2177F361600646992 /* TMTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8459ACB1177F361600646992 /* TMTestViewController.m */; };
 		8459ACB5177F362800646992 /* TMScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8459ACB4177F362800646992 /* TMScoreViewController.m */; };
 		8459ACB9177F39B800646992 /* model.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8459ACB8177F39B800646992 /* model.jpg */; };
+		87B79BCB17846A1F00482EC4 /* PCHalfPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 87B79BC317846A1F00482EC4 /* PCHalfPieChart.m */; };
+		87B79BCC17846A1F00482EC4 /* PCLineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 87B79BC517846A1F00482EC4 /* PCLineChartView.m */; };
+		87B79BCD17846A1F00482EC4 /* PCPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 87B79BC717846A1F00482EC4 /* PCPieChart.m */; };
+		87B79BCE17846A1F00482EC4 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 87B79BCA17846A1F00482EC4 /* JSONKit.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +50,14 @@
 		8459ACB3177F362800646992 /* TMScoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMScoreViewController.h; sourceTree = "<group>"; };
 		8459ACB4177F362800646992 /* TMScoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMScoreViewController.m; sourceTree = "<group>"; };
 		8459ACB8177F39B800646992 /* model.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = model.jpg; sourceTree = "<group>"; };
+		87B79BC217846A1F00482EC4 /* PCHalfPieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCHalfPieChart.h; sourceTree = "<group>"; };
+		87B79BC317846A1F00482EC4 /* PCHalfPieChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCHalfPieChart.m; sourceTree = "<group>"; };
+		87B79BC417846A1F00482EC4 /* PCLineChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCLineChartView.h; sourceTree = "<group>"; };
+		87B79BC517846A1F00482EC4 /* PCLineChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCLineChartView.m; sourceTree = "<group>"; };
+		87B79BC617846A1F00482EC4 /* PCPieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCPieChart.h; sourceTree = "<group>"; };
+		87B79BC717846A1F00482EC4 /* PCPieChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCPieChart.m; sourceTree = "<group>"; };
+		87B79BC917846A1F00482EC4 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		87B79BCA17846A1F00482EC4 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +128,7 @@
 		8459ACAC177F34CD00646992 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				87B79BC017846A1F00482EC4 /* vendor */,
 				8459AC92177F33E700646992 /* AppDelegate.h */,
 				8459AC93177F33E700646992 /* AppDelegate.m */,
 				8459ACA0177F344300646992 /* TMWelcomeViewController.h */,
@@ -136,6 +149,37 @@
 				8459ACB8177F39B800646992 /* model.jpg */,
 			);
 			path = res;
+			sourceTree = "<group>";
+		};
+		87B79BC017846A1F00482EC4 /* vendor */ = {
+			isa = PBXGroup;
+			children = (
+				87B79BC117846A1F00482EC4 /* iOSPlot */,
+				87B79BC817846A1F00482EC4 /* JSONKit */,
+			);
+			path = vendor;
+			sourceTree = "<group>";
+		};
+		87B79BC117846A1F00482EC4 /* iOSPlot */ = {
+			isa = PBXGroup;
+			children = (
+				87B79BC217846A1F00482EC4 /* PCHalfPieChart.h */,
+				87B79BC317846A1F00482EC4 /* PCHalfPieChart.m */,
+				87B79BC417846A1F00482EC4 /* PCLineChartView.h */,
+				87B79BC517846A1F00482EC4 /* PCLineChartView.m */,
+				87B79BC617846A1F00482EC4 /* PCPieChart.h */,
+				87B79BC717846A1F00482EC4 /* PCPieChart.m */,
+			);
+			path = iOSPlot;
+			sourceTree = "<group>";
+		};
+		87B79BC817846A1F00482EC4 /* JSONKit */ = {
+			isa = PBXGroup;
+			children = (
+				87B79BC917846A1F00482EC4 /* JSONKit.h */,
+				87B79BCA17846A1F00482EC4 /* JSONKit.m */,
+			);
+			path = JSONKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,6 +254,10 @@
 				8459ACAF177F360400646992 /* TMHomeViewController.m in Sources */,
 				8459ACB2177F361600646992 /* TMTestViewController.m in Sources */,
 				8459ACB5177F362800646992 /* TMScoreViewController.m in Sources */,
+				87B79BCB17846A1F00482EC4 /* PCHalfPieChart.m in Sources */,
+				87B79BCC17846A1F00482EC4 /* PCLineChartView.m in Sources */,
+				87B79BCD17846A1F00482EC4 /* PCPieChart.m in Sources */,
+				87B79BCE17846A1F00482EC4 /* JSONKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +374,7 @@
 				8459AC9F177F33E700646992 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
