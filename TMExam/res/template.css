@@ -81,9 +81,20 @@ a {
     border-bottom: solid 1px #E4E2E0;
     -webkit-transition: border 0.3s;
 }
+
     
+::selection      {
+ color: gold;  background: red; }
+    
+    
+
 #description a:hover {
     border-bottom: solid 1px #4C4C4C;
+}
+
+#description a:active
+{ 
+background-color:yellow;
 }
 
 #description p {
@@ -94,7 +105,7 @@ a {
 #description blockquote {
     padding: 5px 0;
     margin: 0 30px;
-}
+}{
 
 img {
     display: block;

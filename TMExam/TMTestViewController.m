@@ -18,8 +18,8 @@
 @property (nonatomic, retain) UIWebView *webView;
 @property (nonatomic, readwrite)int  curTestRecordIdx;
 @property (nonatomic, strong)NSMutableArray *testRecords; //  试题的一个集合, 暂时不用, 以后可以扩展为, 此数组配置化, 可以定制从题库中选择显示哪些试题. 此版本显示所有试题
-@property (nonatomic, weak)NSArray *curRecordArray;
-
+@property (nonatomic, weak)NSArray *curRecordArray; // 当前类型试题的数组
+@property (nonatomic, readwrite) int curSelection;  //
 - (BOOL)processLinkClick:(NSURLRequest *)request;
 
 @end
@@ -69,8 +69,10 @@
     {
         if ([request.URL.host isEqualToString:@"next"])
         {
-            
-            if (++self.curTestRecordIdx >= [self.curRecordArray count]) {
+            TMTestRecordSingleSelection *record = [self.curRecordArray objectAtIndex:++self.curTestRecordIdx];
+            record.selIdx = self.curSelection;
+
+            if (self.curTestRecordIdx+1 >= [self.curRecordArray count]) {
                 UIAlertView  *alertView = [[UIAlertView alloc] initWithTitle:@"no more test"
                                                                      message:@"no more test"
                                                                     delegate:self
@@ -79,25 +81,29 @@
                 [alertView show];
                 return NO;
             }
-            TMTestRecordSingleSelection *record = [self.curRecordArray objectAtIndex:++self.curTestRecordIdx];
+            record = [self.curRecordArray objectAtIndex:++self.curTestRecordIdx];
             TMHtmlMaker *htmlMaker = [[TMChoiceQuestionMaker alloc] initWithQuestion:record.body  choices:@[record.selA, record.selB, record.selC] previousButton:nil nextButton:@"下一题"];
             NSLog(@"%@", htmlMaker.htmlString);
             [self.webView loadHTMLString:htmlMaker.htmlString baseURL:nil];
         }
         else if ([request.URL.host isEqualToString:@"choice0"])
         {
-            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"你选择了A" message:nil delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-            [alertView show];
+            self.curSelection = 0;
+//            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"你选择了A" message:nil delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+//            [alertView show];
         }
         else if ([request.URL.host isEqualToString:@"choice1"])
         {
-            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"你选择了B" message:nil delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-            [alertView show];
+            self.curSelection = 1;
+
+//            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"你选择了B" message:nil delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+//            [alertView show];
         }
         else if ([request.URL.host isEqualToString:@"choice2"])
         {
-            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"你选择了C" message:nil delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-            [alertView show];
+            self.curSelection = 2;
+//            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"你选择了C" message:nil delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+//            [alertView show];
         }
     }
     

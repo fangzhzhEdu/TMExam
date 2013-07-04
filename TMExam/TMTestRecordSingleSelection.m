@@ -14,7 +14,7 @@
              selB:(NSString*)selB
              selC:(NSString*)selC
              selD:(NSString*)selD
-           selIdx:(int)selIdx
+           rightIdx:(int)rightIdx
              type:(int)type
 
 {
@@ -25,7 +25,7 @@
         self.selB = selB;
         self.selC = selC;
         self.selD = selD;
-        self.selIdx = selIdx;
+        self.rightIdx = rightIdx;
         self.GUID = [TMUtility GenerateUUID];
     }
     return self;

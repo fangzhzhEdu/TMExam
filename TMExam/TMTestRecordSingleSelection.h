@@ -13,6 +13,7 @@
 @property (nonatomic, strong)NSString *selB;
 @property (nonatomic, strong)NSString *selC;
 @property (nonatomic, strong)NSString *selD;
+@property (nonatomic, readwrite)int  rightIdx;
 @property (nonatomic, readwrite)int  selIdx;
 
 -(id)initWithBody:(NSString*)body
@@ -20,7 +21,7 @@
              selB:(NSString*)selB
              selC:(NSString*)selC
              selD:(NSString*)selD
-           selIdx:(int)selIdx
+           rightIdx:(int)rightIdx
              type:(int)type;
 
 @end

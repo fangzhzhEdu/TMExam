@@ -40,20 +40,19 @@
             TMTestRecord *record = nil;
             if (type == RECORD_TYPE_SINGLE_SELECTION) {
 
-                int type = type;
                 NSString * body = [info objectForKey:@"body"];
                 NSString * selA = [info objectForKey:@"selA"];
                 NSString * selB = [info objectForKey:@"selB"];
                 NSString * selC = [info objectForKey:@"selC"];
                 NSString * selD = [info objectForKey:@"selD"];
-                int selIdx = [[info objectForKey:@"selIdx"] intValue];
+                int rightIdx = [[info objectForKey:@"rightIdx"] intValue];
                 TMTestRecordSingleSelection *recordS =                [[TMTestRecordSingleSelection alloc]
                                                                        initWithBody:body
                                                                        selA:selA
                                                                        selB:selB
                                                                        selC:selC
                                                                        selD:selD
-                                                                       selIdx:selIdx
+                                                                       rightIdx:rightIdx
                                                                        type:type];
                 record = recordS;
             }

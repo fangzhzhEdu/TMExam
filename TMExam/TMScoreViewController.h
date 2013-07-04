@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TMScoreViewController : UITableViewController
+@interface TMScoreViewController : UIViewController
+- (id)initWithDict:(NSDictionary*)sampleInfo;
 
 @end

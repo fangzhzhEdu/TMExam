@@ -8,7 +8,7 @@
 
 #import "TMHomeViewController.h"
 #import "TMTestViewController.h"
-
+#import "TMScoreViewController.h"
 @interface TMHomeViewController ()
 
 @end
@@ -151,12 +151,30 @@
         }
         case 2:
         {
-            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提示"
-                                                                message:@"演示版没有此功能"
-                                                               delegate:nil
-                                                      cancelButtonTitle:@"知道了"
-                                                      otherButtonTitles:nil, nil];
-            [alertView show];
+            // 拼数据
+            NSMutableDictionary *dict = [[NSMutableDictionary alloc] initWithCapacity:10];
+            NSMutableArray *data = [[NSMutableArray alloc] initWithCapacity:10];
+            [dict setObject:data forKey:@"data"];
+            NSMutableDictionary *record = [[NSMutableDictionary alloc] initWithCapacity:2];
+            [record setObject:@"正确题目" forKey:@"title"];
+            [record setObject:[NSNumber numberWithInt:1] forKey:@"value"];
+            [data addObject:record];
+
+            record = [[NSMutableDictionary alloc] initWithCapacity:2];
+            [record setObject:@"错误题目" forKey:@"title"];
+            [record setObject:[NSNumber numberWithInt:1] forKey:@"value"];
+            [data addObject:record];
+            
+            // 显示
+            TMScoreViewController *scoreViewController = [[TMScoreViewController alloc] initWithDict:dict];
+            [self.navigationController pushViewController:scoreViewController animated:YES];
+            break;
+//            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提示"
+//                                                                message:@"演示版没有此功能"
+//                                                               delegate:nil
+//                                                      cancelButtonTitle:@"知道了"
+//                                                      otherButtonTitles:nil, nil];
+//            [alertView show];
             break;
         }
         case 3:
