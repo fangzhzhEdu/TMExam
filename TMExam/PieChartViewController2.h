@@ -32,6 +32,7 @@
  */
 
 #import <UIKit/UIKit.h>
-
+// pie chart without arrow
 @interface PieChartViewController2 : UIViewController
+- (id)initWithDict:(NSDictionary*)sampleInfo;
 @end

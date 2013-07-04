@@ -26,6 +26,7 @@
 		8459ACAF177F360400646992 /* TMHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8459ACAE177F360400646992 /* TMHomeViewController.m */; };
 		8459ACB5177F362800646992 /* TMScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8459ACB4177F362800646992 /* TMScoreViewController.m */; };
 		8459ACB9177F39B800646992 /* model.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8459ACB8177F39B800646992 /* model.jpg */; };
+		87A6F0931785184B00C60AE4 /* HalfPieChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A6F0921785184B00C60AE4 /* HalfPieChartViewController.m */; };
 		87B79BCB17846A1F00482EC4 /* PCHalfPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 87B79BC317846A1F00482EC4 /* PCHalfPieChart.m */; };
 		87B79BCC17846A1F00482EC4 /* PCLineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 87B79BC517846A1F00482EC4 /* PCLineChartView.m */; };
 		87B79BCD17846A1F00482EC4 /* PCPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 87B79BC717846A1F00482EC4 /* PCPieChart.m */; };
@@ -67,6 +68,8 @@
 		8459ACB3177F362800646992 /* TMScoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMScoreViewController.h; sourceTree = "<group>"; };
 		8459ACB4177F362800646992 /* TMScoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMScoreViewController.m; sourceTree = "<group>"; };
 		8459ACB8177F39B800646992 /* model.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = model.jpg; sourceTree = "<group>"; };
+		87A6F0911785184B00C60AE4 /* HalfPieChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HalfPieChartViewController.h; sourceTree = "<group>"; };
+		87A6F0921785184B00C60AE4 /* HalfPieChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HalfPieChartViewController.m; sourceTree = "<group>"; };
 		87B79BC217846A1F00482EC4 /* PCHalfPieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCHalfPieChart.h; sourceTree = "<group>"; };
 		87B79BC317846A1F00482EC4 /* PCHalfPieChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCHalfPieChart.m; sourceTree = "<group>"; };
 		87B79BC417846A1F00482EC4 /* PCLineChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCLineChartView.h; sourceTree = "<group>"; };
@@ -153,6 +156,8 @@
 		8459ACAC177F34CD00646992 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				87A6F0911785184B00C60AE4 /* HalfPieChartViewController.h */,
+				87A6F0921785184B00C60AE4 /* HalfPieChartViewController.m */,
 				87B79BD21784A33700482EC4 /* ChartListViewController.h */,
 				87B79BD31784A33700482EC4 /* ChartListViewController.m */,
 				87B79BD41784A33700482EC4 /* LineChartViewController.h */,
@@ -308,6 +313,7 @@
 				87B79BDB1784A33700482EC4 /* LineChartViewController.m in Sources */,
 				87B79BDC1784A33700482EC4 /* PieChartViewController.m in Sources */,
 				87B79BDD1784A33700482EC4 /* PieChartViewController2.m in Sources */,
+				87A6F0931785184B00C60AE4 /* HalfPieChartViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
