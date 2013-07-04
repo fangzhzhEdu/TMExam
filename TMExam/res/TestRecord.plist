@@ -18,5 +18,133 @@
 		<key>rightIdx</key>
 		<string>2</string>
 	</dict>
+	<dict>
+		<key>type</key>
+		<integer>1</integer>
+		<key>body</key>
+		<string>1+0 = ?</string>
+		<key>selA</key>
+		<string>0</string>
+		<key>selB</key>
+		<string>1</string>
+		<key>selC</key>
+		<string>2</string>
+		<key>selD</key>
+		<string>3</string>
+		<key>rightIdx</key>
+		<string>1</string>
+	</dict>
+	<dict>
+		<key>type</key>
+		<integer>1</integer>
+		<key>body</key>
+		<string>0+0 = ?</string>
+		<key>selA</key>
+		<string>0</string>
+		<key>selB</key>
+		<string>1</string>
+		<key>selC</key>
+		<string>2</string>
+		<key>selD</key>
+		<string>3</string>
+		<key>rightIdx</key>
+		<string>0</string>
+	</dict>
+		<dict>
+		<key>type</key>
+		<integer>1</integer>
+		<key>body</key>
+		<string>1+1 = ?</string>
+		<key>selA</key>
+		<string>0</string>
+		<key>selB</key>
+		<string>1</string>
+		<key>selC</key>
+		<string>2</string>
+		<key>selD</key>
+		<string>3</string>
+		<key>rightIdx</key>
+		<string>2</string>
+	</dict>
+	<dict>
+		<key>type</key>
+		<integer>1</integer>
+		<key>body</key>
+		<string>1+0 = ?</string>
+		<key>selA</key>
+		<string>0</string>
+		<key>selB</key>
+		<string>1</string>
+		<key>selC</key>
+		<string>2</string>
+		<key>selD</key>
+		<string>3</string>
+		<key>rightIdx</key>
+		<string>1</string>
+	</dict>
+	<dict>
+		<key>type</key>
+		<integer>1</integer>
+		<key>body</key>
+		<string>0+0 = ?</string>
+		<key>selA</key>
+		<string>0</string>
+		<key>selB</key>
+		<string>1</string>
+		<key>selC</key>
+		<string>2</string>
+		<key>selD</key>
+		<string>3</string>
+		<key>rightIdx</key>
+		<string>0</string>
+	</dict>
+		<dict>
+		<key>type</key>
+		<integer>1</integer>
+		<key>body</key>
+		<string>1+1 = ?</string>
+		<key>selA</key>
+		<string>0</string>
+		<key>selB</key>
+		<string>1</string>
+		<key>selC</key>
+		<string>2</string>
+		<key>selD</key>
+		<string>3</string>
+		<key>rightIdx</key>
+		<string>2</string>
+	</dict>
+	<dict>
+		<key>type</key>
+		<integer>1</integer>
+		<key>body</key>
+		<string>1+0 = ?</string>
+		<key>selA</key>
+		<string>0</string>
+		<key>selB</key>
+		<string>1</string>
+		<key>selC</key>
+		<string>2</string>
+		<key>selD</key>
+		<string>3</string>
+		<key>rightIdx</key>
+		<string>1</string>
+	</dict>
+	<dict>
+		<key>type</key>
+		<integer>1</integer>
+		<key>body</key>
+		<string>0+0 = ?</string>
+		<key>selA</key>
+		<string>0</string>
+		<key>selB</key>
+		<string>1</string>
+		<key>selC</key>
+		<string>2</string>
+		<key>selD</key>
+		<string>3</string>
+		<key>rightIdx</key>
+		<string>0</string>
+	</dict>
 </array>
 </plist>

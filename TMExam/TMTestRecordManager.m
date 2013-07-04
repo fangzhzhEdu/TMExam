@@ -72,4 +72,22 @@
 }
 
 
+-(void)doStatistics;
+{
+    if (self.type2RightRecDict == nil) {
+        self.type2RightRecDict = [[NSMutableDictionary alloc] initWithCapacity:RECORD_TYPE_MAX];
+    }
+    for (int k = RECORD_TYPE_SINGLE_SELECTION; k < RECORD_TYPE_MAX; ++k) {
+        NSArray *array = [self.type2RecordArrayDict objectForKey:[NSNumber numberWithInt:k]];
+        int right = 0;
+        for (TMTestRecord *record in array) {
+            if ([record isRight]) {
+                ++right;
+            }
+        }
+        [self.type2RightRecDict setObject:[NSNumber numberWithInt:right] forKey:[NSNumber numberWithInt:k]];
+    }
+}
+
+
 @end

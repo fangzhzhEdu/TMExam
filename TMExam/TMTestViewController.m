@@ -69,7 +69,7 @@
     {
         if ([request.URL.host isEqualToString:@"next"])
         {
-            TMTestRecordSingleSelection *record = [self.curRecordArray objectAtIndex:++self.curTestRecordIdx];
+            TMTestRecordSingleSelection *record = [self.curRecordArray objectAtIndex:self.curTestRecordIdx];
             record.selIdx = self.curSelection;
 
             if (self.curTestRecordIdx+1 >= [self.curRecordArray count]) {
@@ -79,6 +79,7 @@
                                                            cancelButtonTitle:@"知道了"
                                                            otherButtonTitles:nil, nil];
                 [alertView show];
+                [[TMTestRecordManager sharedManager] doStatistics];
                 return NO;
             }
             record = [self.curRecordArray objectAtIndex:++self.curTestRecordIdx];

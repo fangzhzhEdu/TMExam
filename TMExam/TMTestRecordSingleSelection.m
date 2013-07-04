@@ -31,4 +31,9 @@
     return self;
     
 }
+
+-(BOOL)isRight
+{
+    return self.rightIdx == self.selIdx;
+}
 @end

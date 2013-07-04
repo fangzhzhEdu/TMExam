@@ -9,6 +9,8 @@
 #import "TMHomeViewController.h"
 #import "TMTestViewController.h"
 #import "TMScoreViewController.h"
+#import "TMTestRecord.h"
+#import "TMTestRecordManager.h"
 @interface TMHomeViewController ()
 
 @end
@@ -156,13 +158,17 @@
             NSMutableArray *data = [[NSMutableArray alloc] initWithCapacity:10];
             [dict setObject:data forKey:@"data"];
             NSMutableDictionary *record = [[NSMutableDictionary alloc] initWithCapacity:2];
+            
+            NSArray *array = [[[TMTestRecordManager sharedManager] type2RecordArrayDict] objectForKey:[NSNumber numberWithInt:RECORD_TYPE_SINGLE_SELECTION]];
+            int cnt = array.count;
+            int right = [[[[TMTestRecordManager sharedManager] type2RightRecDict] objectForKey:[NSNumber numberWithInt:RECORD_TYPE_SINGLE_SELECTION]] intValue];
             [record setObject:@"正确题目" forKey:@"title"];
-            [record setObject:[NSNumber numberWithInt:1] forKey:@"value"];
+            [record setObject:[NSNumber numberWithInt:right] forKey:@"value"];
             [data addObject:record];
 
             record = [[NSMutableDictionary alloc] initWithCapacity:2];
             [record setObject:@"错误题目" forKey:@"title"];
-            [record setObject:[NSNumber numberWithInt:1] forKey:@"value"];
+            [record setObject:[NSNumber numberWithInt:cnt - right] forKey:@"value"];
             [data addObject:record];
             
             // 显示
