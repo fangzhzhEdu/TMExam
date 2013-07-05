@@ -60,12 +60,12 @@
     
     if (self.previous)
     {
-        bodyString = [bodyString stringByAppendingFormat:@"<div class='previous'><a href='%@'>%@</a></div>", [self previousLink], self.previous];
+        bodyString = [bodyString stringByAppendingFormat:@"<div class='button'><a href='%@'>%@</a></div>", [self previousLink], self.previous];
     }
     
     if (self.next)
     {
-        bodyString = [bodyString stringByAppendingFormat:@"<div class='next'><a href='%@'>%@</a></div>", [self nextLink], self.next];
+        bodyString = [bodyString stringByAppendingFormat:@"<div class='button'><a href='%@'>%@</a></div>", [self nextLink], self.next];
     }
     
     return bodyString;
