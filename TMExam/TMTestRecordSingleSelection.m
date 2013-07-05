@@ -8,6 +8,7 @@
 
 #import "TMTestRecordSingleSelection.h"
 #import "TMUtility.h"
+
 @implementation TMTestRecordSingleSelection
 -(id)initWithBody:(NSString*)body
              selA:(NSString*)selA
@@ -19,21 +20,44 @@
 
 {
     self = [super init];
-    if (self) {
+    if (self)
+    {
         self.body = body;
-        self.selA = selA;
-        self.selB = selB;
-        self.selC = selC;
-        self.selD = selD;
+
+        NSMutableArray *options = [[NSMutableArray alloc] init];
+
+        if (selA)
+            [options addObject:selA];
+        if (selB)
+            [options addObject:selB];
+        if (selC)
+            [options addObject:selC];
+        if (selD)
+            [options addObject:selD];
+        
+        self.options = [NSArray arrayWithArray:options];
         self.rightIdx = rightIdx;
-        self.GUID = [TMUtility GenerateUUID];
+        self.selIdx = -1;
+        
     }
-    return self;
     
+    return self;
 }
 
 -(BOOL)isRight
 {
     return self.rightIdx == self.selIdx;
 }
+
+- (NSInteger)addOption:(NSString *)option right:(BOOL)right
+{
+    self.options = [self.options arrayByAddingObject:option];
+
+    NSInteger index = self.options.count - 1;
+    if (right)
+        self.rightIdx = index;
+    
+    return index;
+}
+
 @end

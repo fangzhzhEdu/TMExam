@@ -11,7 +11,9 @@
 @interface TMChoiceQuestionMaker : TMQuestionMaker
 
 - (id)initWithQuestion:(NSString *)question
+        questionNumber:(NSString *)questionNumber
                choices:(NSArray *)choices
+                chosen:(NSInteger)chosen
         previousButton:(NSString *)previous
             nextButton:(NSString *)next;
 @end

@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <!-- Bootstrap -->
             <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+                <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
                 <style type="text/css">
                     body {
                         /*padding-top: 60px;
@@ -18,7 +19,7 @@
                     }
                     .dl-horizontal dt {
                         float: left;
-                        width: 40px;
+                        width: 30px;
                         overflow: hidden;
                         clear: left;
                         text-align: left;
@@ -26,21 +27,19 @@
                         white-space: nowrap;
                     }
                     .dl-horizontal dd {
-                        margin-left: 60px;
+                        margin-left: 40px;
                     }
                     </style>
                 </head>
     <body>
         <div class="container">
-            <h4 ><span class='span1'>1</span><span>要把大象装冰箱，总共分几步？要把大象装冰箱，总共分几步？要把大象装冰箱，总共分几步？</span></h4>
+            <h4 class="dl-horizontal"><dt>1</dt><dd>要把大象装冰箱，总共分几步？要把大象装冰箱，总共分几步？</dd></h4>
             <hr />
             <dl class="dl-horizontal">
-                <dt><a class="badge" href='#'>A</a></dt><dd>把冰箱门打开把冰箱门打开把冰箱门打开把冰箱门打开把冰箱门打开把冰箱门打开把冰箱门打开把冰箱门打开把冰箱门打开把冰箱门打开把冰箱门打开把冰箱门打开把冰箱门打开把冰箱门打开</dd>
-                
-                <dt class="badge">B</dt><dd>把大象塞进去把大象塞进去把大象塞进去把大象塞进去把大象塞进去把大象塞进去把大象塞进去把大象塞进去把大象塞进去把大象塞进去把大象塞进去把大象塞进去把大象塞进去把大象塞进去把大象塞进去把大象塞进去把大象塞进去把大象塞进去把大象塞进去把大象塞进去把大象塞进去把大象塞进去把大象塞进去把大象塞进去把大象塞进去把大象塞进去把大象塞进去把大象塞进去</dd>
-                
-                <dt>C</dt><dd>把冰箱门关上</dd>
-                <dt>D</dt><dd>放完了</dd>
+                <dt><a class="badge" href='#'>A</a></dt><dd>把冰箱门打开</dd>
+                <dt><a class="badge" href='#'>B</a></dt><dd>把大象塞进去</dd>
+                <dt><a class="badge" href='#'>C</a></dt><dd>把冰箱门关上</dd>
+                <dt><a class="badge" href='#'>D</a></dt><dd>放完了</dd>
             </dl>
             <hr />
             
@@ -48,11 +47,12 @@
             <!-- <p><div class='span1' ><a class='btn' href='#'>A</a></div><div class='span1' ><a class='btn' href='#'>B</a></div><div class='span1' ><a class='btn' href='#'>C</a></div><div class='span1' ><a class='btn' href='#'>D</a></div></p> -->
             
             <ul class="pager">
-                <li><a href="#">A</a></li>
-                <li><a href="#">B</a></li>
-                <li><a href="#">C</a></li>
-                <li><a href="#">D</a></li>
-            </ul>  
+                    <li><a class="badge" href='#'>A</a></li><li>把冰箱门打开</li>
+                    <li><a class="badge" href='#'>B</a></li><li>把大象塞进去</li>
+                    <li><a class="badge" href='#'>C</a></li><li>把冰箱门关上</li>
+                    <li><a class="badge" href='#'>D</a></li><li>放完了</li>
+                </dl>
+            </ul>
             <!-- <hr /> -->
             
             <ul class="pager">

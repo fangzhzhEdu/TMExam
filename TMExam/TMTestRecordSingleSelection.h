@@ -9,19 +9,24 @@
 #import <UIKit/UIKit.h>
 #import "TMTestRecord.h"
 @interface TMTestRecordSingleSelection : TMTestRecord
-@property (nonatomic, strong)NSString *selA;
-@property (nonatomic, strong)NSString *selB;
-@property (nonatomic, strong)NSString *selC;
-@property (nonatomic, strong)NSString *selD;
-@property (nonatomic, readwrite)int  rightIdx;
-@property (nonatomic, readwrite)int  selIdx;
 
--(id)initWithBody:(NSString*)body
-             selA:(NSString*)selA
-             selB:(NSString*)selB
-             selC:(NSString*)selC
-             selD:(NSString*)selD
-           rightIdx:(int)rightIdx
-             type:(int)type;
+//@property (nonatomic, strong)NSString *selA;
+//@property (nonatomic, strong)NSString *selB;
+//@property (nonatomic, strong)NSString *selC;
+//@property (nonatomic, strong)NSString *selD;
+
+@property (nonatomic, strong) NSArray *options;
+@property (nonatomic, readwrite) NSInteger rightIdx;
+@property (nonatomic, readwrite) NSInteger selIdx;
+
+- (id)initWithBody:(NSString*)body
+              selA:(NSString*)selA
+              selB:(NSString*)selB
+              selC:(NSString*)selC
+              selD:(NSString*)selD
+          rightIdx:(NSInteger)rightIdx
+              type:(NSInteger)type;
+
+- (NSInteger)addOption:(NSString *)option right:(BOOL)right;
 
 @end

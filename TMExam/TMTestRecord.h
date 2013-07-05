@@ -7,16 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+
+#define RECORD_TYPE_UNKNOW 0
 #define RECORD_TYPE_SINGLE_SELECTION 1
 #define RECORD_TYPE_MULTIPLE_SELECTION 2
 #define RECORD_TYPE_MAX 10
 
 @interface TMTestRecord : NSObject
-{
-    
-}
-@property (nonatomic, readwrite)int  type;
-@property (nonatomic, strong)NSString* GUID;
-@property (nonatomic, strong)NSString* body;
--(BOOL)isRight;
+
+@property (nonatomic, readwrite) NSInteger type;
+@property (nonatomic, strong) NSString* GUID;
+@property (nonatomic, strong) NSString* body;
+
+- (BOOL)isRight;
+
 @end

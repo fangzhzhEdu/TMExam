@@ -10,7 +10,15 @@
 #import "TMTestrecord.h"
 #import "TMTestRecordSingleSelection.h"
 
+@interface TMTestRecordManager()
+
+- (id)initWithPlist;
+
+@end
+
+
 @implementation TMTestRecordManager
+
 + (TMTestRecordManager *)sharedManager
 {
     static TMTestRecordManager *_sharedManager = nil;
@@ -23,10 +31,11 @@
 }
 
 
--(id)initWithPlist
+- (id)initWithPlist
 {
     self = [super init];
-    if (self) {
+    if (self)
+    {
         // 初始化变量
         self.testRecords = [[NSMutableArray alloc] initWithCapacity:10];
         self.type2RecordArrayDict = [[NSMutableDictionary alloc] initWithCapacity:10];
@@ -35,16 +44,19 @@
         // 加题目
         NSString *plist = [[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:@"TestRecord.plist"];
         NSArray *testArray = [NSArray arrayWithContentsOfFile:plist];
-        for (NSDictionary *info in testArray) {
+        for (NSDictionary *info in testArray)
+        {
             int type = [[info objectForKey:@"type"] intValue];
             TMTestRecord *record = nil;
-            if (type == RECORD_TYPE_SINGLE_SELECTION) {
+            if (type == RECORD_TYPE_SINGLE_SELECTION)
+            {
 
                 NSString * body = [info objectForKey:@"body"];
                 NSString * selA = [info objectForKey:@"selA"];
                 NSString * selB = [info objectForKey:@"selB"];
                 NSString * selC = [info objectForKey:@"selC"];
                 NSString * selD = [info objectForKey:@"selD"];
+                
                 int rightIdx = [[info objectForKey:@"rightIdx"] intValue];
                 TMTestRecordSingleSelection *recordS =                [[TMTestRecordSingleSelection alloc]
                                                                        initWithBody:body
@@ -56,38 +68,43 @@
                                                                        type:type];
                 record = recordS;
             }
+            
             [self.testRecords addObject:record];
+            
             NSMutableArray *array = [self.type2RecordArrayDict objectForKey:[NSNumber numberWithInt:type]];
-            if (array == nil) {
+            if (array == nil)
+            {
                 array = [[NSMutableArray alloc] initWithCapacity:10];
                 [self.type2RecordArrayDict setObject:array forKey:[NSNumber numberWithInt:type]];
             }
+            
             [array addObject:record];
             [self.guid2RecordDict setObject:record forKey:record.GUID];
         }
-
-
     }
+    
     return self;
 }
 
-
--(void)doStatistics;
+- (void)doStatistics
 {
-    if (self.type2RightRecDict == nil) {
+    if (self.type2RightRecDict == nil)
+    {
         self.type2RightRecDict = [[NSMutableDictionary alloc] initWithCapacity:RECORD_TYPE_MAX];
     }
-    for (int k = RECORD_TYPE_SINGLE_SELECTION; k < RECORD_TYPE_MAX; ++k) {
+    for (int k = RECORD_TYPE_SINGLE_SELECTION; k < RECORD_TYPE_MAX; ++k)
+    {
         NSArray *array = [self.type2RecordArrayDict objectForKey:[NSNumber numberWithInt:k]];
         int right = 0;
-        for (TMTestRecord *record in array) {
-            if ([record isRight]) {
+        for (TMTestRecord *record in array)
+        {
+            if ([record isRight])
+            {
                 ++right;
             }
         }
         [self.type2RightRecDict setObject:[NSNumber numberWithInt:right] forKey:[NSNumber numberWithInt:k]];
     }
 }
-
 
 @end
