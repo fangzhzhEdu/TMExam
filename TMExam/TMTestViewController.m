@@ -9,11 +9,17 @@
 #import "TMTestViewController.h"
 #import "TMHtmlMaker.h"
 #import "TMChoiceQuestionMaker.h"
+#import "TMTestRecordManager.h"
+#import "TMTestRecord.h"
+#import "TMTestRecordSingleSelection.h"
 
 @interface TMTestViewController () <UIWebViewDelegate>
 
 @property (nonatomic, retain) UIWebView *webView;
-
+@property (nonatomic, readwrite)int  curTestRecordIdx;
+@property (nonatomic, strong)NSMutableArray *testRecords; //  试题的一个集合, 暂时不用, 以后可以扩展为, 此数组配置化, 可以定制从题库中选择显示哪些试题. 此版本显示所有试题
+@property (nonatomic, weak)NSArray *curRecordArray; // 当前类型试题的数组
+@property (nonatomic, readwrite) int curSelection;  //
 - (BOOL)processLinkClick:(NSURLRequest *)request;
 
 @end
@@ -36,8 +42,13 @@
     self.webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
     self.webView.delegate = self;
     [self.view addSubview:self.webView];
-    
-    TMHtmlMaker *htmlMaker = [[TMChoiceQuestionMaker alloc] initWithQuestion:@"问题1：1+1=？" choices:@[@"A: 0", @"B: 1", @"C: 2"] previousButton:nil nextButton:@"下一题"];
+    self.curRecordArray = [[TMTestRecordManager sharedManager].type2RecordArrayDict objectForKey:[NSNumber numberWithInt:RECORD_TYPE_SINGLE_SELECTION]];
+    if (self.curRecordArray == nil) {
+        return;
+    }
+    TMTestRecordSingleSelection *record = [self.curRecordArray objectAtIndex:self.curTestRecordIdx];
+    TMHtmlMaker *htmlMaker = [[TMChoiceQuestionMaker alloc] initWithQuestion:record.body  choices:@[record.selA, record.selB, record.selC] previousButton:nil nextButton:@"下一题"];
+
     NSLog(@"%@", htmlMaker.htmlString);
     [self.webView loadHTMLString:htmlMaker.htmlString baseURL:nil];
     
@@ -58,26 +69,42 @@
     {
         if ([request.URL.host isEqualToString:@"next"])
         {
-            static NSUInteger index = 1;
-            NSString *question = [NSString stringWithFormat:@"问题%i：1+1=？", ++index];
-            TMHtmlMaker *htmlMaker = [[TMChoiceQuestionMaker alloc] initWithQuestion:question choices:@[@"A: 0", @"B: 1", @"C: 2"] previousButton:nil nextButton:@"下一题"];
+            TMTestRecordSingleSelection *record = [self.curRecordArray objectAtIndex:self.curTestRecordIdx];
+            record.selIdx = self.curSelection;
+
+            if (self.curTestRecordIdx+1 >= [self.curRecordArray count]) {
+                UIAlertView  *alertView = [[UIAlertView alloc] initWithTitle:@"no more test"
+                                                                     message:@"no more test"
+                                                                    delegate:self
+                                                           cancelButtonTitle:@"知道了"
+                                                           otherButtonTitles:nil, nil];
+                [alertView show];
+                [[TMTestRecordManager sharedManager] doStatistics];
+                return NO;
+            }
+            record = [self.curRecordArray objectAtIndex:++self.curTestRecordIdx];
+            TMHtmlMaker *htmlMaker = [[TMChoiceQuestionMaker alloc] initWithQuestion:record.body  choices:@[record.selA, record.selB, record.selC] previousButton:nil nextButton:@"下一题"];
             NSLog(@"%@", htmlMaker.htmlString);
             [self.webView loadHTMLString:htmlMaker.htmlString baseURL:nil];
         }
         else if ([request.URL.host isEqualToString:@"choice0"])
         {
-            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"你选择了A" message:nil delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-            [alertView show];
+            self.curSelection = 0;
+//            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"你选择了A" message:nil delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+//            [alertView show];
         }
         else if ([request.URL.host isEqualToString:@"choice1"])
         {
-            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"你选择了B" message:nil delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-            [alertView show];
+            self.curSelection = 1;
+
+//            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"你选择了B" message:nil delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+//            [alertView show];
         }
         else if ([request.URL.host isEqualToString:@"choice2"])
         {
-            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"你选择了C" message:nil delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-            [alertView show];
+            self.curSelection = 2;
+//            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"你选择了C" message:nil delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+//            [alertView show];
         }
     }
     

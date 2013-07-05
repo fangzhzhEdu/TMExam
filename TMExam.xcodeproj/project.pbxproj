@@ -35,6 +35,17 @@
 		87B79BDB1784A33700482EC4 /* LineChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87B79BD51784A33700482EC4 /* LineChartViewController.m */; };
 		87B79BDC1784A33700482EC4 /* PieChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87B79BD71784A33700482EC4 /* PieChartViewController.m */; };
 		87B79BDD1784A33700482EC4 /* PieChartViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 87B79BD91784A33700482EC4 /* PieChartViewController2.m */; };
+		87FAD8FE1786000E00F31A38 /* TMTestRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 87FAD8FD1786000E00F31A38 /* TMTestRecord.m */; };
+		87FAD9011786003700F31A38 /* TMTestRecordManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 87FAD9001786003700F31A38 /* TMTestRecordManager.m */; };
+		87FAD906178608C000F31A38 /* TestRecord.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87FAD905178608C000F31A38 /* TestRecord.plist */; };
+		87FAD9091786123E00F31A38 /* TMUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 87FAD9081786123E00F31A38 /* TMUtility.m */; };
+		87FAD9151786124500F31A38 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 87FAD90C1786124500F31A38 /* FMDatabase.m */; };
+		87FAD9161786124500F31A38 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 87FAD90E1786124500F31A38 /* FMDatabaseAdditions.m */; };
+		87FAD9171786124500F31A38 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 87FAD9101786124500F31A38 /* FMDatabasePool.m */; };
+		87FAD9181786124500F31A38 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 87FAD9121786124500F31A38 /* FMDatabaseQueue.m */; };
+		87FAD9191786124500F31A38 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 87FAD9141786124500F31A38 /* FMResultSet.m */; };
+		87FAD91B178612ED00F31A38 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 87FAD91A178612ED00F31A38 /* libsqlite3.dylib */; };
+		87FAD91E1786162500F31A38 /* TMTestRecordSingleSelection.m in Sources */ = {isa = PBXBuildFile; fileRef = 87FAD91D1786162000F31A38 /* TMTestRecordSingleSelection.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +97,26 @@
 		87B79BD71784A33700482EC4 /* PieChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PieChartViewController.m; sourceTree = "<group>"; };
 		87B79BD81784A33700482EC4 /* PieChartViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PieChartViewController2.h; sourceTree = "<group>"; };
 		87B79BD91784A33700482EC4 /* PieChartViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PieChartViewController2.m; sourceTree = "<group>"; };
+		87FAD8FC1786000E00F31A38 /* TMTestRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMTestRecord.h; sourceTree = "<group>"; };
+		87FAD8FD1786000E00F31A38 /* TMTestRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMTestRecord.m; sourceTree = "<group>"; };
+		87FAD8FF1786003600F31A38 /* TMTestRecordManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMTestRecordManager.h; sourceTree = "<group>"; };
+		87FAD9001786003700F31A38 /* TMTestRecordManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMTestRecordManager.m; sourceTree = "<group>"; };
+		87FAD905178608C000F31A38 /* TestRecord.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TestRecord.plist; sourceTree = "<group>"; };
+		87FAD9071786123E00F31A38 /* TMUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMUtility.h; sourceTree = "<group>"; };
+		87FAD9081786123E00F31A38 /* TMUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMUtility.m; sourceTree = "<group>"; };
+		87FAD90B1786124500F31A38 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		87FAD90C1786124500F31A38 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		87FAD90D1786124500F31A38 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		87FAD90E1786124500F31A38 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		87FAD90F1786124500F31A38 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		87FAD9101786124500F31A38 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		87FAD9111786124500F31A38 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		87FAD9121786124500F31A38 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		87FAD9131786124500F31A38 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		87FAD9141786124500F31A38 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		87FAD91A178612ED00F31A38 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		87FAD91C1786161F00F31A38 /* TMTestRecordSingleSelection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMTestRecordSingleSelection.h; sourceTree = "<group>"; };
+		87FAD91D1786162000F31A38 /* TMTestRecordSingleSelection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMTestRecordSingleSelection.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87FAD91B178612ED00F31A38 /* libsqlite3.dylib in Frameworks */,
 				8459AC84177F33E700646992 /* UIKit.framework in Frameworks */,
 				8459AC86177F33E700646992 /* Foundation.framework in Frameworks */,
 				8459AC88177F33E700646992 /* CoreGraphics.framework in Frameworks */,
@@ -122,6 +154,7 @@
 		8459AC82177F33E700646992 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				87FAD91A178612ED00F31A38 /* libsqlite3.dylib */,
 				8459AC83177F33E700646992 /* UIKit.framework */,
 				8459AC85177F33E700646992 /* Foundation.framework */,
 				8459AC87177F33E700646992 /* CoreGraphics.framework */,
@@ -156,6 +189,10 @@
 		8459ACAC177F34CD00646992 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				87FAD91C1786161F00F31A38 /* TMTestRecordSingleSelection.h */,
+				87FAD91D1786162000F31A38 /* TMTestRecordSingleSelection.m */,
+				87FAD9071786123E00F31A38 /* TMUtility.h */,
+				87FAD9081786123E00F31A38 /* TMUtility.m */,
 				87A6F0911785184B00C60AE4 /* HalfPieChartViewController.h */,
 				87A6F0921785184B00C60AE4 /* HalfPieChartViewController.m */,
 				87B79BD21784A33700482EC4 /* ChartListViewController.h */,
@@ -175,6 +212,10 @@
 				8459ACAE177F360400646992 /* TMHomeViewController.m */,
 				8411472F17846F810075F01D /* TMTestViewController.h */,
 				8411473017846F810075F01D /* TMTestViewController.m */,
+				87FAD8FC1786000E00F31A38 /* TMTestRecord.h */,
+				87FAD8FF1786003600F31A38 /* TMTestRecordManager.h */,
+				87FAD9001786003700F31A38 /* TMTestRecordManager.m */,
+				87FAD8FD1786000E00F31A38 /* TMTestRecord.m */,
 				8459ACB3177F362800646992 /* TMScoreViewController.h */,
 				8459ACB4177F362800646992 /* TMScoreViewController.m */,
 				8411472617846DB00075F01D /* TMHtmlMaker.h */,
@@ -190,6 +231,7 @@
 		8459ACB7177F39A200646992 /* res */ = {
 			isa = PBXGroup;
 			children = (
+				87FAD905178608C000F31A38 /* TestRecord.plist */,
 				8459ACB8177F39B800646992 /* model.jpg */,
 				84114732178475E50075F01D /* template.css */,
 				84114734178477EF0075F01D /* template.html */,
@@ -200,6 +242,7 @@
 		87B79BC017846A1F00482EC4 /* vendor */ = {
 			isa = PBXGroup;
 			children = (
+				87FAD90A1786124500F31A38 /* FMDB */,
 				87B79BC117846A1F00482EC4 /* iOSPlot */,
 				87B79BC817846A1F00482EC4 /* JSONKit */,
 			);
@@ -226,6 +269,23 @@
 				87B79BCA17846A1F00482EC4 /* JSONKit.m */,
 			);
 			path = JSONKit;
+			sourceTree = "<group>";
+		};
+		87FAD90A1786124500F31A38 /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				87FAD90B1786124500F31A38 /* FMDatabase.h */,
+				87FAD90C1786124500F31A38 /* FMDatabase.m */,
+				87FAD90D1786124500F31A38 /* FMDatabaseAdditions.h */,
+				87FAD90E1786124500F31A38 /* FMDatabaseAdditions.m */,
+				87FAD90F1786124500F31A38 /* FMDatabasePool.h */,
+				87FAD9101786124500F31A38 /* FMDatabasePool.m */,
+				87FAD9111786124500F31A38 /* FMDatabaseQueue.h */,
+				87FAD9121786124500F31A38 /* FMDatabaseQueue.m */,
+				87FAD9131786124500F31A38 /* FMResultSet.h */,
+				87FAD9141786124500F31A38 /* FMResultSet.m */,
+			);
+			path = FMDB;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,6 +346,7 @@
 				8459ACB9177F39B800646992 /* model.jpg in Resources */,
 				84114733178475E50075F01D /* template.css in Resources */,
 				84114735178477EF0075F01D /* template.html in Resources */,
+				87FAD906178608C000F31A38 /* TestRecord.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +375,15 @@
 				87B79BDC1784A33700482EC4 /* PieChartViewController.m in Sources */,
 				87B79BDD1784A33700482EC4 /* PieChartViewController2.m in Sources */,
 				87A6F0931785184B00C60AE4 /* HalfPieChartViewController.m in Sources */,
+				87FAD8FE1786000E00F31A38 /* TMTestRecord.m in Sources */,
+				87FAD9011786003700F31A38 /* TMTestRecordManager.m in Sources */,
+				87FAD9091786123E00F31A38 /* TMUtility.m in Sources */,
+				87FAD9151786124500F31A38 /* FMDatabase.m in Sources */,
+				87FAD9161786124500F31A38 /* FMDatabaseAdditions.m in Sources */,
+				87FAD9171786124500F31A38 /* FMDatabasePool.m in Sources */,
+				87FAD9181786124500F31A38 /* FMDatabaseQueue.m in Sources */,
+				87FAD9191786124500F31A38 /* FMResultSet.m in Sources */,
+				87FAD91E1786162500F31A38 /* TMTestRecordSingleSelection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
