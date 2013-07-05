@@ -26,6 +26,8 @@
 		8459ACAF177F360400646992 /* TMHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8459ACAE177F360400646992 /* TMHomeViewController.m */; };
 		8459ACB5177F362800646992 /* TMScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8459ACB4177F362800646992 /* TMScoreViewController.m */; };
 		8459ACB9177F39B800646992 /* model.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8459ACB8177F39B800646992 /* model.jpg */; };
+		84E562CD17872DD100C89FE7 /* bootstrap in Resources */ = {isa = PBXBuildFile; fileRef = 84E562CC17872DD100C89FE7 /* bootstrap */; };
+		84E562CF17872E3800C89FE7 /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = 84E562CE17872E3800C89FE7 /* test.html */; };
 		87A6F0931785184B00C60AE4 /* HalfPieChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A6F0921785184B00C60AE4 /* HalfPieChartViewController.m */; };
 		87B79BCB17846A1F00482EC4 /* PCHalfPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 87B79BC317846A1F00482EC4 /* PCHalfPieChart.m */; };
 		87B79BCC17846A1F00482EC4 /* PCLineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 87B79BC517846A1F00482EC4 /* PCLineChartView.m */; };
@@ -79,6 +81,8 @@
 		8459ACB3177F362800646992 /* TMScoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMScoreViewController.h; sourceTree = "<group>"; };
 		8459ACB4177F362800646992 /* TMScoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMScoreViewController.m; sourceTree = "<group>"; };
 		8459ACB8177F39B800646992 /* model.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = model.jpg; sourceTree = "<group>"; };
+		84E562CC17872DD100C89FE7 /* bootstrap */ = {isa = PBXFileReference; lastKnownFileType = folder; path = bootstrap; sourceTree = "<group>"; };
+		84E562CE17872E3800C89FE7 /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
 		87A6F0911785184B00C60AE4 /* HalfPieChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HalfPieChartViewController.h; sourceTree = "<group>"; };
 		87A6F0921785184B00C60AE4 /* HalfPieChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HalfPieChartViewController.m; sourceTree = "<group>"; };
 		87B79BC217846A1F00482EC4 /* PCHalfPieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCHalfPieChart.h; sourceTree = "<group>"; };
@@ -165,6 +169,7 @@
 		8459AC89177F33E700646992 /* TMExam */ = {
 			isa = PBXGroup;
 			children = (
+				87B79BC017846A1F00482EC4 /* vendor */,
 				8459ACB7177F39A200646992 /* res */,
 				8459ACAC177F34CD00646992 /* src */,
 				8459AC8A177F33E700646992 /* Supporting Files */,
@@ -203,7 +208,6 @@
 				87B79BD71784A33700482EC4 /* PieChartViewController.m */,
 				87B79BD81784A33700482EC4 /* PieChartViewController2.h */,
 				87B79BD91784A33700482EC4 /* PieChartViewController2.m */,
-				87B79BC017846A1F00482EC4 /* vendor */,
 				8459AC92177F33E700646992 /* AppDelegate.h */,
 				8459AC93177F33E700646992 /* AppDelegate.m */,
 				8459ACA0177F344300646992 /* TMWelcomeViewController.h */,
@@ -213,9 +217,9 @@
 				8411472F17846F810075F01D /* TMTestViewController.h */,
 				8411473017846F810075F01D /* TMTestViewController.m */,
 				87FAD8FC1786000E00F31A38 /* TMTestRecord.h */,
+				87FAD8FD1786000E00F31A38 /* TMTestRecord.m */,
 				87FAD8FF1786003600F31A38 /* TMTestRecordManager.h */,
 				87FAD9001786003700F31A38 /* TMTestRecordManager.m */,
-				87FAD8FD1786000E00F31A38 /* TMTestRecord.m */,
 				8459ACB3177F362800646992 /* TMScoreViewController.h */,
 				8459ACB4177F362800646992 /* TMScoreViewController.m */,
 				8411472617846DB00075F01D /* TMHtmlMaker.h */,
@@ -235,6 +239,7 @@
 				8459ACB8177F39B800646992 /* model.jpg */,
 				84114732178475E50075F01D /* template.css */,
 				84114734178477EF0075F01D /* template.html */,
+				84E562CE17872E3800C89FE7 /* test.html */,
 			);
 			path = res;
 			sourceTree = "<group>";
@@ -242,6 +247,7 @@
 		87B79BC017846A1F00482EC4 /* vendor */ = {
 			isa = PBXGroup;
 			children = (
+				84E562CC17872DD100C89FE7 /* bootstrap */,
 				87FAD90A1786124500F31A38 /* FMDB */,
 				87B79BC117846A1F00482EC4 /* iOSPlot */,
 				87B79BC817846A1F00482EC4 /* JSONKit */,
@@ -347,6 +353,8 @@
 				84114733178475E50075F01D /* template.css in Resources */,
 				84114735178477EF0075F01D /* template.html in Resources */,
 				87FAD906178608C000F31A38 /* TestRecord.plist in Resources */,
+				84E562CD17872DD100C89FE7 /* bootstrap in Resources */,
+				84E562CF17872E3800C89FE7 /* test.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
