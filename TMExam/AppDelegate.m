@@ -7,7 +7,10 @@
 //
 
 #import "AppDelegate.h"
-#import "TMWelcomeViewController.h"
+#import "TMHomeViewController.h"
+#import "TMUtility.h"
+//#import "TMWelcomeViewController.h"
+
 
 @implementation AppDelegate
 
@@ -15,9 +18,20 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    TMWelcomeViewController *welcomeViewController = [[TMWelcomeViewController alloc] init];
-    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:welcomeViewController];
-//    navController.navigationBar
+//    TMWelcomeViewController *welcomeViewController = [[TMWelcomeViewController alloc] init];
+//    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:welcomeViewController];
+
+//    UIUserInterfaceIdiomPad
+    NSString *xibName = nil;
+    if (![TMUtility iPhone5Device])
+        xibName = @"TMHomeViewController";
+    else
+        xibName = @"TMHomeViewController-ip5";
+    
+    TMHomeViewController *homeViewController = [[TMHomeViewController alloc] initWithNibName:xibName bundle:[NSBundle mainBundle]];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:homeViewController];
+    navController.navigationBarHidden = YES;
+    
     self.window.rootViewController = navController;
     
     self.window.backgroundColor = [UIColor whiteColor];

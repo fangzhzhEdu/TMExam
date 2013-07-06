@@ -103,5 +103,11 @@
     return [defaultManager fileExistsAtPath:path];
 }
 
++ (BOOL)iPhone5Device
+{
+    if ([UIScreen instancesRespondToSelector:@selector(currentMode)])
+        return CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size);
+    return NO;
+}
 
 @end

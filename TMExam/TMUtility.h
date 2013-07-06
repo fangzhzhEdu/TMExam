@@ -90,6 +90,12 @@
  @return 返回解析后的文件路径
  */
 + (NSString *)parserFileName:(NSString *)fullPath;
+/**
+ 判断设备是否是iphone5
+ 
+ @return 是返回YES，否返回NO
+ */
++ (BOOL)iPhone5Device;
 
 
 @end
