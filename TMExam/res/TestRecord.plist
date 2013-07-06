@@ -3,10 +3,54 @@
 <plist version="1.0">
 <array>
 	<dict>
+		<key>body</key>
+		<string>在道路上骑电动自行车必须年满多少周岁？</string>
+		<key>rightIdx</key>
+		<string>1</string>
+		<key>selA</key>
+		<string>14周岁</string>
+		<key>selB</key>
+		<string>16周岁</string>
+		<key>selC</key>
+		<string>18周岁</string>
 		<key>type</key>
 		<integer>1</integer>
+	</dict>
+	<dict>
+		<key>body</key>
+		<string>当你骑电动自行车在非机动车道内行驶时，最高时速不得超过多少公里？</string>
+		<key>rightIdx</key>
+		<string>1</string>
+		<key>selA</key>
+		<string>10公里</string>
+		<key>selB</key>
+		<string>15公里</string>
+		<key>selC</key>
+		<string>20公里</string>
+		<key>type</key>
+		<integer>1</integer>
+	</dict>
+	<dict>
+		<key>body</key>
+		<string>注入水水质指标中属于控制指标的是</string>
+		<key>rightIdx</key>
+		<string>0</string>
+		<key>selA</key>
+		<string>溶解氧 和含油量</string>
+		<key>selB</key>
+		<string>含油量 和含铁量</string>
+		<key>selC</key>
+		<string>悬浮物含量和含油量 </string>
+		<key>selD</key>
+		<string>PH值和硫化氢</string>
+		<key>type</key>
+		<integer>1</integer>
+	</dict>
+	<dict>
 		<key>body</key>
 		<string>1+1 = ?</string>
+		<key>rightIdx</key>
+		<string>2</string>
 		<key>selA</key>
 		<string>0</string>
 		<key>selB</key>
@@ -15,14 +59,14 @@
 		<string>2</string>
 		<key>selD</key>
 		<string>3</string>
-		<key>rightIdx</key>
-		<string>2</string>
-	</dict>
-	<dict>
 		<key>type</key>
 		<integer>1</integer>
+	</dict>
+	<dict>
 		<key>body</key>
 		<string>1+0 = ?</string>
+		<key>rightIdx</key>
+		<string>1</string>
 		<key>selA</key>
 		<string>0</string>
 		<key>selB</key>
@@ -31,14 +75,14 @@
 		<string>2</string>
 		<key>selD</key>
 		<string>3</string>
-		<key>rightIdx</key>
-		<string>1</string>
+		<key>type</key>
+		<integer>1</integer>
 	</dict>
 	<dict>
-		<key>type</key>
-		<integer>1</integer>
 		<key>body</key>
 		<string>0+0 = ?</string>
+		<key>rightIdx</key>
+		<string>0</string>
 		<key>selA</key>
 		<string>0</string>
 		<key>selB</key>
@@ -47,14 +91,14 @@
 		<string>2</string>
 		<key>selD</key>
 		<string>3</string>
-		<key>rightIdx</key>
-		<string>0</string>
-	</dict>
-		<dict>
 		<key>type</key>
 		<integer>1</integer>
+	</dict>
+	<dict>
 		<key>body</key>
 		<string>1+1 = ?</string>
+		<key>rightIdx</key>
+		<string>2</string>
 		<key>selA</key>
 		<string>0</string>
 		<key>selB</key>
@@ -63,14 +107,14 @@
 		<string>2</string>
 		<key>selD</key>
 		<string>3</string>
-		<key>rightIdx</key>
-		<string>2</string>
-	</dict>
-	<dict>
 		<key>type</key>
 		<integer>1</integer>
+	</dict>
+	<dict>
 		<key>body</key>
 		<string>1+0 = ?</string>
+		<key>rightIdx</key>
+		<string>1</string>
 		<key>selA</key>
 		<string>0</string>
 		<key>selB</key>
@@ -79,14 +123,14 @@
 		<string>2</string>
 		<key>selD</key>
 		<string>3</string>
-		<key>rightIdx</key>
-		<string>1</string>
-	</dict>
-	<dict>
 		<key>type</key>
 		<integer>1</integer>
+	</dict>
+	<dict>
 		<key>body</key>
 		<string>0+0 = ?</string>
+		<key>rightIdx</key>
+		<string>0</string>
 		<key>selA</key>
 		<string>0</string>
 		<key>selB</key>
@@ -95,56 +139,8 @@
 		<string>2</string>
 		<key>selD</key>
 		<string>3</string>
-		<key>rightIdx</key>
-		<string>0</string>
-	</dict>
-		<dict>
 		<key>type</key>
 		<integer>1</integer>
-		<key>body</key>
-		<string>1+1 = ?</string>
-		<key>selA</key>
-		<string>0</string>
-		<key>selB</key>
-		<string>1</string>
-		<key>selC</key>
-		<string>2</string>
-		<key>selD</key>
-		<string>3</string>
-		<key>rightIdx</key>
-		<string>2</string>
-	</dict>
-	<dict>
-		<key>type</key>
-		<integer>1</integer>
-		<key>body</key>
-		<string>1+0 = ?</string>
-		<key>selA</key>
-		<string>0</string>
-		<key>selB</key>
-		<string>1</string>
-		<key>selC</key>
-		<string>2</string>
-		<key>selD</key>
-		<string>3</string>
-		<key>rightIdx</key>
-		<string>1</string>
-	</dict>
-	<dict>
-		<key>type</key>
-		<integer>1</integer>
-		<key>body</key>
-		<string>0+0 = ?</string>
-		<key>selA</key>
-		<string>0</string>
-		<key>selB</key>
-		<string>1</string>
-		<key>selC</key>
-		<string>2</string>
-		<key>selD</key>
-		<string>3</string>
-		<key>rightIdx</key>
-		<string>0</string>
 	</dict>
 </array>
 </plist>

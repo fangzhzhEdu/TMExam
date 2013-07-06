@@ -7,9 +7,13 @@
 //
 
 #import "TMTestDemoViewController.h"
+#import "TMTestRecordManager.h"
+#import "TMTestRecord.h"
+#import "TMTestRecordSingleSelection.h"
 
 @interface TMTestDemoViewController ()
-
+@property (nonatomic, readwrite) NSInteger curTestRecordIdx;
+@property (nonatomic, weak) NSArray *curRecordArray;        // 当前类型试题的数组
 @end
 
 @implementation TMTestDemoViewController
@@ -27,6 +31,12 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.curRecordArray = [[TMTestRecordManager sharedManager].type2RecordArrayDict objectForKey:[NSNumber numberWithInt:RECORD_TYPE_SINGLE_SELECTION]];
+    if (self.curRecordArray == nil)
+    {
+        return;
+    }
+
 }
 
 - (void)didReceiveMemoryWarning
