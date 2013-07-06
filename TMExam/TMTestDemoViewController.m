@@ -13,7 +13,7 @@
 
 @interface TMTestDemoViewController ()
 @property (nonatomic, readwrite) NSInteger curTestRecordIdx;
-@property (nonatomic, readwrite) NSInteger curSel;
+@property (nonatomic, readwrite) TMTestRecordSingleSelection  *curTestRecord;
 @property (nonatomic, weak) NSArray *curRecordArray;        // 当前类型试题的数组
 @property (nonatomic, readwrite)BOOL answerWrong;
 @end
@@ -80,7 +80,7 @@
     self.optionMarkCButton.hidden = YES;
     self.optionMarkDButton.hidden = YES;
 
-    self.curSel = 0;
+    self.curTestRecord.selIdx = 0;
     self.optionMarkAButton.hidden = NO;
 
 }
@@ -96,7 +96,7 @@
     self.optionMarkCButton.hidden = YES;
     self.optionMarkDButton.hidden = YES;
 
-    self.curSel = 1;
+    self.curTestRecord.selIdx = 1;
     self.optionMarkBButton.hidden = NO;
 }
 
@@ -111,7 +111,7 @@
     self.optionMarkCButton.hidden = YES;
     self.optionMarkDButton.hidden = YES;
 
-    self.curSel = 2;
+    self.curTestRecord.selIdx = 2;
     self.optionMarkCButton.hidden = NO;
 }
 
@@ -126,18 +126,41 @@
     self.optionMarkCButton.hidden = YES;
     self.optionMarkDButton.hidden = YES;
 
-    self.curSel = 3;
+    self.curTestRecord.selIdx = 3;
     self.optionMarkDButton.hidden = NO;
 }
 
 - (IBAction)previousButtonClicked:(id)sender
 {
-    TMTestRecordSingleSelection *record =  [self.curRecordArray objectAtIndex:self.curTestRecordIdx];
-    self.questionLabel.text = record.body;
-    self.optionALabel.text = [record.options objectAtIndex:0];
-    self.optionBLabel.text = [record.options objectAtIndex:1];
-    self.optionCLabel.text = [record.options objectAtIndex:2];
-    self.optionDLabel.text = [record.options objectAtIndex:3];
+    if (self.curTestRecordIdx == 0) {
+        UIAlertView  *alertView = [[UIAlertView alloc] initWithTitle:@"no more test"
+                                                             message:@"no more test"
+                                                            delegate:self
+                                                   cancelButtonTitle:@"知道了"
+                                                   otherButtonTitles:nil, nil];
+        [alertView show];
+        [[TMTestRecordManager sharedManager] doStatistics];
+        return;
+    }
+
+    TMTestRecordSingleSelection *record =  [self.curRecordArray objectAtIndex:--self.curTestRecordIdx];
+    [self loadTestRecord];
+    if (record.isRight  )
+    { // 选择正确
+        // 还原正确的选择界面
+    }
+    else
+    { // 选择错误, 还原错误选择界面
+
+        self.explainFrameImageView.hidden = NO;
+        self.explainTitleLabel.hidden = NO;
+        self.explainContentLabel.hidden = NO;
+        self.explainTitleLabel.text =  [NSString stringWithFormat:@"正确答案是: %c", 'A' + record.rightIdx] ;
+        self.explainContentLabel.text = [NSString stringWithFormat:@"%@", [record.options objectAtIndex:record.rightIdx]];
+        self.answerWrong = YES;
+    }
+
+
 }
 
 - (IBAction)nextButtonClicked:(id)sender
@@ -153,7 +176,7 @@
         return;
     }
     TMTestRecordSingleSelection *record =  [self.curRecordArray objectAtIndex:self.curTestRecordIdx];
-    if (self.curSel == record.rightIdx  || self.answerWrong)
+    if (record.selIdx == record.rightIdx  || self.answerWrong)
     { // 选择正确, 或者已经 认定 错误答案
         ++self.curTestRecordIdx;
         // 判断是否结束
@@ -168,13 +191,13 @@
         self.explainTitleLabel.text =  [NSString stringWithFormat:@"正确答案是: %c", 'A' + record.rightIdx] ;
         self.explainContentLabel.text = [NSString stringWithFormat:@"%@", [record.options objectAtIndex:record.rightIdx]];
         self.answerWrong = YES;
-
     }
 }
     
 -(void )loadTestRecord
 {
     TMTestRecordSingleSelection *record =  [self.curRecordArray objectAtIndex:self.curTestRecordIdx];
+    self.curTestRecord = record;
     self.questionLabel.text = record.body;
     
     // 答案
