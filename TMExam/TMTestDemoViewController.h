@@ -19,6 +19,11 @@
 @property (nonatomic, strong) IBOutlet UILabel *explainTitleLabel;
 @property (nonatomic, strong) IBOutlet UILabel *explainContentLabel;
 
+@property (nonatomic, strong) IBOutlet UIButton *optionMarkAButton;
+@property (nonatomic, strong) IBOutlet UIButton *optionMarkBButton;
+@property (nonatomic, strong) IBOutlet UIButton *optionMarkCButton;
+@property (nonatomic, strong) IBOutlet UIButton *optionMarkDButton;
+
 
 - (IBAction)homeToolbarButtonClicked:(id)sender;
 - (IBAction)textbookToolbarButtonClicked:(id)sender;
