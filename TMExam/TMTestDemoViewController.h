@@ -24,6 +24,11 @@
 @property (nonatomic, strong) IBOutlet UIButton *optionMarkCButton;
 @property (nonatomic, strong) IBOutlet UIButton *optionMarkDButton;
 
+@property (nonatomic, strong) IBOutlet UIButton *optionQuestionAButton;
+@property (nonatomic, strong) IBOutlet UIButton *optionQuestionBButton;
+@property (nonatomic, strong) IBOutlet UIButton *optionQuestionCButton;
+@property (nonatomic, strong) IBOutlet UIButton *optionQuestionDButton;
+
 
 - (IBAction)homeToolbarButtonClicked:(id)sender;
 - (IBAction)textbookToolbarButtonClicked:(id)sender;
