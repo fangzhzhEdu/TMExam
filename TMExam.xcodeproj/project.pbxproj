@@ -51,6 +51,18 @@
 		843116F3178884DD0058547A /* TMTestDemoViewController-ip5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 843116F2178884DD0058547A /* TMTestDemoViewController-ip5.xib */; };
 		843116F5178885D60058547A /* QuestionViewBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 843116F4178885D50058547A /* QuestionViewBackground@2x.png */; };
 		843116F71788A1A80058547A /* Menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 843116F61788A1A80058547A /* Menu.png */; };
+		843116F91788B2790058547A /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 843116F81788B2790058547A /* Icon@2x.png */; };
+		843116FE1788B4600058547A /* OptionMarkWhiteA@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 843116FA1788B45E0058547A /* OptionMarkWhiteA@2x.png */; };
+		843116FF1788B4600058547A /* OptionMarkWhiteB@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 843116FB1788B45E0058547A /* OptionMarkWhiteB@2x.png */; };
+		843117001788B4600058547A /* OptionMarkWhiteC@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 843116FC1788B45F0058547A /* OptionMarkWhiteC@2x.png */; };
+		843117011788B4600058547A /* OptionMarkWhiteD@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 843116FD1788B4600058547A /* OptionMarkWhiteD@2x.png */; };
+		843117081788B69C0058547A /* OptionBackRight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 843117021788B6980058547A /* OptionBackRight@2x.png */; };
+		843117091788B69C0058547A /* OptionBackWrong@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 843117031788B6980058547A /* OptionBackWrong@2x.png */; };
+		8431170A1788B69C0058547A /* OptionMarkBlackA@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 843117041788B6990058547A /* OptionMarkBlackA@2x.png */; };
+		8431170B1788B69C0058547A /* OptionMarkBlackB@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 843117051788B69A0058547A /* OptionMarkBlackB@2x.png */; };
+		8431170C1788B69C0058547A /* OptionMarkBlackC@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 843117061788B69B0058547A /* OptionMarkBlackC@2x.png */; };
+		8431170D1788B69C0058547A /* OptionMarkBlackD@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 843117071788B69C0058547A /* OptionMarkBlackD@2x.png */; };
+		843117111788BB7A0058547A /* OptionBackNormal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 843117101788BB7A0058547A /* OptionBackNormal@2x.png */; };
 		8459AC84177F33E700646992 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8459AC83177F33E700646992 /* UIKit.framework */; };
 		8459AC86177F33E700646992 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8459AC85177F33E700646992 /* Foundation.framework */; };
 		8459AC88177F33E700646992 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8459AC87177F33E700646992 /* CoreGraphics.framework */; };
@@ -137,6 +149,18 @@
 		843116F2178884DD0058547A /* TMTestDemoViewController-ip5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "TMTestDemoViewController-ip5.xib"; sourceTree = "<group>"; };
 		843116F4178885D50058547A /* QuestionViewBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QuestionViewBackground@2x.png"; sourceTree = "<group>"; };
 		843116F61788A1A80058547A /* Menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Menu.png; sourceTree = "<group>"; };
+		843116F81788B2790058547A /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		843116FA1788B45E0058547A /* OptionMarkWhiteA@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "OptionMarkWhiteA@2x.png"; sourceTree = "<group>"; };
+		843116FB1788B45E0058547A /* OptionMarkWhiteB@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "OptionMarkWhiteB@2x.png"; sourceTree = "<group>"; };
+		843116FC1788B45F0058547A /* OptionMarkWhiteC@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "OptionMarkWhiteC@2x.png"; sourceTree = "<group>"; };
+		843116FD1788B4600058547A /* OptionMarkWhiteD@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "OptionMarkWhiteD@2x.png"; sourceTree = "<group>"; };
+		843117021788B6980058547A /* OptionBackRight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "OptionBackRight@2x.png"; sourceTree = "<group>"; };
+		843117031788B6980058547A /* OptionBackWrong@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "OptionBackWrong@2x.png"; sourceTree = "<group>"; };
+		843117041788B6990058547A /* OptionMarkBlackA@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "OptionMarkBlackA@2x.png"; sourceTree = "<group>"; };
+		843117051788B69A0058547A /* OptionMarkBlackB@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "OptionMarkBlackB@2x.png"; sourceTree = "<group>"; };
+		843117061788B69B0058547A /* OptionMarkBlackC@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "OptionMarkBlackC@2x.png"; sourceTree = "<group>"; };
+		843117071788B69C0058547A /* OptionMarkBlackD@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "OptionMarkBlackD@2x.png"; sourceTree = "<group>"; };
+		843117101788BB7A0058547A /* OptionBackNormal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "OptionBackNormal@2x.png"; sourceTree = "<group>"; };
 		8459AC80177F33E700646992 /* TMExam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TMExam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8459AC83177F33E700646992 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8459AC85177F33E700646992 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -310,6 +334,18 @@
 		8459ACB7177F39A200646992 /* res */ = {
 			isa = PBXGroup;
 			children = (
+				843117101788BB7A0058547A /* OptionBackNormal@2x.png */,
+				843117021788B6980058547A /* OptionBackRight@2x.png */,
+				843117031788B6980058547A /* OptionBackWrong@2x.png */,
+				843117041788B6990058547A /* OptionMarkBlackA@2x.png */,
+				843117051788B69A0058547A /* OptionMarkBlackB@2x.png */,
+				843117061788B69B0058547A /* OptionMarkBlackC@2x.png */,
+				843117071788B69C0058547A /* OptionMarkBlackD@2x.png */,
+				843116FA1788B45E0058547A /* OptionMarkWhiteA@2x.png */,
+				843116FB1788B45E0058547A /* OptionMarkWhiteB@2x.png */,
+				843116FC1788B45F0058547A /* OptionMarkWhiteC@2x.png */,
+				843116FD1788B4600058547A /* OptionMarkWhiteD@2x.png */,
+				843116F81788B2790058547A /* Icon@2x.png */,
 				843116F61788A1A80058547A /* Menu.png */,
 				843116F4178885D50058547A /* QuestionViewBackground@2x.png */,
 				843116D2178883FC0058547A /* AQ.jpg */,
@@ -499,6 +535,18 @@
 				843116F3178884DD0058547A /* TMTestDemoViewController-ip5.xib in Resources */,
 				843116F5178885D60058547A /* QuestionViewBackground@2x.png in Resources */,
 				843116F71788A1A80058547A /* Menu.png in Resources */,
+				843116F91788B2790058547A /* Icon@2x.png in Resources */,
+				843116FE1788B4600058547A /* OptionMarkWhiteA@2x.png in Resources */,
+				843116FF1788B4600058547A /* OptionMarkWhiteB@2x.png in Resources */,
+				843117001788B4600058547A /* OptionMarkWhiteC@2x.png in Resources */,
+				843117011788B4600058547A /* OptionMarkWhiteD@2x.png in Resources */,
+				843117081788B69C0058547A /* OptionBackRight@2x.png in Resources */,
+				843117091788B69C0058547A /* OptionBackWrong@2x.png in Resources */,
+				8431170A1788B69C0058547A /* OptionMarkBlackA@2x.png in Resources */,
+				8431170B1788B69C0058547A /* OptionMarkBlackB@2x.png in Resources */,
+				8431170C1788B69C0058547A /* OptionMarkBlackC@2x.png in Resources */,
+				8431170D1788B69C0058547A /* OptionMarkBlackD@2x.png in Resources */,
+				843117111788BB7A0058547A /* OptionBackNormal@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

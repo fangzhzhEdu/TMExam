@@ -75,14 +75,18 @@
     if (self.answerWrong) {
         return;
     }
-    self.optionMarkAButton.hidden = YES;
-    self.optionMarkBButton.hidden = YES;
-    self.optionMarkCButton.hidden = YES;
-    self.optionMarkDButton.hidden = YES;
-
+    
     self.curSel = 0;
-    self.optionMarkAButton.hidden = NO;
+    
+    [self.optionQuestionAButton setImage:[UIImage imageNamed:@"OptionBackWrong"] forState:UIControlStateNormal];
+    [self.optionQuestionBButton setImage:[UIImage imageNamed:@"OptionBackNormal"] forState:UIControlStateNormal];
+    [self.optionQuestionCButton setImage:[UIImage imageNamed:@"OptionBackNormal"] forState:UIControlStateNormal];
+    [self.optionQuestionDButton setImage:[UIImage imageNamed:@"OptionBackNormal"] forState:UIControlStateNormal];
 
+    [self.optionMarkAButton setImage:[UIImage imageNamed:@"OptionMarkWhiteA"] forState:UIControlStateNormal];
+    [self.optionMarkBButton setImage:[UIImage imageNamed:@"OptionMarkBlackB"] forState:UIControlStateNormal];
+    [self.optionMarkCButton setImage:[UIImage imageNamed:@"OptionMarkBlackC"] forState:UIControlStateNormal];
+    [self.optionMarkDButton setImage:[UIImage imageNamed:@"OptionMarkBlackD"] forState:UIControlStateNormal];
 }
 
 - (IBAction)optionBClicked:(id)sender
@@ -91,13 +95,17 @@
         return;
     }
 
-    self.optionMarkAButton.hidden = YES;
-    self.optionMarkBButton.hidden = YES;
-    self.optionMarkCButton.hidden = YES;
-    self.optionMarkDButton.hidden = YES;
-
     self.curSel = 1;
-    self.optionMarkBButton.hidden = NO;
+    
+    [self.optionQuestionAButton setImage:[UIImage imageNamed:@"OptionBackNormal"] forState:UIControlStateNormal];
+    [self.optionQuestionBButton setImage:[UIImage imageNamed:@"OptionBackWrong"] forState:UIControlStateNormal];
+    [self.optionQuestionCButton setImage:[UIImage imageNamed:@"OptionBackNormal"] forState:UIControlStateNormal];
+    [self.optionQuestionDButton setImage:[UIImage imageNamed:@"OptionBackNormal"] forState:UIControlStateNormal];
+    
+    [self.optionMarkAButton setImage:[UIImage imageNamed:@"OptionMarkBlackA"] forState:UIControlStateNormal];
+    [self.optionMarkBButton setImage:[UIImage imageNamed:@"OptionMarkWhiteB"] forState:UIControlStateNormal];
+    [self.optionMarkCButton setImage:[UIImage imageNamed:@"OptionMarkBlackC"] forState:UIControlStateNormal];
+    [self.optionMarkDButton setImage:[UIImage imageNamed:@"OptionMarkBlackD"] forState:UIControlStateNormal];
 }
 
 - (IBAction)optionCClicked:(id)sender
@@ -106,13 +114,17 @@
         return;
     }
 
-    self.optionMarkAButton.hidden = YES;
-    self.optionMarkBButton.hidden = YES;
-    self.optionMarkCButton.hidden = YES;
-    self.optionMarkDButton.hidden = YES;
-
     self.curSel = 2;
-    self.optionMarkCButton.hidden = NO;
+    
+    [self.optionQuestionAButton setImage:[UIImage imageNamed:@"OptionBackNormal"] forState:UIControlStateNormal];
+    [self.optionQuestionBButton setImage:[UIImage imageNamed:@"OptionBackNormal"] forState:UIControlStateNormal];
+    [self.optionQuestionCButton setImage:[UIImage imageNamed:@"OptionBackWrong"] forState:UIControlStateNormal];
+    [self.optionQuestionDButton setImage:[UIImage imageNamed:@"OptionBackNormal"] forState:UIControlStateNormal];
+
+    [self.optionMarkAButton setImage:[UIImage imageNamed:@"OptionMarkBlackA"] forState:UIControlStateNormal];
+    [self.optionMarkBButton setImage:[UIImage imageNamed:@"OptionMarkBlackB"] forState:UIControlStateNormal];
+    [self.optionMarkCButton setImage:[UIImage imageNamed:@"OptionMarkWhiteC"] forState:UIControlStateNormal];
+    [self.optionMarkDButton setImage:[UIImage imageNamed:@"OptionMarkBlackD"] forState:UIControlStateNormal];
 }
 
 - (IBAction)optionDClicked:(id)sender
@@ -121,13 +133,17 @@
         return;
     }
 
-    self.optionMarkAButton.hidden = YES;
-    self.optionMarkBButton.hidden = YES;
-    self.optionMarkCButton.hidden = YES;
-    self.optionMarkDButton.hidden = YES;
-
     self.curSel = 3;
-    self.optionMarkDButton.hidden = NO;
+    
+    [self.optionQuestionAButton setImage:[UIImage imageNamed:@"OptionBackNormal"] forState:UIControlStateNormal];
+    [self.optionQuestionBButton setImage:[UIImage imageNamed:@"OptionBackNormal"] forState:UIControlStateNormal];
+    [self.optionQuestionCButton setImage:[UIImage imageNamed:@"OptionBackNormal"] forState:UIControlStateNormal];
+    [self.optionQuestionDButton setImage:[UIImage imageNamed:@"OptionBackWrong"] forState:UIControlStateNormal];
+    
+    [self.optionMarkAButton setImage:[UIImage imageNamed:@"OptionMarkBlackA"] forState:UIControlStateNormal];
+    [self.optionMarkBButton setImage:[UIImage imageNamed:@"OptionMarkBlackB"] forState:UIControlStateNormal];
+    [self.optionMarkCButton setImage:[UIImage imageNamed:@"OptionMarkBlackC"] forState:UIControlStateNormal];
+    [self.optionMarkDButton setImage:[UIImage imageNamed:@"OptionMarkWhiteD"] forState:UIControlStateNormal];
 }
 
 - (IBAction)previousButtonClicked:(id)sender
@@ -152,6 +168,7 @@
         [[TMTestRecordManager sharedManager] doStatistics];
         return;
     }
+    
     TMTestRecordSingleSelection *record =  [self.curRecordArray objectAtIndex:self.curTestRecordIdx];
     if (self.curSel == record.rightIdx  || self.answerWrong)
     { // 选择正确, 或者已经 认定 错误答案
@@ -162,13 +179,33 @@
     }
     else
     { // 选择错误
+        
+        switch (record.rightIdx)
+        {
+            case 0:
+                [self.optionQuestionAButton setImage:[UIImage imageNamed:@"OptionBackRight"] forState:UIControlStateNormal];
+                [self.optionMarkAButton setImage:[UIImage imageNamed:@"OptionMarkWhiteA"] forState:UIControlStateNormal];
+                break;
+            case 1:
+                [self.optionQuestionBButton setImage:[UIImage imageNamed:@"OptionBackRight"] forState:UIControlStateNormal];
+                [self.optionMarkBButton setImage:[UIImage imageNamed:@"OptionMarkWhiteB"] forState:UIControlStateNormal];
+                break;
+            case 2:
+                [self.optionQuestionCButton setImage:[UIImage imageNamed:@"OptionBackRight"] forState:UIControlStateNormal];
+                [self.optionMarkCButton setImage:[UIImage imageNamed:@"OptionMarkWhiteC"] forState:UIControlStateNormal];
+                break;
+            case 3:
+                [self.optionQuestionDButton setImage:[UIImage imageNamed:@"OptionBackRight"] forState:UIControlStateNormal];
+                [self.optionMarkDButton setImage:[UIImage imageNamed:@"OptionMarkWhiteD"] forState:UIControlStateNormal];
+                break;
+        }
+
         self.explainFrameImageView.hidden = NO;
         self.explainTitleLabel.hidden = NO;
         self.explainContentLabel.hidden = NO;
         self.explainTitleLabel.text =  [NSString stringWithFormat:@"正确答案是: %c", 'A' + record.rightIdx] ;
         self.explainContentLabel.text = [NSString stringWithFormat:@"%@", [record.options objectAtIndex:record.rightIdx]];
         self.answerWrong = YES;
-
     }
 }
     
@@ -182,14 +219,35 @@
     self.explainContentLabel.hidden = YES;
     self.explainFrameImageView.hidden = YES;
     
+    [self.optionQuestionAButton setImage:[UIImage imageNamed:@"OptionBackNormal"] forState:UIControlStateNormal];
+    [self.optionQuestionBButton setImage:[UIImage imageNamed:@"OptionBackNormal"] forState:UIControlStateNormal];
+    [self.optionQuestionCButton setImage:[UIImage imageNamed:@"OptionBackNormal"] forState:UIControlStateNormal];
+    [self.optionQuestionDButton setImage:[UIImage imageNamed:@"OptionBackNormal"] forState:UIControlStateNormal];
+
+    [self.optionMarkAButton setImage:[UIImage imageNamed:@"OptionMarkBlackA"] forState:UIControlStateNormal];
+    [self.optionMarkBButton setImage:[UIImage imageNamed:@"OptionMarkBlackB"] forState:UIControlStateNormal];
+    [self.optionMarkCButton setImage:[UIImage imageNamed:@"OptionMarkBlackC"] forState:UIControlStateNormal];
+    [self.optionMarkDButton setImage:[UIImage imageNamed:@"OptionMarkBlackD"] forState:UIControlStateNormal];
+
+    self.optionMarkAButton.hidden = NO;
+    self.optionMarkBButton.hidden = NO;
+    self.optionMarkCButton.hidden = NO;
+    self.optionMarkDButton.hidden = NO;
+    
+    self.optionALabel.hidden = NO;
+    self.optionBLabel.hidden = NO;
+    self.optionCLabel.hidden = NO;
+    self.optionDLabel.hidden = NO;
+    
+    self.optionQuestionAButton.hidden = NO;
+    self.optionQuestionBButton.hidden = NO;
+    self.optionQuestionCButton.hidden = NO;
+    self.optionQuestionDButton.hidden = NO;
+    
+    
     // 题目
     if (record.options.count > 3)
     {
-        self.optionMarkAButton.hidden = YES;
-        self.optionMarkBButton.hidden = YES;
-        self.optionMarkCButton.hidden = YES;
-        self.optionMarkDButton.hidden = YES;
-
         self.optionALabel.text = [record.options objectAtIndex:0];
         self.optionBLabel.text = [record.options objectAtIndex:1];
         self.optionCLabel.text = [record.options objectAtIndex:2];
@@ -197,53 +255,42 @@
     }
     else if (record.options.count > 2)
     {
-        self.optionMarkAButton.hidden = YES;
-        self.optionMarkBButton.hidden = YES;
-        self.optionMarkCButton.hidden = YES;
         self.optionMarkDButton.hidden = YES;
+        self.optionDLabel.hidden = YES;
+        self.optionQuestionDButton.hidden = YES;
 
         self.optionALabel.text = [record.options objectAtIndex:0];
         self.optionBLabel.text = [record.options objectAtIndex:1];
         self.optionCLabel.text = [record.options objectAtIndex:2];
-
-        self.optionQuestionDButton.hidden = YES;
-        self.optionDLabel.hidden = YES;
     }
     else if (record.options.count > 1)
     {
-        self.optionMarkAButton.hidden = YES;
-        self.optionMarkBButton.hidden = YES;
         self.optionMarkCButton.hidden = YES;
-        self.optionMarkDButton.hidden = YES;
+        self.optionCLabel.hidden = YES;
+        self.optionQuestionCButton.hidden = YES;
 
+        self.optionMarkDButton.hidden = YES;
+        self.optionDLabel.hidden = YES;
+        self.optionQuestionDButton.hidden = YES;
+        
         self.optionALabel.text = [record.options objectAtIndex:0];
         self.optionBLabel.text = [record.options objectAtIndex:1];
-        
-        self.optionQuestionDButton.hidden = YES;
-        self.optionDLabel.hidden = YES;
-
-        self.optionQuestionCButton.hidden = YES;
-        self.optionCLabel.hidden = YES;
-
     }
     else if (record.options.count > 0)
     {
-        self.optionMarkAButton.hidden = YES;
         self.optionMarkBButton.hidden = YES;
+        self.optionBLabel.hidden = YES;
+        self.optionQuestionBButton.hidden = YES;
+
         self.optionMarkCButton.hidden = YES;
+        self.optionCLabel.hidden = YES;
+        self.optionQuestionCButton.hidden = YES;
+        
         self.optionMarkDButton.hidden = YES;
+        self.optionDLabel.hidden = YES;
+        self.optionQuestionDButton.hidden = YES;
 
         self.optionDLabel.text = [record.options objectAtIndex:0];
-        
-        self.optionQuestionDButton.hidden = YES;
-        self.optionDLabel.hidden = YES;
-        
-        self.optionQuestionCButton.hidden = YES;
-        self.optionCLabel.hidden = YES;
-        
-        self.optionQuestionBButton.hidden = YES;
-        self.optionBLabel.hidden = YES;
-
     }
 }
 
