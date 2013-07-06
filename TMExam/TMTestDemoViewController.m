@@ -50,7 +50,6 @@
 
 - (IBAction)homeToolbarButtonClicked:(id)sender
 {
-
     
 }
 
@@ -71,22 +70,47 @@
 
 - (IBAction)optionAClicked:(id)sender
 {
-    
+    self.optionMarkAButton.hidden = YES;
+    self.optionMarkBButton.hidden = YES;
+    self.optionMarkCButton.hidden = YES;
+    self.optionMarkDButton.hidden = YES;
+
+    self.curTestRecordIdx = 0;
+    self.optionMarkAButton.hidden = NO;
+
 }
 
 - (IBAction)optionBClicked:(id)sender
 {
-    
+    self.optionMarkAButton.hidden = YES;
+    self.optionMarkBButton.hidden = YES;
+    self.optionMarkCButton.hidden = YES;
+    self.optionMarkDButton.hidden = YES;
+
+    self.curTestRecordIdx = 1;
+    self.optionMarkBButton.hidden = NO;
 }
 
 - (IBAction)optionCClicked:(id)sender
 {
-    
+    self.optionMarkAButton.hidden = YES;
+    self.optionMarkBButton.hidden = YES;
+    self.optionMarkCButton.hidden = YES;
+    self.optionMarkDButton.hidden = YES;
+
+    self.curTestRecordIdx = 2;
+    self.optionMarkCButton.hidden = NO;
 }
 
 - (IBAction)optionDClicked:(id)sender
 {
-    
+    self.optionMarkAButton.hidden = YES;
+    self.optionMarkBButton.hidden = YES;
+    self.optionMarkCButton.hidden = YES;
+    self.optionMarkDButton.hidden = YES;
+
+    self.curTestRecordIdx = 3;
+    self.optionMarkDButton.hidden = NO;
 }
 
 - (IBAction)previousButtonClicked:(id)sender
@@ -110,8 +134,19 @@
     TMTestRecordSingleSelection *record =  [self.curRecordArray objectAtIndex:self.curTestRecordIdx];
     self.questionLabel.text = record.body;
     
+    // 答案
+    self.explainTitleLabel.hidden = YES;
+    self.explainContentLabel.hidden = YES;
+    self.explainFrameImageView.hidden = YES;
+    
+    // 题目
     if (record.options.count > 3)
     {
+        self.optionMarkAButton.hidden = YES;
+        self.optionMarkBButton.hidden = YES;
+        self.optionMarkCButton.hidden = YES;
+        self.optionMarkDButton.hidden = YES;
+
         self.optionALabel.text = [record.options objectAtIndex:0];
         self.optionBLabel.text = [record.options objectAtIndex:1];
         self.optionCLabel.text = [record.options objectAtIndex:2];
@@ -119,26 +154,52 @@
     }
     else if (record.options.count > 2)
     {
+        self.optionMarkAButton.hidden = YES;
+        self.optionMarkBButton.hidden = YES;
+        self.optionMarkCButton.hidden = YES;
+        self.optionMarkDButton.hidden = YES;
+
         self.optionALabel.text = [record.options objectAtIndex:0];
         self.optionBLabel.text = [record.options objectAtIndex:1];
         self.optionCLabel.text = [record.options objectAtIndex:2];
+
+        self.optionQuestionDButton.hidden = YES;
         self.optionDLabel.hidden = YES;
-        self.optionMarkDButton.hidden = YES;
     }
     else if (record.options.count > 1)
     {
+        self.optionMarkAButton.hidden = YES;
+        self.optionMarkBButton.hidden = YES;
+        self.optionMarkCButton.hidden = YES;
+        self.optionMarkDButton.hidden = YES;
+
         self.optionALabel.text = [record.options objectAtIndex:0];
         self.optionBLabel.text = [record.options objectAtIndex:1];
+        
+        self.optionQuestionDButton.hidden = YES;
         self.optionDLabel.hidden = YES;
-        self.optionDLabel.hidden = YES;
+
+        self.optionQuestionCButton.hidden = YES;
+        self.optionCLabel.hidden = YES;
 
     }
     else if (record.options.count > 0)
     {
-        self.optionDLabel.text = [record.options objectAtIndex:3];
+        self.optionMarkAButton.hidden = YES;
+        self.optionMarkBButton.hidden = YES;
+        self.optionMarkCButton.hidden = YES;
+        self.optionMarkDButton.hidden = YES;
+
+        self.optionDLabel.text = [record.options objectAtIndex:0];
+        
+        self.optionQuestionDButton.hidden = YES;
         self.optionDLabel.hidden = YES;
-        self.optionDLabel.hidden = YES;
-        self.optionDLabel.hidden = YES;
+        
+        self.optionQuestionCButton.hidden = YES;
+        self.optionCLabel.hidden = YES;
+        
+        self.optionQuestionBButton.hidden = YES;
+        self.optionBLabel.hidden = YES;
 
     }
 }
