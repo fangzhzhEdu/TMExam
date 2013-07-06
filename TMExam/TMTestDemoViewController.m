@@ -44,6 +44,9 @@
         return;
     }
     self.questionLabel.font    = [UIFont systemFontOfSize: 14];
+//    self.questionLabel.textAlignment = NSTextAlignmentLeft;
+//    self.questionLabel.baselineAdjustment = NSWritingDirectionRightToLeft;
+    [self.questionLabel sizeToFit];
 
 }
 
