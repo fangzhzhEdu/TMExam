@@ -9,6 +9,7 @@
 #import "TMHomeViewController.h"
 #import "TMTestViewController.h"
 #import "TMScoreViewController.h"
+#import "TMTestDemoViewController.h"
 
 @interface TMHomeViewController ()
 
@@ -59,7 +60,10 @@
 
 - (IBAction)testButtonClicked:(id)sender
 {
-    TMTestViewController *testViewController = [[TMTestViewController alloc] init];
+//    TMTestViewController *testViewController = [[TMTestViewController alloc] init];
+//    [self.navigationController pushViewController:testViewController animated:YES];
+
+    TMTestDemoViewController *testViewController = [[TMTestDemoViewController alloc] initWithNibName:@"TMTestDemoViewController-ip5" bundle:[NSBundle mainBundle]];
     [self.navigationController pushViewController:testViewController animated:YES];
 }
 

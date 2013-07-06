@@ -31,6 +31,25 @@
 		843116C91788555D0058547A /* TMHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843116C71788555D0058547A /* TMHomeViewController.m */; };
 		843116CA1788555D0058547A /* TMHomeViewController-ip5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 843116C81788555D0058547A /* TMHomeViewController-ip5.xib */; };
 		843116CC17885A3D0058547A /* TMHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 843116CB17885A3D0058547A /* TMHomeViewController.xib */; };
+		843116D017887CE70058547A /* TMTestDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843116CE17887CE70058547A /* TMTestDemoViewController.m */; };
+		843116E2178884030058547A /* AQ.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 843116D2178883FC0058547A /* AQ.jpg */; };
+		843116E3178884030058547A /* Counter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 843116D3178883FD0058547A /* Counter@2x.png */; };
+		843116E4178884030058547A /* ExplainingFrame@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 843116D4178883FD0058547A /* ExplainingFrame@2x.png */; };
+		843116E5178884030058547A /* NextButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 843116D5178883FE0058547A /* NextButton@2x.png */; };
+		843116E6178884030058547A /* OptionA@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 843116D6178883FE0058547A /* OptionA@2x.png */; };
+		843116E7178884030058547A /* OptionB@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 843116D7178883FE0058547A /* OptionB@2x.png */; };
+		843116E8178884030058547A /* OptionC@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 843116D8178883FF0058547A /* OptionC@2x.png */; };
+		843116E9178884030058547A /* OptionD@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 843116D9178884000058547A /* OptionD@2x.png */; };
+		843116EA178884030058547A /* OptionMarkError@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 843116DA178884000058547A /* OptionMarkError@2x.png */; };
+		843116EB178884030058547A /* OptionMarkRight.png in Resources */ = {isa = PBXBuildFile; fileRef = 843116DB178884010058547A /* OptionMarkRight.png */; };
+		843116EC178884030058547A /* Person@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 843116DC178884010058547A /* Person@2x.png */; };
+		843116ED178884030058547A /* PreviousButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 843116DD178884010058547A /* PreviousButton@2x.png */; };
+		843116EE178884030058547A /* PullBar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 843116DE178884020058547A /* PullBar@2x.png */; };
+		843116EF178884030058547A /* QuestionBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 843116DF178884020058547A /* QuestionBackground@2x.png */; };
+		843116F0178884030058547A /* SubmitButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 843116E0178884020058547A /* SubmitButton@2x.png */; };
+		843116F1178884030058547A /* UndoneButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 843116E1178884030058547A /* UndoneButton@2x.png */; };
+		843116F3178884DD0058547A /* TMTestDemoViewController-ip5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 843116F2178884DD0058547A /* TMTestDemoViewController-ip5.xib */; };
+		843116F5178885D60058547A /* QuestionViewBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 843116F4178885D50058547A /* QuestionViewBackground@2x.png */; };
 		8459AC84177F33E700646992 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8459AC83177F33E700646992 /* UIKit.framework */; };
 		8459AC86177F33E700646992 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8459AC85177F33E700646992 /* Foundation.framework */; };
 		8459AC88177F33E700646992 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8459AC87177F33E700646992 /* CoreGraphics.framework */; };
@@ -40,7 +59,6 @@
 		8459AC96177F33E700646992 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8459AC95177F33E700646992 /* Default.png */; };
 		8459AC98177F33E700646992 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8459AC97177F33E700646992 /* Default@2x.png */; };
 		8459AC9A177F33E700646992 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8459AC99177F33E700646992 /* Default-568h@2x.png */; };
-		8459ACA2177F344300646992 /* TMWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8459ACA1177F344300646992 /* TMWelcomeViewController.m */; };
 		8459ACB5177F362800646992 /* TMScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8459ACB4177F362800646992 /* TMScoreViewController.m */; };
 		8459ACB9177F39B800646992 /* model.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8459ACB8177F39B800646992 /* model.jpg */; };
 		84E562CD17872DD100C89FE7 /* bootstrap in Resources */ = {isa = PBXBuildFile; fileRef = 84E562CC17872DD100C89FE7 /* bootstrap */; };
@@ -97,6 +115,26 @@
 		843116C71788555D0058547A /* TMHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMHomeViewController.m; sourceTree = "<group>"; };
 		843116C81788555D0058547A /* TMHomeViewController-ip5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "TMHomeViewController-ip5.xib"; sourceTree = "<group>"; };
 		843116CB17885A3D0058547A /* TMHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TMHomeViewController.xib; sourceTree = "<group>"; };
+		843116CD17887CE70058547A /* TMTestDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMTestDemoViewController.h; sourceTree = "<group>"; };
+		843116CE17887CE70058547A /* TMTestDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMTestDemoViewController.m; sourceTree = "<group>"; };
+		843116D2178883FC0058547A /* AQ.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = AQ.jpg; sourceTree = "<group>"; };
+		843116D3178883FD0058547A /* Counter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Counter@2x.png"; sourceTree = "<group>"; };
+		843116D4178883FD0058547A /* ExplainingFrame@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ExplainingFrame@2x.png"; sourceTree = "<group>"; };
+		843116D5178883FE0058547A /* NextButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NextButton@2x.png"; sourceTree = "<group>"; };
+		843116D6178883FE0058547A /* OptionA@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "OptionA@2x.png"; sourceTree = "<group>"; };
+		843116D7178883FE0058547A /* OptionB@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "OptionB@2x.png"; sourceTree = "<group>"; };
+		843116D8178883FF0058547A /* OptionC@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "OptionC@2x.png"; sourceTree = "<group>"; };
+		843116D9178884000058547A /* OptionD@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "OptionD@2x.png"; sourceTree = "<group>"; };
+		843116DA178884000058547A /* OptionMarkError@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "OptionMarkError@2x.png"; sourceTree = "<group>"; };
+		843116DB178884010058547A /* OptionMarkRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OptionMarkRight.png; sourceTree = "<group>"; };
+		843116DC178884010058547A /* Person@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Person@2x.png"; sourceTree = "<group>"; };
+		843116DD178884010058547A /* PreviousButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PreviousButton@2x.png"; sourceTree = "<group>"; };
+		843116DE178884020058547A /* PullBar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PullBar@2x.png"; sourceTree = "<group>"; };
+		843116DF178884020058547A /* QuestionBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QuestionBackground@2x.png"; sourceTree = "<group>"; };
+		843116E0178884020058547A /* SubmitButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SubmitButton@2x.png"; sourceTree = "<group>"; };
+		843116E1178884030058547A /* UndoneButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UndoneButton@2x.png"; sourceTree = "<group>"; };
+		843116F2178884DD0058547A /* TMTestDemoViewController-ip5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "TMTestDemoViewController-ip5.xib"; sourceTree = "<group>"; };
+		843116F4178885D50058547A /* QuestionViewBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QuestionViewBackground@2x.png"; sourceTree = "<group>"; };
 		8459AC80177F33E700646992 /* TMExam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TMExam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8459AC83177F33E700646992 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8459AC85177F33E700646992 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -110,8 +148,6 @@
 		8459AC95177F33E700646992 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		8459AC97177F33E700646992 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		8459AC99177F33E700646992 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		8459ACA0177F344300646992 /* TMWelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMWelcomeViewController.h; sourceTree = "<group>"; };
-		8459ACA1177F344300646992 /* TMWelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMWelcomeViewController.m; sourceTree = "<group>"; };
 		8459ACB3177F362800646992 /* TMScoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMScoreViewController.h; sourceTree = "<group>"; };
 		8459ACB4177F362800646992 /* TMScoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMScoreViewController.m; sourceTree = "<group>"; };
 		8459ACB8177F39B800646992 /* model.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = model.jpg; sourceTree = "<group>"; };
@@ -244,8 +280,6 @@
 				87B79BD91784A33700482EC4 /* PieChartViewController2.m */,
 				8459AC92177F33E700646992 /* AppDelegate.h */,
 				8459AC93177F33E700646992 /* AppDelegate.m */,
-				8459ACA0177F344300646992 /* TMWelcomeViewController.h */,
-				8459ACA1177F344300646992 /* TMWelcomeViewController.m */,
 				8411472F17846F810075F01D /* TMTestViewController.h */,
 				8411473017846F810075F01D /* TMTestViewController.m */,
 				87FAD8FC1786000E00F31A38 /* TMTestRecord.h */,
@@ -264,6 +298,9 @@
 				843116C71788555D0058547A /* TMHomeViewController.m */,
 				843116C81788555D0058547A /* TMHomeViewController-ip5.xib */,
 				843116CB17885A3D0058547A /* TMHomeViewController.xib */,
+				843116CD17887CE70058547A /* TMTestDemoViewController.h */,
+				843116CE17887CE70058547A /* TMTestDemoViewController.m */,
+				843116F2178884DD0058547A /* TMTestDemoViewController-ip5.xib */,
 			);
 			name = src;
 			sourceTree = "<group>";
@@ -271,6 +308,23 @@
 		8459ACB7177F39A200646992 /* res */ = {
 			isa = PBXGroup;
 			children = (
+				843116F4178885D50058547A /* QuestionViewBackground@2x.png */,
+				843116D2178883FC0058547A /* AQ.jpg */,
+				843116D3178883FD0058547A /* Counter@2x.png */,
+				843116D4178883FD0058547A /* ExplainingFrame@2x.png */,
+				843116D5178883FE0058547A /* NextButton@2x.png */,
+				843116D6178883FE0058547A /* OptionA@2x.png */,
+				843116D7178883FE0058547A /* OptionB@2x.png */,
+				843116D8178883FF0058547A /* OptionC@2x.png */,
+				843116D9178884000058547A /* OptionD@2x.png */,
+				843116DA178884000058547A /* OptionMarkError@2x.png */,
+				843116DB178884010058547A /* OptionMarkRight.png */,
+				843116DC178884010058547A /* Person@2x.png */,
+				843116DD178884010058547A /* PreviousButton@2x.png */,
+				843116DE178884020058547A /* PullBar@2x.png */,
+				843116DF178884020058547A /* QuestionBackground@2x.png */,
+				843116E0178884020058547A /* SubmitButton@2x.png */,
+				843116E1178884030058547A /* UndoneButton@2x.png */,
 				843116A8178854800058547A /* background-568h@2x.png */,
 				843116A9178854800058547A /* background@2x.png */,
 				843116AA178854800058547A /* ExamButton@2x.png */,
@@ -423,6 +477,24 @@
 				843116C5178854800058547A /* TrainingButton@2x.png in Resources */,
 				843116CA1788555D0058547A /* TMHomeViewController-ip5.xib in Resources */,
 				843116CC17885A3D0058547A /* TMHomeViewController.xib in Resources */,
+				843116E2178884030058547A /* AQ.jpg in Resources */,
+				843116E3178884030058547A /* Counter@2x.png in Resources */,
+				843116E4178884030058547A /* ExplainingFrame@2x.png in Resources */,
+				843116E5178884030058547A /* NextButton@2x.png in Resources */,
+				843116E6178884030058547A /* OptionA@2x.png in Resources */,
+				843116E7178884030058547A /* OptionB@2x.png in Resources */,
+				843116E8178884030058547A /* OptionC@2x.png in Resources */,
+				843116E9178884030058547A /* OptionD@2x.png in Resources */,
+				843116EA178884030058547A /* OptionMarkError@2x.png in Resources */,
+				843116EB178884030058547A /* OptionMarkRight.png in Resources */,
+				843116EC178884030058547A /* Person@2x.png in Resources */,
+				843116ED178884030058547A /* PreviousButton@2x.png in Resources */,
+				843116EE178884030058547A /* PullBar@2x.png in Resources */,
+				843116EF178884030058547A /* QuestionBackground@2x.png in Resources */,
+				843116F0178884030058547A /* SubmitButton@2x.png in Resources */,
+				843116F1178884030058547A /* UndoneButton@2x.png in Resources */,
+				843116F3178884DD0058547A /* TMTestDemoViewController-ip5.xib in Resources */,
+				843116F5178885D60058547A /* QuestionViewBackground@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,7 +507,6 @@
 			files = (
 				8459AC90177F33E700646992 /* main.m in Sources */,
 				8459AC94177F33E700646992 /* AppDelegate.m in Sources */,
-				8459ACA2177F344300646992 /* TMWelcomeViewController.m in Sources */,
 				8459ACB5177F362800646992 /* TMScoreViewController.m in Sources */,
 				87B79BCB17846A1F00482EC4 /* PCHalfPieChart.m in Sources */,
 				87B79BCC17846A1F00482EC4 /* PCLineChartView.m in Sources */,
@@ -460,6 +531,7 @@
 				87FAD9191786124500F31A38 /* FMResultSet.m in Sources */,
 				87FAD91E1786162500F31A38 /* TMTestRecordSingleSelection.m in Sources */,
 				843116C91788555D0058547A /* TMHomeViewController.m in Sources */,
+				843116D017887CE70058547A /* TMTestDemoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
