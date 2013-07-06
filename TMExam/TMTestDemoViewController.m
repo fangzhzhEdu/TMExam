@@ -13,6 +13,7 @@
 
 @interface TMTestDemoViewController ()
 @property (nonatomic, readwrite) NSInteger curTestRecordIdx;
+@property (nonatomic, readwrite) NSInteger curSel;
 @property (nonatomic, weak) NSArray *curRecordArray;        // 当前类型试题的数组
 @property (nonatomic, readwrite)BOOL answerWrong;
 @end
@@ -79,7 +80,7 @@
     self.optionMarkCButton.hidden = YES;
     self.optionMarkDButton.hidden = YES;
 
-    self.curTestRecordIdx = 0;
+    self.curSel = 0;
     self.optionMarkAButton.hidden = NO;
 
 }
@@ -95,7 +96,7 @@
     self.optionMarkCButton.hidden = YES;
     self.optionMarkDButton.hidden = YES;
 
-    self.curTestRecordIdx = 1;
+    self.curSel = 1;
     self.optionMarkBButton.hidden = NO;
 }
 
@@ -110,7 +111,7 @@
     self.optionMarkCButton.hidden = YES;
     self.optionMarkDButton.hidden = YES;
 
-    self.curTestRecordIdx = 2;
+    self.curSel = 2;
     self.optionMarkCButton.hidden = NO;
 }
 
@@ -125,13 +126,13 @@
     self.optionMarkCButton.hidden = YES;
     self.optionMarkDButton.hidden = YES;
 
-    self.curTestRecordIdx = 3;
+    self.curSel = 3;
     self.optionMarkDButton.hidden = NO;
 }
 
 - (IBAction)previousButtonClicked:(id)sender
 {
-    TMTestRecordSingleSelection *record =  [self.curRecordArray objectAtIndex:--self.curTestRecordIdx];
+    TMTestRecordSingleSelection *record =  [self.curRecordArray objectAtIndex:self.curTestRecordIdx];
     self.questionLabel.text = record.body;
     self.optionALabel.text = [record.options objectAtIndex:0];
     self.optionBLabel.text = [record.options objectAtIndex:1];
@@ -152,10 +153,11 @@
         return;
     }
     TMTestRecordSingleSelection *record =  [self.curRecordArray objectAtIndex:self.curTestRecordIdx];
-    if (self.curTestRecordIdx == record.rightIdx  || self.answerWrong)
+    if (self.curSel == record.rightIdx  || self.answerWrong)
     { // 选择正确, 或者已经 认定 错误答案
         ++self.curTestRecordIdx;
         // 判断是否结束
+        self.answerWrong = NO;
         [self loadTestRecord];
     }
     else
