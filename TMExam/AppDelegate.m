@@ -28,6 +28,7 @@
     else
         xibName = @"TMHomeViewController-ip5";
     
+    [NSThread sleepForTimeInterval:2.0];
     TMHomeViewController *homeViewController = [[TMHomeViewController alloc] initWithNibName:xibName bundle:[NSBundle mainBundle]];
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:homeViewController];
     navController.navigationBarHidden = YES;
