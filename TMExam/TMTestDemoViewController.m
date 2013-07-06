@@ -47,6 +47,11 @@
 //    self.questionLabel.textAlignment = NSTextAlignmentLeft;
 //    self.questionLabel.baselineAdjustment = NSWritingDirectionRightToLeft;
     [self.questionLabel sizeToFit];
+    self.optionALabel.textAlignment = NSTextAlignmentCenter;
+    self.optionBLabel.textAlignment = NSTextAlignmentCenter;
+    self.optionCLabel.textAlignment = NSTextAlignmentCenter;
+    self.optionDLabel.textAlignment = NSTextAlignmentCenter;
+    [self.explainContentLabel sizeToFit];
 
 }
 
@@ -252,6 +257,10 @@
         self.explainTitleLabel.hidden = NO;
         self.explainContentLabel.hidden = NO;
         self.explainTitleLabel.text =  [NSString stringWithFormat:@"正确答案是: %c", 'A' + record.rightIdx] ;
+        
+        NSMutableAttributedString *text = [[NSMutableAttributedString alloc] initWithAttributedString: self.explainTitleLabel.attributedText];
+        [text addAttribute: NSForegroundColorAttributeName value: [UIColor colorWithRed:0.1216 green:0.608 blue:0.228 alpha:1] range: NSMakeRange(7, 1)];
+        [self.explainTitleLabel setAttributedText: text];
         self.explainContentLabel.text = [NSString stringWithFormat:@"%@", [record.options objectAtIndex:record.rightIdx]];
         self.answerWrong = YES;
     }
