@@ -32,6 +32,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.curRecordArray = [[TMTestRecordManager sharedManager].type2RecordArrayDict objectForKey:[NSNumber numberWithInt:RECORD_TYPE_SINGLE_SELECTION]];
+    [self loadTestRecord];
+
     if (self.curRecordArray == nil)
     {
         return;
@@ -48,6 +50,7 @@
 
 - (IBAction)homeToolbarButtonClicked:(id)sender
 {
+
     
 }
 
@@ -88,12 +91,56 @@
 
 - (IBAction)previousButtonClicked:(id)sender
 {
-    
+    TMTestRecordSingleSelection *record =  [self.curRecordArray objectAtIndex:--self.curTestRecordIdx];
+    self.questionLabel.text = record.body;
+    self.optionALabel.text = [record.options objectAtIndex:0];
+    self.optionBLabel.text = [record.options objectAtIndex:1];
+    self.optionCLabel.text = [record.options objectAtIndex:2];
+    self.optionDLabel.text = [record.options objectAtIndex:3];
 }
 
 - (IBAction)nextButtonClicked:(id)sender
 {
+    ++self.curTestRecordIdx;
+    [self loadTestRecord];
+}
+     
+-(void )loadTestRecord
+{
+    TMTestRecordSingleSelection *record =  [self.curRecordArray objectAtIndex:self.curTestRecordIdx];
+    self.questionLabel.text = record.body;
     
+    if (record.options.count > 3)
+    {
+        self.optionALabel.text = [record.options objectAtIndex:0];
+        self.optionBLabel.text = [record.options objectAtIndex:1];
+        self.optionCLabel.text = [record.options objectAtIndex:2];
+        self.optionDLabel.text = [record.options objectAtIndex:3];
+    }
+    else if (record.options.count > 2)
+    {
+        self.optionALabel.text = [record.options objectAtIndex:0];
+        self.optionBLabel.text = [record.options objectAtIndex:1];
+        self.optionCLabel.text = [record.options objectAtIndex:2];
+        self.optionDLabel.hidden = YES;
+        self.optionMarkDButton.hidden = YES;
+    }
+    else if (record.options.count > 1)
+    {
+        self.optionALabel.text = [record.options objectAtIndex:0];
+        self.optionBLabel.text = [record.options objectAtIndex:1];
+        self.optionDLabel.hidden = YES;
+        self.optionDLabel.hidden = YES;
+
+    }
+    else if (record.options.count > 0)
+    {
+        self.optionDLabel.text = [record.options objectAtIndex:3];
+        self.optionDLabel.hidden = YES;
+        self.optionDLabel.hidden = YES;
+        self.optionDLabel.hidden = YES;
+
+    }
 }
 
 - (IBAction)submitButtonClicked:(id)sender
