@@ -26,7 +26,10 @@
     if (self) {
         // Custom initialization
     }
+
     return self;
+
+
 }
 
 - (void)viewDidLoad
@@ -40,6 +43,7 @@
     {
         return;
     }
+    self.questionLabel.font    = [UIFont systemFontOfSize: 14];
 
 }
 
@@ -77,7 +81,7 @@
     }
 
 //    self.curSel = 0;
-    
+    self.curTestRecord.selIdx = 0;
     [self.optionQuestionAButton setImage:[UIImage imageNamed:@"OptionBackWrong"] forState:UIControlStateNormal];
     [self.optionQuestionBButton setImage:[UIImage imageNamed:@"OptionBackNormal"] forState:UIControlStateNormal];
     [self.optionQuestionCButton setImage:[UIImage imageNamed:@"OptionBackNormal"] forState:UIControlStateNormal];
@@ -87,6 +91,8 @@
     [self.optionMarkBButton setImage:[UIImage imageNamed:@"OptionMarkBlackB"] forState:UIControlStateNormal];
     [self.optionMarkCButton setImage:[UIImage imageNamed:@"OptionMarkBlackC"] forState:UIControlStateNormal];
     [self.optionMarkDButton setImage:[UIImage imageNamed:@"OptionMarkBlackD"] forState:UIControlStateNormal];
+    [self doNext];
+
 }
 
 - (IBAction)optionBClicked:(id)sender
@@ -96,7 +102,7 @@
     }
 
 //    self.curSel = 1;
-    
+        self.curTestRecord.selIdx = 1;
     [self.optionQuestionAButton setImage:[UIImage imageNamed:@"OptionBackNormal"] forState:UIControlStateNormal];
     [self.optionQuestionBButton setImage:[UIImage imageNamed:@"OptionBackWrong"] forState:UIControlStateNormal];
     [self.optionQuestionCButton setImage:[UIImage imageNamed:@"OptionBackNormal"] forState:UIControlStateNormal];
@@ -106,6 +112,9 @@
     [self.optionMarkBButton setImage:[UIImage imageNamed:@"OptionMarkWhiteB"] forState:UIControlStateNormal];
     [self.optionMarkCButton setImage:[UIImage imageNamed:@"OptionMarkBlackC"] forState:UIControlStateNormal];
     [self.optionMarkDButton setImage:[UIImage imageNamed:@"OptionMarkBlackD"] forState:UIControlStateNormal];
+    
+    [self doNext];
+
 }
 
 - (IBAction)optionCClicked:(id)sender
@@ -115,7 +124,7 @@
     }
 
 //    self.curSel = 2;
-    
+        self.curTestRecord.selIdx = 2;
     [self.optionQuestionAButton setImage:[UIImage imageNamed:@"OptionBackNormal"] forState:UIControlStateNormal];
     [self.optionQuestionBButton setImage:[UIImage imageNamed:@"OptionBackNormal"] forState:UIControlStateNormal];
     [self.optionQuestionCButton setImage:[UIImage imageNamed:@"OptionBackWrong"] forState:UIControlStateNormal];
@@ -125,6 +134,9 @@
     [self.optionMarkBButton setImage:[UIImage imageNamed:@"OptionMarkBlackB"] forState:UIControlStateNormal];
     [self.optionMarkCButton setImage:[UIImage imageNamed:@"OptionMarkWhiteC"] forState:UIControlStateNormal];
     [self.optionMarkDButton setImage:[UIImage imageNamed:@"OptionMarkBlackD"] forState:UIControlStateNormal];
+    
+    [self doNext];
+
 }
 
 - (IBAction)optionDClicked:(id)sender
@@ -134,7 +146,7 @@
     }
 
 //    self.curSel = 3;
-    
+        self.curTestRecord.selIdx = 3;
     [self.optionQuestionAButton setImage:[UIImage imageNamed:@"OptionBackNormal"] forState:UIControlStateNormal];
     [self.optionQuestionBButton setImage:[UIImage imageNamed:@"OptionBackNormal"] forState:UIControlStateNormal];
     [self.optionQuestionCButton setImage:[UIImage imageNamed:@"OptionBackNormal"] forState:UIControlStateNormal];
@@ -144,10 +156,14 @@
     [self.optionMarkBButton setImage:[UIImage imageNamed:@"OptionMarkBlackB"] forState:UIControlStateNormal];
     [self.optionMarkCButton setImage:[UIImage imageNamed:@"OptionMarkBlackC"] forState:UIControlStateNormal];
     [self.optionMarkDButton setImage:[UIImage imageNamed:@"OptionMarkWhiteD"] forState:UIControlStateNormal];
+    
+    [self doNext];
+
 }
 
 - (IBAction)previousButtonClicked:(id)sender
 {
+    return;
     if (self.curTestRecordIdx == 0) {
         UIAlertView  *alertView = [[UIAlertView alloc] initWithTitle:@"no more test"
                                                              message:@"no more test"
@@ -190,8 +206,14 @@
         [alertView show];
         [[TMTestRecordManager sharedManager] doStatistics];
         return;
+
     }
+    [self doNext];
     
+}
+
+-(void)doNext
+{
     TMTestRecordSingleSelection *record =  [self.curRecordArray objectAtIndex:self.curTestRecordIdx];
     if (record.selIdx == record.rightIdx  || self.answerWrong)
     { // 选择正确, 或者已经 认定 错误答案
@@ -222,7 +244,7 @@
                 [self.optionMarkDButton setImage:[UIImage imageNamed:@"OptionMarkWhiteD"] forState:UIControlStateNormal];
                 break;
         }
-
+        
         self.explainFrameImageView.hidden = NO;
         self.explainTitleLabel.hidden = NO;
         self.explainContentLabel.hidden = NO;
@@ -230,10 +252,11 @@
         self.explainContentLabel.text = [NSString stringWithFormat:@"%@", [record.options objectAtIndex:record.rightIdx]];
         self.answerWrong = YES;
     }
+
 }
-    
 -(void )loadTestRecord
 {
+    
     TMTestRecordSingleSelection *record =  [self.curRecordArray objectAtIndex:self.curTestRecordIdx];
     self.curTestRecord = record;
     self.questionLabel.text = record.body;
