@@ -30,6 +30,9 @@
 @property (nonatomic, strong) IBOutlet UIButton *optionQuestionDButton;
 
 
+@property (nonatomic, strong) IBOutlet UIImageView *explainFrameImageView;
+
+
 - (IBAction)homeToolbarButtonClicked:(id)sender;
 - (IBAction)textbookToolbarButtonClicked:(id)sender;
 - (IBAction)newsToolbarButtonClicked:(id)sender;
