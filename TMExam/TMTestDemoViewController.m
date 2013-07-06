@@ -50,7 +50,7 @@
 
 - (IBAction)homeToolbarButtonClicked:(id)sender
 {
-    
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (IBAction)textbookToolbarButtonClicked:(id)sender
