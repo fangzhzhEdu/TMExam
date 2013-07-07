@@ -256,12 +256,21 @@
         self.explainFrameImageView.hidden = NO;
         self.explainTitleLabel.hidden = NO;
         self.explainContentLabel.hidden = NO;
-        self.explainTitleLabel.text =  [NSString stringWithFormat:@"正确答案是: %c", 'A' + record.rightIdx] ;
+        self.explainTitleLabel.text =  [NSString stringWithFormat:@"正确答案是  %c", 'A' + record.rightIdx] ;
         
         NSMutableAttributedString *text = [[NSMutableAttributedString alloc] initWithAttributedString: self.explainTitleLabel.attributedText];
-        [text addAttribute: NSForegroundColorAttributeName value: [UIColor colorWithRed:0.1216 green:0.608 blue:0.228 alpha:1] range: NSMakeRange(7, 1)];
+        [text addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize: 20] range:NSMakeRange(6, 1)];
+
+        NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithCapacity:2];
+        [dict setObject:[UIColor colorWithRed:0.1216 green:0.608 blue:0.228 alpha:1] forKey:NSForegroundColorAttributeName];
+        [dict setObject:[UIFont systemFontOfSize: 20] forKey:NSFontAttributeName];
+
+        [text addAttributes:dict range: NSMakeRange(6, 1)];
+
+//        [text addAttribute: NSForegroundColorAttributeName value: [UIColor colorWithRed:0.1216 green:0.608 blue:0.228 alpha:1] range: NSMakeRange(6, 1)];
+        
         [self.explainTitleLabel setAttributedText: text];
-        self.explainContentLabel.text = [NSString stringWithFormat:@"%@", [record.options objectAtIndex:record.rightIdx]];
+        self.explainContentLabel.text = [NSString stringWithFormat:@"详解: %@", [record.options objectAtIndex:record.rightIdx]];
         self.answerWrong = YES;
     }
 
