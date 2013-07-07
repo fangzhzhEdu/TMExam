@@ -16,6 +16,7 @@
 @property (nonatomic, strong) IBOutlet UILabel *optionBLabel;
 @property (nonatomic, strong) IBOutlet UILabel *optionCLabel;
 @property (nonatomic, strong) IBOutlet UILabel *optionDLabel;
+@property (nonatomic, strong) IBOutlet UILabel *explainLeadingLabel;
 @property (nonatomic, strong) IBOutlet UILabel *explainTitleLabel;
 @property (nonatomic, strong) IBOutlet UILabel *explainContentLabel;
 
