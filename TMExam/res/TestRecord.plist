@@ -48,97 +48,113 @@
 	</dict>
 	<dict>
 		<key>body</key>
-		<string>1+1 = ?</string>
+		<string>采油二厂注入水质标准中,悬浮固体含量控制在____mg/L?</string>
 		<key>rightIdx</key>
-		<string>2</string>
-		<key>selA</key>
 		<string>0</string>
+		<key>selA</key>
+		<string>≤1.0  </string>
 		<key>selB</key>
-		<string>1</string>
+		<string>≥1.0</string>
 		<key>selC</key>
-		<string>2</string>
+		<string>≤5.0</string>
 		<key>selD</key>
-		<string>3</string>
+		<string>≤2.0</string>
 		<key>type</key>
 		<integer>1</integer>
 	</dict>
 	<dict>
 		<key>body</key>
-		<string>1+0 = ?</string>
+		<string>水的PH值受____而变化，测定时应在规定的的下进行，或者校正温度。</string>
 		<key>rightIdx</key>
 		<string>1</string>
 		<key>selA</key>
-		<string>0</string>
+		<string>压力</string>
 		<key>selB</key>
-		<string>1</string>
+		<string>温度</string>
 		<key>selC</key>
-		<string>2</string>
+		<string>时间</string>
 		<key>selD</key>
-		<string>3</string>
+		<string>地点</string>
 		<key>type</key>
 		<integer>1</integer>
 	</dict>
 	<dict>
 		<key>body</key>
-		<string>0+0 = ?</string>
+		<string>当被测定的物质的量较大时，相对误差就比较小，测定的准确程度也就比较____</string>
 		<key>rightIdx</key>
-		<string>0</string>
-		<key>selA</key>
-		<string>0</string>
-		<key>selB</key>
 		<string>1</string>
+		<key>selA</key>
+		<string>低</string>
+		<key>selB</key>
+		<string>高</string>
 		<key>selC</key>
-		<string>2</string>
+		<string>恒定</string>
 		<key>selD</key>
-		<string>3</string>
+		<string>无法确定</string>
 		<key>type</key>
 		<integer>1</integer>
 	</dict>
 	<dict>
 		<key>body</key>
-		<string>1+1 = ?</string>
+		<string>玻璃温度计读数时，视线与温度计内____保持在同一水平面上</string>
 		<key>rightIdx</key>
-		<string>2</string>
-		<key>selA</key>
 		<string>0</string>
+		<key>selA</key>
+		<string>液面</string>
 		<key>selB</key>
-		<string>1</string>
+		<string>水银</string>
 		<key>selC</key>
-		<string>2</string>
+		<string>液面上</string>
 		<key>selD</key>
-		<string>3</string>
+		<string>液面下</string>
 		<key>type</key>
 		<integer>1</integer>
 	</dict>
 	<dict>
 		<key>body</key>
-		<string>1+0 = ?</string>
+		<string>试样本身有挥发性，应放在____中称量</string>
 		<key>rightIdx</key>
-		<string>1</string>
-		<key>selA</key>
-		<string>0</string>
-		<key>selB</key>
-		<string>1</string>
-		<key>selC</key>
 		<string>2</string>
+		<key>selA</key>
+		<string>烧杯</string>
+		<key>selB</key>
+		<string>锥形瓶</string>
+		<key>selC</key>
+		<string>称量瓶</string>
 		<key>selD</key>
-		<string>3</string>
+		<string>量筒</string>
 		<key>type</key>
 		<integer>1</integer>
 	</dict>
 	<dict>
 		<key>body</key>
-		<string>0+0 = ?</string>
+		<string>密度计法测定较粘稠的原油样品，须用____后方可测定</string>
 		<key>rightIdx</key>
-		<string>0</string>
-		<key>selA</key>
-		<string>0</string>
-		<key>selB</key>
-		<string>1</string>
-		<key>selC</key>
 		<string>2</string>
+		<key>selA</key>
+		<string>水稀释</string>
+		<key>selB</key>
+		<string>油品混合</string>
+		<key>selC</key>
+		<string>煤油稀释</string>
 		<key>selD</key>
-		<string>3</string>
+		<string>汽油混合</string>
+		<key>type</key>
+		<integer>1</integer>
+	</dict>
+	<dict>
+		<key>body</key>
+		<string>原油中____是用沉降法就能分离出来的水</string>
+		<key>rightIdx</key>
+		<string>2</string>
+		<key>selA</key>
+		<string>乳化水</string>
+		<key>selB</key>
+		<string>悬浮水</string>
+		<key>selC</key>
+		<string>游离水</string>
+		<key>selD</key>
+		<string>溶解水</string>
 		<key>type</key>
 		<integer>1</integer>
 	</dict>
