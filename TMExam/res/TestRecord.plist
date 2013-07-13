@@ -80,7 +80,7 @@
 	</dict>
 	<dict>
 		<key>body</key>
-		<string>当被测定的物质的量较大时，相对误差就比较小，测定的准确程度也就比较____</string>
+		<string>被测定的物质的量较大时，相对误差比较小，测定准确程度也比较__</string>
 		<key>rightIdx</key>
 		<string>1</string>
 		<key>selA</key>
