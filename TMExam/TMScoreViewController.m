@@ -252,6 +252,11 @@
 
 }
 
+- (IBAction)finishTestTouched:(id)sender
+{
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

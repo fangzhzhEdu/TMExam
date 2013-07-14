@@ -82,7 +82,8 @@
 @property (nonatomic, strong) IBOutlet UIImageView *testPage1;
 @property (nonatomic, strong) IBOutlet UIImageView *testPage2;
 
-@property (nonatomic, strong) IBOutlet UIImageView *finishTest;
+@property (nonatomic, strong) IBOutlet UIButton *finishTest;
 
+- (IBAction)finishTestTouched:(id)sender;
 
 @end
