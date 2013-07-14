@@ -69,7 +69,9 @@
 
 - (IBAction)scoreButtonClicked:(id)sender
 {
-    TMScoreViewController *scoreViewController = [[TMScoreViewController alloc] init];
+//    TMScoreViewController *scoreViewController = [[TMScoreViewController alloc] init];
+    
+    TMScoreViewController *scoreViewController = [[TMScoreViewController alloc] initWithNibName:@"TMScoreViewController-ip5" bundle:[NSBundle mainBundle]];
     [self.navigationController pushViewController:scoreViewController animated:YES];
 }
 

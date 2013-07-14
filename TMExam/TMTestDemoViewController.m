@@ -29,7 +29,7 @@
         // Custom initialization
         self.curTestRecordIdx = 0;
         self.curRecordArray = [[TMTestRecordManager sharedManager].type2RecordArrayDict objectForKey:[NSNumber numberWithInt:RECORD_TYPE_SINGLE_SELECTION]];
-        
+        self.startAnswerTime = time(NULL);
         if (self.curRecordArray == nil)
         {
             return nil;
@@ -157,7 +157,8 @@
                                                    cancelButtonTitle:@"知道了"
                                                    otherButtonTitles:nil, nil];
         [alertView show];
-        [[TMTestRecordManager sharedManager] doStatistics];
+        self.finishAnswerTime = time(NULL);
+        [[TMTestRecordManager sharedManager] doStatistics:(self.finishAnswerTime-self.startAnswerTime)];
         return;
         
     }
@@ -295,7 +296,9 @@
 
 - (IBAction)submitButtonClicked:(id)sender
 {
-    
+    self.finishAnswerTime = time(NULL);
+    [[TMTestRecordManager sharedManager] doStatistics:(self.finishAnswerTime-self.startAnswerTime)];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (IBAction)undoneButtonClicked:(id)sender

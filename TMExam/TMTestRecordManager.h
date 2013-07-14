@@ -13,10 +13,17 @@
 @property (nonatomic, strong) NSMutableArray *testRecords;                  // 试题汇总
 @property (nonatomic, strong) NSMutableDictionary *type2RecordArrayDict;    // 类别 -> 类别试题 的字典
 @property (nonatomic, strong) NSMutableDictionary *guid2RecordDict;         // guid -> 试题的字典
-@property (nonatomic, strong) NSMutableDictionary *type2RightRecDict;       // 类别 -> 正确题目 的字典
+@property (nonatomic, strong) NSMutableDictionary *type2RightRecDict;       // 类别 -> 正确题目个数 的字典
+@property (nonatomic, strong) NSMutableArray *testResultInfoArray;     // 答题信息统计数组
 
 + (TMTestRecordManager *)sharedManager;
 
-- (void)doStatistics;
+/*
+ * 计算出,每个类别的正确题目的个数
+ *
+ * duration  答题时间
+ */
+
+- (void)doStatistics:(long)duration;
 
 @end

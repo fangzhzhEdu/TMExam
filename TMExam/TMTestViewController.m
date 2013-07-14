@@ -89,7 +89,7 @@
                                                            cancelButtonTitle:@"知道了"
                                                            otherButtonTitles:nil, nil];
                 [alertView show];
-                [[TMTestRecordManager sharedManager] doStatistics];
+//                [[TMTestRecordManager sharedManager] doStatistics:self.];
                 return NO;
             }
             

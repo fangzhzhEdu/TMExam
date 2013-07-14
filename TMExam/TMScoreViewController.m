@@ -8,12 +8,44 @@
 
 #import "TMScoreViewController.h"
 #import "PCPieChart.h"
-
+#import "TMTestRecordManager.h"
+#import "TMTestResult.h"
 @interface TMScoreViewController ()
 
 @end
 
 @implementation TMScoreViewController
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization
+        int n = [[TMTestRecordManager sharedManager] testResultInfoArray].count;
+        if (n <= 0) {
+            return self;
+        }
+        
+        TMTestResult *result = nil;
+        result = [[[TMTestRecordManager sharedManager] testResultInfoArray] objectAtIndex:n-1];
+        
+        // 答题时间
+        
+        // 正确统计
+        
+        // 正确率
+        
+        
+        // 答题次数统计
+        
+        
+        // 称号
+        
+        // 每一个题目
+    }
+    
+    return self;
+}
+
 - (id)initWithDict:(NSDictionary*)sampleInfo
 {
     self = [super init];

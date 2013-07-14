@@ -9,7 +9,7 @@
 #import "TMTestRecordManager.h"
 #import "TMTestrecord.h"
 #import "TMTestRecordSingleSelection.h"
-
+#import "TMTestResult.h"
 @interface TMTestRecordManager()
 
 - (id)initWithPlist;
@@ -36,6 +36,13 @@
     self = [super init];
     if (self)
     {
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+
+        self.testResultInfoArray = [defaults objectForKey:@"com.topmost.testResult"];
+        if (self.testResultInfoArray == nil) {
+            self.testResultInfoArray = [[NSMutableArray alloc] initWithCapacity:10];
+        }
+
         // 初始化变量
         self.testRecords = [[NSMutableArray alloc] initWithCapacity:10];
         self.type2RecordArrayDict = [[NSMutableDictionary alloc] initWithCapacity:10];
@@ -86,12 +93,14 @@
     return self;
 }
 
-- (void)doStatistics
+- (void)doStatistics:(long)duration
 {
     if (self.type2RightRecDict == nil)
     {
         self.type2RightRecDict = [[NSMutableDictionary alloc] initWithCapacity:RECORD_TYPE_MAX];
     }
+    int totalCnt = 0;
+    int totalRightCnt = 0;
     for (int k = RECORD_TYPE_SINGLE_SELECTION; k < RECORD_TYPE_MAX; ++k)
     {
         NSArray *array = [self.type2RecordArrayDict objectForKey:[NSNumber numberWithInt:k]];
@@ -101,10 +110,20 @@
             if ([record isRight])
             {
                 ++right;
+                ++totalRightCnt;
             }
+            ++totalCnt;
         }
         [self.type2RightRecDict setObject:[NSNumber numberWithInt:right] forKey:[NSNumber numberWithInt:k]];
     }
+    TMTestResult *result = [[TMTestResult alloc] init];
+    result.totalCnt = totalCnt;
+    result.rightCnt = totalRightCnt;
+    result.testDuration = duration;
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [self.testResultInfoArray addObject:result];
+    [defaults setObject:self.testResultInfoArray forKey:@"com.topmost.testResult"];
+    [defaults synchronize];
 }
 
 @end
