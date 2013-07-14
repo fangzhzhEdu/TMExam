@@ -169,6 +169,9 @@
 {
     TMTestRecordSingleSelection *record =  [self.curRecordArray objectAtIndex:self.curTestRecordIdx];
     if (!record.answered) {
+        record.selIdx = -1;
+        record.answered = YES;
+        [self loadSingleSelectionRecord:record];
         return;
     }
     if (self.curTestRecordIdx + 1 >= self.curRecordArray.count) {
