@@ -322,16 +322,16 @@
     
     int panelCnt = k / 35;
     
-    if (panelCnt == 0) {
+    if (panelCnt == 1) {
         self.testPage0.hidden = YES;
         self.testPage1.hidden = YES;
         self.testPage2.hidden = YES;
     }
-    else if(panelCnt == 1)
+    else if(panelCnt == 2)
     {
         self.testPage2.hidden = YES;
     }
-    else if(panelCnt == 2)
+    else if(panelCnt == 3)
     {
         
     }

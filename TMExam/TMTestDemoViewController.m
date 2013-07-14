@@ -30,7 +30,11 @@
         // Custom initialization
         self.curTestRecordIdx = 0;
         self.curRecordArray = [[TMTestRecordManager sharedManager].type2RecordArrayDict objectForKey:[NSNumber numberWithInt:RECORD_TYPE_SINGLE_SELECTION]];
+        [self.curRecordArray enumerateObjectsUsingBlock:^(TMTestRecordSingleSelection *obj, NSUInteger idx, BOOL *stop) {
+            obj.answered = NO;
+        }];
         [TMTestRecordManager sharedManager].startAnswerTime = time(NULL);
+        
         if (self.curRecordArray == nil)
         {
             return nil;
@@ -79,9 +83,12 @@
 - (IBAction)optionAClicked:(id)sender
 {
     TMTestRecordSingleSelection *record = self.curRecordArray[self.curTestRecordIdx];
-    if (record.selIdx >= 0)
-        return;
 
+
+    if (record.answered)
+        return;
+    
+    record.answered = YES;
     record.selIdx = 0;
 
     [self loadSingleSelectionRecord:record];
@@ -93,9 +100,12 @@
 - (IBAction)optionBClicked:(id)sender
 {
     TMTestRecordSingleSelection *record = self.curRecordArray[self.curTestRecordIdx];
-    if (record.selIdx >= 0)
+
+
+    if (record.answered)
         return;
-    
+
+    record.answered = YES;
     record.selIdx = 1;
     
     [self loadSingleSelectionRecord:record];
@@ -107,9 +117,12 @@
 - (IBAction)optionCClicked:(id)sender
 {
     TMTestRecordSingleSelection *record = self.curRecordArray[self.curTestRecordIdx];
-    if (record.selIdx >= 0)
+
+
+    if (record.answered)
         return;
     
+    record.answered = YES;
     record.selIdx = 2;
     
     [self loadSingleSelectionRecord:record];
@@ -121,9 +134,12 @@
 - (IBAction)optionDClicked:(id)sender
 {
     TMTestRecordSingleSelection *record = self.curRecordArray[self.curTestRecordIdx];
-    if (record.selIdx >= 0)
+
+
+    if (record.answered)
         return;
-    
+
+    record.answered = YES;
     record.selIdx = 3;
     
     [self loadSingleSelectionRecord:record];
@@ -151,28 +167,34 @@
 
 -(void)doNext
 {
+    TMTestRecordSingleSelection *record =  [self.curRecordArray objectAtIndex:self.curTestRecordIdx];
+    if (!record.answered) {
+        return;
+    }
     if (self.curTestRecordIdx + 1 >= self.curRecordArray.count) {
-        UIAlertView  *alertView = [[UIAlertView alloc] initWithTitle:@"no more test"
-                                                             message:@"no more test"
-                                                            delegate:self
-                                                   cancelButtonTitle:@"知道了"
-                                                   otherButtonTitles:nil, nil];
-        [alertView show];
+//        UIAlertView  *alertView = [[UIAlertView alloc] initWithTitle:@"no more test"
+//                                                             message:@"no more test"
+//                                                            delegate:self
+//                                                   cancelButtonTitle:@"知道了"
+//                                                   otherButtonTitles:nil, nil];
+//        [alertView show];
         [TMTestRecordManager sharedManager].finishAnswerTime = time(NULL);
         [[TMTestRecordManager sharedManager] doStatistics:([TMTestRecordManager sharedManager].finishAnswerTime-[TMTestRecordManager sharedManager].startAnswerTime)];
+        TMScoreViewController *scoreViewController = [[TMScoreViewController alloc] initWithNibName:@"TMScoreViewController-ip5" bundle:[NSBundle mainBundle]];
+        [self.navigationController pushViewController:scoreViewController animated:YES];
+
         return;
         
     }
-    
+
     self.curTestRecordIdx += 1;
    
-    TMTestRecordSingleSelection *record =  [self.curRecordArray objectAtIndex:self.curTestRecordIdx];
+    record =  [self.curRecordArray objectAtIndex:self.curTestRecordIdx];
     [self loadSingleSelectionRecord:record];
 }
 
 - (void)loadSingleSelectionRecord:(TMTestRecordSingleSelection *)record
 {
-    record.answered = YES;
     self.questionLabel.text = record.body;
     
     [self.optionQuestionAButton setImage:[UIImage imageNamed:@"OptionBackNormal"] forState:UIControlStateNormal];
@@ -235,7 +257,7 @@
     }
 
     
-    if (record.selIdx >= 0) //已经做过选择，显示上次的选择和答案
+    if (record.answered) //已经做过选择，显示上次的选择和答案
     {
         self.explainFrameImageView.hidden = NO;
         self.explainTitleLabel.hidden = NO;
