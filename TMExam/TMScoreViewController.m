@@ -169,6 +169,17 @@
     imageName = [NSString stringWithFormat:@"%d_10", unit];
     [self.testPercent1 setImage:[UIImage imageNamed:imageName]];
 
+    // 称号
+    if (percent < 60)
+        [self.honorTitle setImage:[UIImage imageNamed:@"60以下_06"]];
+    else if(percent >= 60 && percent < 85)
+        [self.honorTitle setImage:[UIImage imageNamed:@"60以上--x318--435"]];
+    else if(percent >= 85 && percent < 95)
+        [self.honorTitle setImage:[UIImage imageNamed:@"85以上_06"]];
+    else if(percent >= 95 )
+        [self.honorTitle setImage:[UIImage imageNamed:@"95以上_06"]];
+
+
     
     // 答题次数统计
     decimal = n / 10;
@@ -182,7 +193,6 @@
     imageName = [NSString stringWithFormat:@"%d_23", unit];
     [self.testTimes1 setImage:[UIImage imageNamed:imageName]];
     
-    // 称号
     
     // 每一个题目
     self.testRecordArray = [[NSMutableArray alloc] initWithObjects:
@@ -228,11 +238,80 @@
     int k = 0;
     for (TMTestRecord *record in array)
     {
-
         if ([record answered] && ![record isRight])
         {
             UIImageView *imageView = [self.testRecordArray objectAtIndex:k];
             [imageView setImage:[UIImage imageNamed:@"错误_10"]];
+            CGRect rect = imageView.frame;
+            int yoffset = 0;
+            if (k >= 0 && k < 7 )
+                yoffset = 3;
+            else if( k >= 7 && k < 14)
+                yoffset = 0;
+            else if( k >= 14 && k < 21)
+                yoffset = -1;
+            else if( k >= 21 && k < 28)
+                yoffset = 0;
+            else if( k >= 28 && k < 35)
+                yoffset = -3;
+
+            int xoffset = 0;
+            switch (k) {
+                case 0:
+                case 7:
+                case 14:
+                case 21:
+                case 28:
+                    xoffset = 4;
+                    break;
+                case 1:
+                case 8:
+                case 15:
+                case 22:
+                case 29:
+                    xoffset = 4;
+                    break;
+                    
+                case 2:
+                case 9:
+                case 16:
+                case 23:
+                case 30:
+                    xoffset = 3.5;
+                    break;
+                case 3:
+                case 10:
+                case 17:
+                case 24:
+                case 31:
+                    xoffset = 3;
+                    break;
+                    
+                case 4:
+                case 11:
+                case 18:
+                case 25:
+                case 32:
+                case 5:
+                case 12:
+                case 19:
+                case 26:
+                case 33:
+                    xoffset = 0;
+                    break;
+                case 6:
+                case 13:
+                case 20:
+                case 27:
+                case 34:
+                    xoffset = -2.5;
+                    
+                default:
+                    break;
+            }
+
+
+            [imageView setFrame:CGRectMake(rect.origin.x+xoffset, rect.origin.y + yoffset, rect.size.width, rect.size.height)];
         }
         
         if (![record answered]) {
@@ -240,6 +319,24 @@
         }
         ++k;
     }
+    
+    int panelCnt = k / 35;
+    
+    if (panelCnt == 0) {
+        self.testPage0.hidden = YES;
+        self.testPage1.hidden = YES;
+        self.testPage2.hidden = YES;
+    }
+    else if(panelCnt == 1)
+    {
+        self.testPage2.hidden = YES;
+    }
+    else if(panelCnt == 2)
+    {
+        
+    }
+    
+//    else if()
     
     for (; k < self.testRecordArray.count; ++k)
     {
