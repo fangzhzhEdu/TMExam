@@ -107,7 +107,7 @@
         int right = 0;
         for (TMTestRecord *record in array)
         {
-            if ([record isRight])
+            if ([record answered ] && [record isRight])
             {
                 ++right;
                 ++totalRightCnt;

@@ -10,6 +10,7 @@
 #import "PCPieChart.h"
 #import "TMTestRecordManager.h"
 #import "TMTestResult.h"
+#import "TMTestRecord.h"
 @interface TMScoreViewController ()
 
 @end
@@ -206,27 +207,46 @@
         self.testRecord17,
         self.testRecord18,
         self.testRecord19,
-        self.testRecord0,
-        self.testRecord1,
-        self.testRecord2,
-        self.testRecord3,
-        self.testRecord4,
-        self.testRecord5,
-        self.testRecord6,
-        self.testRecord7,
-        self.testRecord8,
-        self.testRecord9,
-        self.testRecord0,
-        self.testRecord1,
-        self.testRecord2,
-        self.testRecord3,
-        self.testRecord4,
-        self.testRecord5,
-        self.testRecord6,
-        self.testRecord7,
-        self.testRecord8,
-        self.testRecord9,
+        self.testRecord20,
+        self.testRecord21,
+        self.testRecord22,
+        self.testRecord23,
+        self.testRecord24,
+        self.testRecord25,
+        self.testRecord26,
+        self.testRecord27,
+        self.testRecord28,
+        self.testRecord29,
+        self.testRecord30,
+        self.testRecord31,
+        self.testRecord32,
+        self.testRecord33,
+        self.testRecord34,
         nil];
+
+    NSArray *array = [[TMTestRecordManager sharedManager].type2RecordArrayDict objectForKey:[NSNumber numberWithInt:RECORD_TYPE_SINGLE_SELECTION]];
+
+    int k = 0;
+    for (TMTestRecord *record in array)
+    {
+
+        if ([record answered] && ![record isRight])
+        {
+            UIImageView *imageView = [self.testRecordArray objectAtIndex:k];
+            [imageView setImage:[UIImage imageNamed:@"OptionMarkError"]];
+        }
+        
+        if (![record answered]) {
+            break;
+        }
+        ++k;
+    }
+    
+    for (; k < self.testRecordArray.count; ++k)
+    {
+        UIImageView *imageView = [self.testRecordArray objectAtIndex:k];
+        imageView.hidden = YES;
+    }
     
 
 

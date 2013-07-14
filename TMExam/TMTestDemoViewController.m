@@ -171,6 +171,7 @@
 
 - (void)loadSingleSelectionRecord:(TMTestRecordSingleSelection *)record
 {
+    record.answered = YES;
     self.questionLabel.text = record.body;
     
     [self.optionQuestionAButton setImage:[UIImage imageNamed:@"OptionBackNormal"] forState:UIControlStateNormal];

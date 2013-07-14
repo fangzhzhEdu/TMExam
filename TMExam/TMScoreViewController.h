@@ -82,5 +82,7 @@
 @property (nonatomic, strong) IBOutlet UIImageView *testPage1;
 @property (nonatomic, strong) IBOutlet UIImageView *testPage2;
 
+@property (nonatomic, strong) IBOutlet UIImageView *finishTest;
+
 
 @end
