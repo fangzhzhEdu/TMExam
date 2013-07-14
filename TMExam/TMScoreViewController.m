@@ -24,52 +24,6 @@
         if (n <= 0) {
             return self;
         }
-        
-
-        NSDictionary *dict = [[[TMTestRecordManager sharedManager] testResultInfoArray] objectAtIndex:n-1];
-        TMTestResult *result = [[TMTestResult alloc] initWithDict:dict];
-        
-        long duration = result.testDuration;
-        int minutes = duration / 60;
-        int seconds = duration % 60;
-        
-        int decimal = minutes / 10;
-        int unit = minutes  % 10;
-        NSString *imageName = nil;
-        UIImage *image = nil;
-        if (decimal != 0) {
-            imageName =  [NSString stringWithFormat:@"%d_06.png", decimal];
-            image = [UIImage imageNamed:imageName];
-            [self.time0 setImage:image];
-        }
-        imageName =  [NSString stringWithFormat:@"%d_06.png", unit];
-        image = [UIImage imageNamed:imageName];
-        [self.time1 setImage:image];
-
-        decimal = seconds / 10;
-        unit = seconds  % 10;
-        imageName =  [NSString stringWithFormat:@"%d_06.png", decimal];
-        image = [UIImage imageNamed:imageName];
-        [self.time2 setImage:image];
-        
-        imageName =  [NSString stringWithFormat:@"%d_06.png", unit];
-        image = [UIImage imageNamed:imageName];
-        [self.time3 setImage:image];
-
-        
-        // 答题时间
-        
-        // 正确统计
-        
-        // 正确率
-        
-        
-        // 答题次数统计
-        
-        
-        // 称号
-        
-        // 每一个题目
     }
     
     return self;
@@ -135,6 +89,147 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    int n = [[TMTestRecordManager sharedManager] testResultInfoArray].count;
+
+    NSDictionary *dict = [[[TMTestRecordManager sharedManager] testResultInfoArray] objectAtIndex:n-1];
+    TMTestResult *result = [[TMTestResult alloc] initWithDict:dict];
+    
+    long duration = result.testDuration;
+    int minutes = duration / 60;
+    int seconds = duration % 60;
+    
+    int decimal = minutes / 10;
+    int unit = minutes  % 10;
+    
+    NSString *imageName = nil;
+    UIImage *image = nil;
+    
+    // 答题时间
+    if (decimal != 0) {
+        imageName =  [NSString stringWithFormat:@"%d_06", decimal];
+        image = [UIImage imageNamed:imageName];
+        [self.time0 setImage:image];
+    }
+    if (unit != 0) {
+        imageName =  [NSString stringWithFormat:@"%d_06", unit];
+        image = [UIImage imageNamed:imageName];
+        [self.time1 setImage:image];
+    }
+    
+    decimal = seconds / 10;
+    unit = seconds  % 10;
+    
+
+    if (decimal != 0) {
+        imageName =  [NSString stringWithFormat:@"%d_06", decimal];
+        image = [UIImage imageNamed:imageName];
+        [self.time2 setImage:image];
+    }
+    
+    imageName =  [NSString stringWithFormat:@"%d_06", unit];
+    image = [UIImage imageNamed:imageName];
+    [self.time3 setImage:image];
+    
+    
+    //  正确统计
+    decimal = result.totalCnt / 10;
+    unit = result.totalCnt % 10;
+    
+    if (decimal != 0) {
+
+        imageName = [NSString stringWithFormat:@"%d_14", decimal];
+        [self.statistics2 setImage:[UIImage imageNamed:imageName]];
+    }
+    imageName = [NSString stringWithFormat:@"%d_14", unit];
+    [self.statistics3 setImage:[UIImage imageNamed:imageName]];
+
+    decimal = result.rightCnt / 10;
+    unit = result.rightCnt % 10;
+    
+        if (decimal != 0) {
+            imageName = [NSString stringWithFormat:@"%d_14", decimal];
+            [self.statistics0 setImage:[UIImage imageNamed:imageName]];
+        }
+    imageName = [NSString stringWithFormat:@"%d_14", unit];
+    [self.statistics1 setImage:[UIImage imageNamed:imageName]];
+    
+    
+    // 正确率
+    int percent = result.rightCnt * 100 / result.totalCnt ;
+    decimal = percent / 10;
+    unit = percent % 10;
+    decimal = 0;
+    unit = 0;
+    if (decimal != 0) {
+        imageName = [NSString stringWithFormat:@"%d_10", decimal];
+        [self.testPercent0 setImage:[UIImage imageNamed:imageName]];
+    }
+    imageName = [NSString stringWithFormat:@"%d_10", unit];
+    [self.testPercent1 setImage:[UIImage imageNamed:imageName]];
+
+    
+    
+    
+    // 答题次数统计
+    decimal = n / 10;
+    unit = n % 10;
+
+    if (decimal != 0) {
+        imageName = [NSString stringWithFormat:@"%d_23", decimal];
+        [self.testTimes0  setImage:[UIImage imageNamed:imageName]];
+    }
+    
+    imageName = [NSString stringWithFormat:@"%d_23", unit];
+    [self.testTimes1 setImage:[UIImage imageNamed:imageName]];
+    
+    // 称号
+    
+    // 每一个题目
+    self.testRecordArray = [[NSMutableArray alloc] initWithObjects:
+        self.testRecord0,
+        self.testRecord1,
+        self.testRecord2,
+        self.testRecord3,
+        self.testRecord4,
+        self.testRecord5,
+        self.testRecord6,
+        self.testRecord7,
+        self.testRecord8,
+        self.testRecord9,
+        self.testRecord10,
+        self.testRecord11,
+        self.testRecord12,
+        self.testRecord13,
+        self.testRecord14,
+        self.testRecord15,
+        self.testRecord16,
+        self.testRecord17,
+        self.testRecord18,
+        self.testRecord19,
+        self.testRecord0,
+        self.testRecord1,
+        self.testRecord2,
+        self.testRecord3,
+        self.testRecord4,
+        self.testRecord5,
+        self.testRecord6,
+        self.testRecord7,
+        self.testRecord8,
+        self.testRecord9,
+        self.testRecord0,
+        self.testRecord1,
+        self.testRecord2,
+        self.testRecord3,
+        self.testRecord4,
+        self.testRecord5,
+        self.testRecord6,
+        self.testRecord7,
+        self.testRecord8,
+        self.testRecord9,
+        nil];
+    
+
+
 }
 
 - (void)didReceiveMemoryWarning

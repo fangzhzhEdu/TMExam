@@ -448,8 +448,6 @@
 		8459AC89177F33E700646992 /* TMExam */ = {
 			isa = PBXGroup;
 			children = (
-				8715D71117921B7A00B0063E /* TMTestResult.h */,
-				8715D71217921B7B00B0063E /* TMTestResult.m */,
 				87B79BC017846A1F00482EC4 /* vendor */,
 				8459ACB7177F39A200646992 /* res */,
 				8459ACAC177F34CD00646992 /* src */,
@@ -475,6 +473,8 @@
 		8459ACAC177F34CD00646992 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				8715D71117921B7A00B0063E /* TMTestResult.h */,
+				8715D71217921B7B00B0063E /* TMTestResult.m */,
 				87FAD91C1786161F00F31A38 /* TMTestRecordSingleSelection.h */,
 				87FAD91D1786162000F31A38 /* TMTestRecordSingleSelection.m */,
 				87FAD9071786123E00F31A38 /* TMUtility.h */,
