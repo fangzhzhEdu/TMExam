@@ -10,6 +10,7 @@
 #import "TMTestRecordManager.h"
 #import "TMTestRecord.h"
 #import "TMTestRecordSingleSelection.h"
+#import "TMScoreViewController.h"
 
 @interface TMTestDemoViewController ()
 
@@ -299,7 +300,12 @@
 {
     [TMTestRecordManager sharedManager].finishAnswerTime = time(NULL);
     [[TMTestRecordManager sharedManager] doStatistics:([TMTestRecordManager sharedManager].finishAnswerTime-[TMTestRecordManager sharedManager].startAnswerTime)];
-    [self.navigationController popViewControllerAnimated:YES];
+
+
+    // 本次
+    TMScoreViewController *scoreViewController = [[TMScoreViewController alloc] initWithNibName:@"TMScoreViewController-ip5" bundle:[NSBundle mainBundle]];
+    [self.navigationController pushViewController:scoreViewController animated:YES];
+
 }
 
 - (IBAction)undoneButtonClicked:(id)sender

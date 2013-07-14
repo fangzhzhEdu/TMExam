@@ -167,11 +167,11 @@
 		8715D70E1791F20500B0063E /* 斜杠_14@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8715D6B61791F20500B0063E /* 斜杠_14@2x.png */; };
 		8715D7101791F2AB00B0063E /* 统计_fb@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8715D70F1791F2AB00B0063E /* 统计_fb@2x.png */; };
 		8715D71317921B7B00B0063E /* TMTestResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 8715D71217921B7B00B0063E /* TMTestResult.m */; };
-		8715D7201792E8F300B0063E /* 60以上--x318--435.png in Resources */ = {isa = PBXBuildFile; fileRef = 8715D71B1792E8F200B0063E /* 60以上--x318--435.png */; };
-		8715D7211792E8F300B0063E /* 60以下_06.png in Resources */ = {isa = PBXBuildFile; fileRef = 8715D71C1792E8F200B0063E /* 60以下_06.png */; };
-		8715D7221792E8F300B0063E /* 85以上_06.png in Resources */ = {isa = PBXBuildFile; fileRef = 8715D71D1792E8F200B0063E /* 85以上_06.png */; };
-		8715D7231792E8F300B0063E /* 95以上_06.png in Resources */ = {isa = PBXBuildFile; fileRef = 8715D71E1792E8F300B0063E /* 95以上_06.png */; };
-		8715D7241792E8F300B0063E /* 错误_10.png in Resources */ = {isa = PBXBuildFile; fileRef = 8715D71F1792E8F300B0063E /* 错误_10.png */; };
+		8715D72A1792E9D400B0063E /* 60以上--x318--435@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8715D7251792E9D100B0063E /* 60以上--x318--435@2x.png */; };
+		8715D72B1792E9D400B0063E /* 60以下_06@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8715D7261792E9D100B0063E /* 60以下_06@2x.png */; };
+		8715D72C1792E9D400B0063E /* 85以上_06@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8715D7271792E9D100B0063E /* 85以上_06@2x.png */; };
+		8715D72D1792E9D400B0063E /* 95以上_06@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8715D7281792E9D200B0063E /* 95以上_06@2x.png */; };
+		8715D72E1792E9D400B0063E /* 错误_10@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8715D7291792E9D300B0063E /* 错误_10@2x.png */; };
 		87A6F0931785184B00C60AE4 /* HalfPieChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A6F0921785184B00C60AE4 /* HalfPieChartViewController.m */; };
 		87B79BCB17846A1F00482EC4 /* PCHalfPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 87B79BC317846A1F00482EC4 /* PCHalfPieChart.m */; };
 		87B79BCC17846A1F00482EC4 /* PCLineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 87B79BC517846A1F00482EC4 /* PCLineChartView.m */; };
@@ -367,11 +367,11 @@
 		8715D70F1791F2AB00B0063E /* 统计_fb@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "统计_fb@2x.png"; sourceTree = "<group>"; };
 		8715D71117921B7A00B0063E /* TMTestResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMTestResult.h; sourceTree = "<group>"; };
 		8715D71217921B7B00B0063E /* TMTestResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMTestResult.m; sourceTree = "<group>"; };
-		8715D71B1792E8F200B0063E /* 60以上--x318--435.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "60以上--x318--435.png"; sourceTree = "<group>"; };
-		8715D71C1792E8F200B0063E /* 60以下_06.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "60以下_06.png"; sourceTree = "<group>"; };
-		8715D71D1792E8F200B0063E /* 85以上_06.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "85以上_06.png"; sourceTree = "<group>"; };
-		8715D71E1792E8F300B0063E /* 95以上_06.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "95以上_06.png"; sourceTree = "<group>"; };
-		8715D71F1792E8F300B0063E /* 错误_10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "错误_10.png"; sourceTree = "<group>"; };
+		8715D7251792E9D100B0063E /* 60以上--x318--435@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "60以上--x318--435@2x.png"; sourceTree = "<group>"; };
+		8715D7261792E9D100B0063E /* 60以下_06@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "60以下_06@2x.png"; sourceTree = "<group>"; };
+		8715D7271792E9D100B0063E /* 85以上_06@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "85以上_06@2x.png"; sourceTree = "<group>"; };
+		8715D7281792E9D200B0063E /* 95以上_06@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "95以上_06@2x.png"; sourceTree = "<group>"; };
+		8715D7291792E9D300B0063E /* 错误_10@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "错误_10@2x.png"; sourceTree = "<group>"; };
 		87A6F0911785184B00C60AE4 /* HalfPieChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HalfPieChartViewController.h; sourceTree = "<group>"; };
 		87A6F0921785184B00C60AE4 /* HalfPieChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HalfPieChartViewController.m; sourceTree = "<group>"; };
 		87B79BC217846A1F00482EC4 /* PCHalfPieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCHalfPieChart.h; sourceTree = "<group>"; };
@@ -531,11 +531,11 @@
 			isa = PBXGroup;
 			children = (
 				8715D65F1791F1F300B0063E /* 0_10@2x.png */,
-				8715D71B1792E8F200B0063E /* 60以上--x318--435.png */,
-				8715D71C1792E8F200B0063E /* 60以下_06.png */,
-				8715D71D1792E8F200B0063E /* 85以上_06.png */,
-				8715D71E1792E8F300B0063E /* 95以上_06.png */,
-				8715D71F1792E8F300B0063E /* 错误_10.png */,
+				8715D7251792E9D100B0063E /* 60以上--x318--435@2x.png */,
+				8715D7261792E9D100B0063E /* 60以下_06@2x.png */,
+				8715D7271792E9D100B0063E /* 85以上_06@2x.png */,
+				8715D7281792E9D200B0063E /* 95以上_06@2x.png */,
+				8715D7291792E9D300B0063E /* 错误_10@2x.png */,
 				8715D70F1791F2AB00B0063E /* 统计_fb@2x.png */,
 				8715D6601791F1F300B0063E /* 0_14@2x.png */,
 				8715D6611791F1F300B0063E /* 0_23@2x.png */,
@@ -927,11 +927,11 @@
 				8715D70D1791F20500B0063E /* 冒号@2x.png in Resources */,
 				8715D70E1791F20500B0063E /* 斜杠_14@2x.png in Resources */,
 				8715D7101791F2AB00B0063E /* 统计_fb@2x.png in Resources */,
-				8715D7201792E8F300B0063E /* 60以上--x318--435.png in Resources */,
-				8715D7211792E8F300B0063E /* 60以下_06.png in Resources */,
-				8715D7221792E8F300B0063E /* 85以上_06.png in Resources */,
-				8715D7231792E8F300B0063E /* 95以上_06.png in Resources */,
-				8715D7241792E8F300B0063E /* 错误_10.png in Resources */,
+				8715D72A1792E9D400B0063E /* 60以上--x318--435@2x.png in Resources */,
+				8715D72B1792E9D400B0063E /* 60以下_06@2x.png in Resources */,
+				8715D72C1792E9D400B0063E /* 85以上_06@2x.png in Resources */,
+				8715D72D1792E9D400B0063E /* 95以上_06@2x.png in Resources */,
+				8715D72E1792E9D400B0063E /* 错误_10@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

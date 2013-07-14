@@ -232,7 +232,7 @@
         if ([record answered] && ![record isRight])
         {
             UIImageView *imageView = [self.testRecordArray objectAtIndex:k];
-            [imageView setImage:[UIImage imageNamed:@"OptionMarkError"]];
+            [imageView setImage:[UIImage imageNamed:@"错误_10"]];
         }
         
         if (![record answered]) {
