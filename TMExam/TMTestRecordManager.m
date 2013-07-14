@@ -117,11 +117,13 @@
         [self.type2RightRecDict setObject:[NSNumber numberWithInt:right] forKey:[NSNumber numberWithInt:k]];
     }
     TMTestResult *result = [[TMTestResult alloc] init];
+    result.testDuration = self.finishAnswerTime - self.startAnswerTime;
     result.totalCnt = totalCnt;
-    result.rightCnt = totalRightCnt;
-    result.testDuration = duration;
+    result.rightCnt= totalRightCnt;
+    
+    NSDictionary *dict = [result toDict];
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [self.testResultInfoArray addObject:result];
+    [self.testResultInfoArray addObject:dict];
     [defaults setObject:self.testResultInfoArray forKey:@"com.topmost.testResult"];
     [defaults synchronize];
 }

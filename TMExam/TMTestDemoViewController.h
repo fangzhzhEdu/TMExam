@@ -33,9 +33,6 @@
 
 @property (nonatomic, strong) IBOutlet UIImageView *explainFrameImageView;
 
-#pragma mark game logic property
-@property (nonatomic, readwrite)long   startAnswerTime;
-@property (nonatomic, readwrite)long   finishAnswerTime;
 
 
 #pragma mark methods

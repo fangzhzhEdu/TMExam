@@ -16,6 +16,11 @@
 @property (nonatomic, strong) NSMutableDictionary *type2RightRecDict;       // 类别 -> 正确题目个数 的字典
 @property (nonatomic, strong) NSMutableArray *testResultInfoArray;     // 答题信息统计数组
 
+#pragma mark game logic property
+@property (nonatomic, readwrite)long   startAnswerTime;
+@property (nonatomic, readwrite)long   finishAnswerTime;
+
+
 + (TMTestRecordManager *)sharedManager;
 
 /*

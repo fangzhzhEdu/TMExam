@@ -25,8 +25,37 @@
             return self;
         }
         
-        TMTestResult *result = nil;
-        result = [[[TMTestRecordManager sharedManager] testResultInfoArray] objectAtIndex:n-1];
+
+        NSDictionary *dict = [[[TMTestRecordManager sharedManager] testResultInfoArray] objectAtIndex:n-1];
+        TMTestResult *result = [[TMTestResult alloc] initWithDict:dict];
+        
+        long duration = result.testDuration;
+        int minutes = duration / 60;
+        int seconds = duration % 60;
+        
+        int decimal = minutes / 10;
+        int unit = minutes  % 10;
+        NSString *imageName = nil;
+        UIImage *image = nil;
+        if (decimal != 0) {
+            imageName =  [NSString stringWithFormat:@"%d_06.png", decimal];
+            image = [UIImage imageNamed:imageName];
+            [self.time0 setImage:image];
+        }
+        imageName =  [NSString stringWithFormat:@"%d_06.png", unit];
+        image = [UIImage imageNamed:imageName];
+        [self.time1 setImage:image];
+
+        decimal = seconds / 10;
+        unit = seconds  % 10;
+        imageName =  [NSString stringWithFormat:@"%d_06.png", decimal];
+        image = [UIImage imageNamed:imageName];
+        [self.time2 setImage:image];
+        
+        imageName =  [NSString stringWithFormat:@"%d_06.png", unit];
+        image = [UIImage imageNamed:imageName];
+        [self.time3 setImage:image];
+
         
         // 答题时间
         
