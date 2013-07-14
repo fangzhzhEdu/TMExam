@@ -133,8 +133,8 @@
     
     
     //  正确统计
-    decimal = result.totalCnt / 10;
-    unit = result.totalCnt % 10;
+    decimal = result.answeredCnt / 10;
+    unit = result.answeredCnt % 10;
     
     if (decimal != 0) {
 
@@ -156,11 +156,12 @@
     
     
     // 正确率
-    int percent = result.rightCnt * 100 / result.totalCnt ;
+    int percent = result.rightCnt * 100 / result.answeredCnt ;
     decimal = percent / 10;
     unit = percent % 10;
-    decimal = 0;
-    unit = 0;
+    if (decimal < 10) {
+        self.testPercent2.hidden = YES;
+    }
     if (decimal != 0) {
         imageName = [NSString stringWithFormat:@"%d_10", decimal];
         [self.testPercent0 setImage:[UIImage imageNamed:imageName]];
@@ -168,8 +169,6 @@
     imageName = [NSString stringWithFormat:@"%d_10", unit];
     [self.testPercent1 setImage:[UIImage imageNamed:imageName]];
 
-    
-    
     
     // 答题次数统计
     decimal = n / 10;

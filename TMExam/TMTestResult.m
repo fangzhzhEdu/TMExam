@@ -17,6 +17,7 @@
         self.testDuration = [[dict objectForKey:@"test_duration"] longValue];
         self.rightCnt = [[dict objectForKey:@"right_cnt"] intValue];
         self.totalCnt = [[dict objectForKey:@"total_cnt"] intValue];
+        self.answeredCnt = [[dict objectForKey:@"answered_cnt"] intValue];
     }
     return self;
 }
@@ -27,6 +28,8 @@
     [dict setObject:[NSNumber numberWithLong:self.testDuration] forKey:@"test_duration"];
     [dict setObject:[NSNumber numberWithInt:self.rightCnt] forKey:@"right_cnt"];
     [dict setObject:[NSNumber numberWithInt:self.totalCnt] forKey:@"total_cnt"];
+    [dict setObject:[NSNumber numberWithInt:self.answeredCnt] forKey:@"answered_cnt"];
+    
     return dict;
 }
 

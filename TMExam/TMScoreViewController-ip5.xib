@@ -1359,6 +1359,14 @@
 					<int key="connectionID">543</int>
 				</object>
 				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">testPercent2</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="457377320"/>
+					</object>
+					<int key="connectionID">545</int>
+				</object>
+				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">finishTestTouched:</string>
 						<reference key="source" ref="1063078511"/>
@@ -1814,7 +1822,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">544</int>
+			<int key="maxID">545</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -1844,6 +1852,7 @@
 						<string key="testPage2">UIImageView</string>
 						<string key="testPercent0">UIImageView</string>
 						<string key="testPercent1">UIImageView</string>
+						<string key="testPercent2">UIImageView</string>
 						<string key="testRecord0">UIImageView</string>
 						<string key="testRecord1">UIImageView</string>
 						<string key="testRecord10">UIImageView</string>
@@ -1929,6 +1938,10 @@
 						</object>
 						<object class="IBToOneOutletInfo" key="testPercent1">
 							<string key="name">testPercent1</string>
+							<string key="candidateClassName">UIImageView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="testPercent2">
+							<string key="name">testPercent2</string>
 							<string key="candidateClassName">UIImageView</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="testRecord0">

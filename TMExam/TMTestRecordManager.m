@@ -101,12 +101,16 @@
     }
     int totalCnt = 0;
     int totalRightCnt = 0;
+    int totalAnswered = 0;
     for (int k = RECORD_TYPE_SINGLE_SELECTION; k < RECORD_TYPE_MAX; ++k)
     {
         NSArray *array = [self.type2RecordArrayDict objectForKey:[NSNumber numberWithInt:k]];
         int right = 0;
         for (TMTestRecord *record in array)
         {
+            if ([record answered]) {
+                ++totalAnswered;
+            }
             if ([record answered ] && [record isRight])
             {
                 ++right;
@@ -120,6 +124,7 @@
     result.testDuration = self.finishAnswerTime - self.startAnswerTime;
     result.totalCnt = totalCnt;
     result.rightCnt= totalRightCnt;
+    result.answeredCnt = totalAnswered;
     
     NSDictionary *dict = [result toDict];
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];

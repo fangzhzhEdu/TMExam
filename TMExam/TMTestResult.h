@@ -12,6 +12,7 @@
 @property ( nonatomic, readwrite) long testDuration;
 @property ( nonatomic, readwrite) int  rightCnt;
 @property (nonatomic, readwrite) int totalCnt;
+@property (nonatomic, readwrite) int answeredCnt;
 
 -(id) initWithDict:(NSDictionary*)dict;
 -(NSDictionary*) toDict;

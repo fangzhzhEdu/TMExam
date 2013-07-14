@@ -29,6 +29,7 @@
 
 @property (nonatomic, strong) IBOutlet UIImageView *testPercent0;
 @property (nonatomic, strong) IBOutlet UIImageView *testPercent1;
+@property (nonatomic, strong) IBOutlet UIImageView *testPercent2;
 
 
 @property (nonatomic, strong) IBOutlet UIImageView *honorTitle;
