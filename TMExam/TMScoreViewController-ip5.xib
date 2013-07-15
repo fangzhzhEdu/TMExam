@@ -144,7 +144,7 @@
 						<string key="NSFrame">{{167, 201}, {133, 34}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
+						<reference key="NSNextKeyView" ref="891934056"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -339,12 +339,13 @@
 							<string key="NSResourceName">x334--y358@2x.png</string>
 						</object>
 					</object>
-					<object class="IBUIScrollView" id="772712176">
+					<object class="IBUIScrollView" id="891934056">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{0, 299}, {320, 209}}</string>
+						<string key="NSFrame">{{0, 286}, {320, 220}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="514327960"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<bool key="IBUIMultipleTouchEnabled">YES</bool>
@@ -353,13 +354,14 @@
 						<bool key="IBUIShowsHorizontalScrollIndicator">NO</bool>
 						<bool key="IBUIShowsVerticalScrollIndicator">NO</bool>
 					</object>
-					<object class="IBUIPageControl" id="259782616">
+					<object class="IBUIPageControl" id="514327960">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">1316</int>
 						<object class="NSPSMatrix" key="NSFrameMatrix"/>
-						<string key="NSFrame">{{141, 512}, {38, 36}}</string>
+						<string key="NSFrame">{{141, 504}, {38, 36}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -543,7 +545,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">scrollView</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="772712176"/>
+						<reference key="destination" ref="891934056"/>
 					</object>
 					<int key="connectionID">548</int>
 				</object>
@@ -551,7 +553,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">pageControl</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="259782616"/>
+						<reference key="destination" ref="514327960"/>
 					</object>
 					<int key="connectionID">550</int>
 				</object>
@@ -597,8 +599,8 @@
 							<reference ref="488158287"/>
 							<reference ref="457377320"/>
 							<reference ref="1063078511"/>
-							<reference ref="772712176"/>
-							<reference ref="259782616"/>
+							<reference ref="891934056"/>
+							<reference ref="514327960"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -715,12 +717,12 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">547</int>
-						<reference key="object" ref="772712176"/>
+						<reference key="object" ref="891934056"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">549</int>
-						<reference key="object" ref="259782616"/>
+						<reference key="object" ref="514327960"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
 				</array>
