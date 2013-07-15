@@ -30,61 +30,84 @@
     return self;
 }
 
-- (id)initWithDict:(NSDictionary*)sampleInfo
+-(id)init
 {
     self = [super init];
     if (self)
     {
-        self.title =  @"成绩统计";
-        [self.view setBackgroundColor:[UIColor colorWithWhite:1 alpha:1]];
-		
-		
-		int height = [self.view bounds].size.width/3*2.; // 220;
-		int width = [self.view bounds].size.width; //320;
-		PCPieChart *pieChart = [[PCPieChart alloc] initWithFrame:CGRectMake(([self.view bounds].size.width-width)/2,([self.view bounds].size.height-height)/2,width,height)];
-		[pieChart setAutoresizingMask:UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleBottomMargin];
-		[pieChart setDiameter:width/2];
-		[pieChart setSameColorLabel:YES];
-		
-		[self.view addSubview:pieChart];
-		
-		if ([[UIDevice currentDevice] userInterfaceIdiom]==UIUserInterfaceIdiomPad)
-		{
-			pieChart.titleFont = [UIFont fontWithName:@"HelveticaNeue-Bold" size:30];
-			pieChart.percentageFont = [UIFont fontWithName:@"HelveticaNeue-Bold" size:50];
-		}
-		
-		NSMutableArray *components = [NSMutableArray array];
-		for (int i=0; i<[[sampleInfo objectForKey:@"data"] count]; i++)
-		{
-			NSDictionary *item = [[sampleInfo objectForKey:@"data"] objectAtIndex:i];
-			PCPieComponent *component = [PCPieComponent pieComponentWithTitle:[item objectForKey:@"title"] value:[[item objectForKey:@"value"] floatValue]];
-			[components addObject:component];
-			
-			if (i==0)
-			{
-				[component setColour:PCColorYellow];
-			}
-			else if (i==1)
-			{
-				[component setColour:PCColorGreen];
-			}
-			else if (i==2)
-			{
-				[component setColour:PCColorOrange];
-			}
-			else if (i==3)
-			{
-				[component setColour:PCColorRed];
-			}
-			else if (i==4)
-			{
-				[component setColour:PCColorBlue];
-			}
-		}
-		[pieChart setComponents:components];
+        int n = [[TMTestRecordManager sharedManager] testResultInfoArray].count;
+        NSDictionary *testResultsDict = [[[TMTestRecordManager sharedManager] testResultInfoArray] objectAtIndex:n-1];
+        TMTestResult *result = [[TMTestResult alloc] initWithDict:testResultsDict];
+        
+        NSMutableDictionary *dict = [[NSMutableDictionary alloc] initWithCapacity:10];
+        NSMutableArray *data = [[NSMutableArray alloc] initWithCapacity:10];
+        [dict setObject:data forKey:@"data"];
+        NSMutableDictionary *record = [[NSMutableDictionary alloc] initWithCapacity:2];
+        [record setObject:@"正确题目" forKey:@"title"];
+        [record setObject:[NSNumber numberWithInt:result.rightCnt] forKey:@"value"];
+        [data addObject:record];
+        
+        record = [[NSMutableDictionary alloc] initWithCapacity:2];
+        [record setObject:@"错误题目" forKey:@"title"];
+        [record setObject:[NSNumber numberWithInt:result.answeredCnt-result.rightCnt] forKey:@"value"];
+        [data addObject:record];
+
+        [self initWithDict:dict];
     }
     return self;
+}
+
+- (void)initWithDict:(NSDictionary*)sampleInfo
+{
+    self.title =  @"成绩统计";
+    [self.view setBackgroundColor:[UIColor colorWithWhite:1 alpha:1]];
+    
+    
+    int height = [self.view bounds].size.width/3*2.; // 220;
+    int width = [self.view bounds].size.width; //320;
+    PCPieChart *pieChart = [[PCPieChart alloc] initWithFrame:CGRectMake(([self.view bounds].size.width-width)/2,([self.view bounds].size.height-height)/2,width,height)];
+    [pieChart setAutoresizingMask:UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleBottomMargin];
+    [pieChart setDiameter:width/2];
+    [pieChart setSameColorLabel:YES];
+    
+    [self.view addSubview:pieChart];
+    
+    if ([[UIDevice currentDevice] userInterfaceIdiom]==UIUserInterfaceIdiomPad)
+    {
+        pieChart.titleFont = [UIFont fontWithName:@"HelveticaNeue-Bold" size:30];
+        pieChart.percentageFont = [UIFont fontWithName:@"HelveticaNeue-Bold" size:50];
+    }
+    
+    NSMutableArray *components = [NSMutableArray array];
+    for (int i=0; i<[[sampleInfo objectForKey:@"data"] count]; i++)
+    {
+        NSDictionary *item = [[sampleInfo objectForKey:@"data"] objectAtIndex:i];
+        PCPieComponent *component = [PCPieComponent pieComponentWithTitle:[item objectForKey:@"title"] value:[[item objectForKey:@"value"] floatValue]];
+        [components addObject:component];
+        
+        if (i==0)
+        {
+            [component setColour:PCColorYellow];
+        }
+        else if (i==1)
+        {
+            [component setColour:PCColorGreen];
+        }
+        else if (i==2)
+        {
+            [component setColour:PCColorOrange];
+        }
+        else if (i==3)
+        {
+            [component setColour:PCColorRed];
+        }
+        else if (i==4)
+        {
+            [component setColour:PCColorBlue];
+        }
+    }
+    [pieChart setComponents:components];
+    
 }
 
 - (void)viewDidLoad

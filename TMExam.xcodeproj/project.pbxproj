@@ -173,6 +173,14 @@
 		8715D72D1792E9D400B0063E /* 95以上_06@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8715D7281792E9D200B0063E /* 95以上_06@2x.png */; };
 		8715D72E1792E9D400B0063E /* 错误_10@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8715D7291792E9D300B0063E /* 错误_10@2x.png */; };
 		8715D730179375C800B0063E /* TMScoreViewControllerStatistics-ip5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8715D72F179375C700B0063E /* TMScoreViewControllerStatistics-ip5.xib */; };
+		8715D74617937A5C00B0063E /* x22--y296@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8715D73F17937A5800B0063E /* x22--y296@2x.png */; };
+		8715D74717937A5C00B0063E /* x77--y865@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8715D74017937A5800B0063E /* x77--y865@2x.png */; };
+		8715D74817937A5C00B0063E /* x111---y181@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8715D74117937A5900B0063E /* x111---y181@2x.png */; };
+		8715D74917937A5C00B0063E /* x298--y841  未被选中背景@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8715D74217937A5900B0063E /* x298--y841  未被选中背景@2x.png */; };
+		8715D74A17937A5C00B0063E /* x319--y865@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8715D74317937A5A00B0063E /* x319--y865@2x.png */; };
+		8715D74B17937A5C00B0063E /* 灰色_07@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8715D74417937A5A00B0063E /* 灰色_07@2x.png */; };
+		8715D74C17937A5C00B0063E /* 灰色_08@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8715D74517937A5B00B0063E /* 灰色_08@2x.png */; };
+		8715D74F179381C100B0063E /* TMScoreViewControllerStatistics.m in Sources */ = {isa = PBXBuildFile; fileRef = 8715D74E179381C000B0063E /* TMScoreViewControllerStatistics.m */; };
 		87A6F0931785184B00C60AE4 /* HalfPieChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A6F0921785184B00C60AE4 /* HalfPieChartViewController.m */; };
 		87B79BCB17846A1F00482EC4 /* PCHalfPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 87B79BC317846A1F00482EC4 /* PCHalfPieChart.m */; };
 		87B79BCC17846A1F00482EC4 /* PCLineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 87B79BC517846A1F00482EC4 /* PCLineChartView.m */; };
@@ -374,6 +382,15 @@
 		8715D7281792E9D200B0063E /* 95以上_06@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "95以上_06@2x.png"; sourceTree = "<group>"; };
 		8715D7291792E9D300B0063E /* 错误_10@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "错误_10@2x.png"; sourceTree = "<group>"; };
 		8715D72F179375C700B0063E /* TMScoreViewControllerStatistics-ip5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "TMScoreViewControllerStatistics-ip5.xib"; sourceTree = "<group>"; };
+		8715D73F17937A5800B0063E /* x22--y296@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "x22--y296@2x.png"; sourceTree = "<group>"; };
+		8715D74017937A5800B0063E /* x77--y865@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "x77--y865@2x.png"; sourceTree = "<group>"; };
+		8715D74117937A5900B0063E /* x111---y181@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "x111---y181@2x.png"; sourceTree = "<group>"; };
+		8715D74217937A5900B0063E /* x298--y841  未被选中背景@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "x298--y841  未被选中背景@2x.png"; sourceTree = "<group>"; };
+		8715D74317937A5A00B0063E /* x319--y865@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "x319--y865@2x.png"; sourceTree = "<group>"; };
+		8715D74417937A5A00B0063E /* 灰色_07@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "灰色_07@2x.png"; sourceTree = "<group>"; };
+		8715D74517937A5B00B0063E /* 灰色_08@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "灰色_08@2x.png"; sourceTree = "<group>"; };
+		8715D74D179381BF00B0063E /* TMScoreViewControllerStatistics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMScoreViewControllerStatistics.h; sourceTree = "<group>"; };
+		8715D74E179381C000B0063E /* TMScoreViewControllerStatistics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMScoreViewControllerStatistics.m; sourceTree = "<group>"; };
 		87A6F0911785184B00C60AE4 /* HalfPieChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HalfPieChartViewController.h; sourceTree = "<group>"; };
 		87A6F0921785184B00C60AE4 /* HalfPieChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HalfPieChartViewController.m; sourceTree = "<group>"; };
 		87B79BC217846A1F00482EC4 /* PCHalfPieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCHalfPieChart.h; sourceTree = "<group>"; };
@@ -513,6 +530,8 @@
 				8459ACB4177F362800646992 /* TMScoreViewController.m */,
 				8715D5951791EEF300B0063E /* TMScoreViewController-ip5.xib */,
 				8715D72F179375C700B0063E /* TMScoreViewControllerStatistics-ip5.xib */,
+				8715D74D179381BF00B0063E /* TMScoreViewControllerStatistics.h */,
+				8715D74E179381C000B0063E /* TMScoreViewControllerStatistics.m */,
 				8411472617846DB00075F01D /* TMHtmlMaker.h */,
 				8411472717846DB00075F01D /* TMHtmlMaker.m */,
 				8411472917846E4E0075F01D /* TMQuestionMaker.h */,
@@ -533,6 +552,13 @@
 		8459ACB7177F39A200646992 /* res */ = {
 			isa = PBXGroup;
 			children = (
+				8715D73F17937A5800B0063E /* x22--y296@2x.png */,
+				8715D74017937A5800B0063E /* x77--y865@2x.png */,
+				8715D74117937A5900B0063E /* x111---y181@2x.png */,
+				8715D74217937A5900B0063E /* x298--y841  未被选中背景@2x.png */,
+				8715D74317937A5A00B0063E /* x319--y865@2x.png */,
+				8715D74417937A5A00B0063E /* 灰色_07@2x.png */,
+				8715D74517937A5B00B0063E /* 灰色_08@2x.png */,
 				8715D65F1791F1F300B0063E /* 0_10@2x.png */,
 				8715D7251792E9D100B0063E /* 60以上--x318--435@2x.png */,
 				8715D7261792E9D100B0063E /* 60以下_06@2x.png */,
@@ -936,6 +962,13 @@
 				8715D72D1792E9D400B0063E /* 95以上_06@2x.png in Resources */,
 				8715D72E1792E9D400B0063E /* 错误_10@2x.png in Resources */,
 				8715D730179375C800B0063E /* TMScoreViewControllerStatistics-ip5.xib in Resources */,
+				8715D74617937A5C00B0063E /* x22--y296@2x.png in Resources */,
+				8715D74717937A5C00B0063E /* x77--y865@2x.png in Resources */,
+				8715D74817937A5C00B0063E /* x111---y181@2x.png in Resources */,
+				8715D74917937A5C00B0063E /* x298--y841  未被选中背景@2x.png in Resources */,
+				8715D74A17937A5C00B0063E /* x319--y865@2x.png in Resources */,
+				8715D74B17937A5C00B0063E /* 灰色_07@2x.png in Resources */,
+				8715D74C17937A5C00B0063E /* 灰色_08@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -974,6 +1007,7 @@
 				843116C91788555D0058547A /* TMHomeViewController.m in Sources */,
 				843116D017887CE70058547A /* TMTestDemoViewController.m in Sources */,
 				8715D71317921B7B00B0063E /* TMTestResult.m in Sources */,
+				8715D74F179381C100B0063E /* TMScoreViewControllerStatistics.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

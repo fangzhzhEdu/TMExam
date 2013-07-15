@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface TMScoreViewController : UIViewController
-- (id)initWithDict:(NSDictionary*)sampleInfo;
 
 
 #pragma  mark Statistics

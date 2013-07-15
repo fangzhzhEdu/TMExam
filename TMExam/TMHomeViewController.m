@@ -10,6 +10,7 @@
 #import "TMTestViewController.h"
 #import "TMScoreViewController.h"
 #import "TMTestDemoViewController.h"
+#import "TMScoreViewControllerStatistics.h"
 
 @interface TMHomeViewController ()
 
@@ -70,8 +71,9 @@
 - (IBAction)scoreButtonClicked:(id)sender
 {
 //    TMScoreViewController *scoreViewController = [[TMScoreViewController alloc] init];
+    TMScoreViewControllerStatistics *scoreViewController = [[TMScoreViewControllerStatistics alloc] initWithNibName:@"TMScoreViewControllerStatistics-ip5" bundle:[NSBundle mainBundle]];
     
-    TMScoreViewController *scoreViewController = [[TMScoreViewController alloc] initWithNibName:@"TMScoreViewController-ip5" bundle:[NSBundle mainBundle]];
+//    TMScoreViewController *scoreViewController = [[TMScoreViewController alloc] initWithNibName:@"TMScoreViewController-ip5" bundle:[NSBundle mainBundle]];
     [self.navigationController pushViewController:scoreViewController animated:YES];
 }
 
