@@ -18,7 +18,9 @@
 @property (nonatomic, readwrite) NSInteger type;
 @property (nonatomic, strong) NSString* GUID;
 @property (nonatomic, strong) NSString* body;
-@property (nonatomic, readwrite) BOOL answered;
+@property (nonatomic, readwrite) BOOL answered; // 本题目是否回答过
+@property (nonatomic, readwrite) BOOL onceRighted; // 本题目,是否曾经被做对过
+@property (nonatomic, readwrite) BOOL onceAnswered; // 本题目,是否曾经被回答过
 
 - (BOOL)isRight;
 

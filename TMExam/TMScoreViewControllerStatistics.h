@@ -11,6 +11,9 @@
 @interface TMScoreViewControllerStatistics : UIViewController
 @property (nonatomic, strong) IBOutlet UIButton *percentBtn;
 @property (nonatomic, strong) IBOutlet UIButton *anserCntBtn;
+@property (nonatomic, strong) IBOutlet UIImageView *percentBack;
+@property (nonatomic, strong) IBOutlet UIImageView *anserCntBack;
+
 
 - (IBAction)percentButtonClicked:(id)sender;
 - (IBAction)anserCnttonClicked:(id)sender;

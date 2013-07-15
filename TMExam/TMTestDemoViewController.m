@@ -94,7 +94,11 @@
     [self loadSingleSelectionRecord:record];
     
     if (record.selIdx == record.rightIdx)
+    {
         [self doNext];
+        record.onceRighted = YES;
+
+    }
 }
 
 - (IBAction)optionBClicked:(id)sender
@@ -111,7 +115,10 @@
     [self loadSingleSelectionRecord:record];
     
     if (record.selIdx == record.rightIdx)
+    {
+        record.onceRighted = YES;
         [self doNext];
+    }
 }
 
 - (IBAction)optionCClicked:(id)sender
@@ -128,7 +135,11 @@
     [self loadSingleSelectionRecord:record];
     
     if (record.selIdx == record.rightIdx)
+    {
+        record.onceRighted = YES;
         [self doNext];
+    }
+
 }
 
 - (IBAction)optionDClicked:(id)sender
@@ -145,7 +156,10 @@
     [self loadSingleSelectionRecord:record];
     
     if (record.selIdx == record.rightIdx)
+    {
+        record.onceRighted = YES;
         [self doNext];
+    }
 }
 
 - (IBAction)previousButtonClicked:(id)sender
@@ -169,8 +183,14 @@
 {
     TMTestRecordSingleSelection *record =  [self.curRecordArray objectAtIndex:self.curTestRecordIdx];
     if (!record.answered) {
+        if ([record isRight])
+            record.onceRighted = YES;
+
         record.selIdx = -1;
         record.answered = YES;
+        if (!record.onceAnswered) {
+            record.onceAnswered = YES;
+        }
         [self loadSingleSelectionRecord:record];
         return;
     }

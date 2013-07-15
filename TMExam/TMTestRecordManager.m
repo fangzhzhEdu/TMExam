@@ -38,10 +38,13 @@
     {
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 
-        self.testResultInfoArray = [defaults objectForKey:@"com.topmost.testResult"];
+        self.testResultInfoArray = [defaults objectForKey:@"com.topmost.testStatistics"];
         if (self.testResultInfoArray == nil) {
             self.testResultInfoArray = [[NSMutableArray alloc] initWithCapacity:10];
         }
+        
+        NSArray *recordsOnceAnswerdArray = [defaults objectForKey:@"com.topmost.tmexam.record_once_answered"];
+        NSArray *recordsOnceRightArray = [defaults objectForKey:@"com.topmost.tmexam.record_once_right"];
 
         // 初始化变量
         self.testRecords = [[NSMutableArray alloc] initWithCapacity:10];
@@ -51,6 +54,7 @@
         // 加题目
         NSString *plist = [[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:@"TestRecord.plist"];
         NSArray *testArray = [NSArray arrayWithContentsOfFile:plist];
+        int k = 0;
         for (NSDictionary *info in testArray)
         {
             int type = [[info objectForKey:@"type"] intValue];
@@ -73,8 +77,21 @@
                                                                        selD:selD
                                                                        rightIdx:rightIdx
                                                                        type:type];
+                
+                
                 record = recordS;
+                ++k;
             }
+            if (recordsOnceAnswerdArray != nil && recordsOnceAnswerdArray.count > k) {
+                bool onceAnswered = [recordsOnceAnswerdArray objectAtIndex:k];
+                record.onceAnswered = onceAnswered;
+            }
+
+            if (recordsOnceRightArray != nil && recordsOnceRightArray.count > k) {
+                bool onceRight = [recordsOnceRightArray objectAtIndex:k];
+                record.onceRighted = onceRight;
+            }
+
             
             [self.testRecords addObject:record];
             
@@ -99,6 +116,9 @@
     {
         self.type2RightRecDict = [[NSMutableDictionary alloc] initWithCapacity:RECORD_TYPE_MAX];
     }
+    NSMutableArray *recordsOnceAnswerdArray = [[NSMutableArray alloc] initWithCapacity:10];
+    NSMutableArray *recordsOnceRightArray = [[NSMutableArray alloc] initWithCapacity:10];
+
     int totalCnt = 0;
     int totalRightCnt = 0;
     int totalAnswered = 0;
@@ -108,14 +128,26 @@
         int right = 0;
         for (TMTestRecord *record in array)
         {
+            if (![record answered] && ![record onceAnswered])
+                [recordsOnceAnswerdArray addObject:[NSNumber numberWithBool:NO]];
+            else
+                [recordsOnceAnswerdArray addObject:[NSNumber numberWithBool:YES]];
+            
             if ([record answered]) {
                 ++totalAnswered;
+
             }
             if ([record answered ] && [record isRight])
             {
                 ++right;
                 ++totalRightCnt;
             }
+            
+            if ([record isRight] || [record onceRighted])
+                [recordsOnceRightArray addObject:[NSNumber numberWithBool:YES]];
+            else
+                [recordsOnceRightArray addObject:[NSNumber numberWithBool:NO]];
+            
             ++totalCnt;
         }
         [self.type2RightRecDict setObject:[NSNumber numberWithInt:right] forKey:[NSNumber numberWithInt:k]];
@@ -129,7 +161,14 @@
     NSDictionary *dict = [result toDict];
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [self.testResultInfoArray addObject:dict];
-    [defaults setObject:self.testResultInfoArray forKey:@"com.topmost.testResult"];
+    [defaults setObject:self.testResultInfoArray forKey:@"com.topmost.testStatistics"];
+    [defaults setObject:recordsOnceAnswerdArray forKey:@"com.topmost.tmexam.record_once_answered"];
+    [defaults setObject:recordsOnceRightArray forKey:@"com.topmost.tmexam.record_once_right"];
+    
+    
+    // once answered
+
+    // once right
     [defaults synchronize];
 }
 

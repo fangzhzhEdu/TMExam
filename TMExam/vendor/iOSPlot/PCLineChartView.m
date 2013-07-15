@@ -32,7 +32,6 @@
  */
 
 #import "PCLineChartView.h"
-
 @implementation PCLineChartViewComponent
 
 - (id)init {
@@ -46,6 +45,7 @@
 @end
 
 @implementation PCLineChartView
+@synthesize components = components_;
 
 - (id)initWithFrame:(CGRect)frame {
 	self = [super initWithFrame:frame];
@@ -56,7 +56,7 @@
 		_minValue = 0;
 		_yLabelFont = [UIFont boldSystemFontOfSize:14];
 		_xLabelFont = [UIFont boldSystemFontOfSize:12];
-		_valueLabelFont = [UIFont boldSystemFontOfSize:10];
+		_valueLabelFont = [UIFont boldSystemFontOfSize:9];
 		_legendFont = [UIFont boldSystemFontOfSize:10];
 		_numYIntervals = 5;
 		_numXIntervals = 1;
@@ -68,7 +68,7 @@
 - (void)drawRect:(CGRect)rect {
 	CGContextRef ctx = UIGraphicsGetCurrentContext();
 	UIGraphicsPushContext(ctx);
-	CGContextSetRGBFillColor(ctx, 0.2f, 0.2f, 0.2f, 1.0f);
+	CGContextSetRGBFillColor(ctx, 0.5f, 0.5f, 0.5f, 1.0f);
 
 	int n_div;
 	int power;
@@ -143,7 +143,7 @@
 
 	float circle_diameter = 10;
 	float circle_stroke_width = 3;
-	float line_width = 4;
+	float line_width = 2;
 
 	for (PCLineChartViewComponent *component in self.components) {
 		int last_x = 0;
@@ -205,7 +205,7 @@
 		int y_level = top_margin;
 
 		for (int j=0; j<[self.components count]; j++) {
-			NSArray *items = [[self.components objectAtIndex:j] points];
+                NSArray *items = [[self.components objectAtIndex:j] points];
 			id object = [items objectAtIndex:i];
 			if (object!=[NSNull null] && object) {
 				float value = [object floatValue];
@@ -216,7 +216,7 @@
 
 				if ([[self.components objectAtIndex:j] shouldLabelValues]) {
 					if (y1 > y_level) {
-						CGContextSetRGBFillColor(ctx, 0.0f, 0.0f, 0.0f, 1.0f);
+						CGContextSetRGBFillColor(ctx, 121.0/255.0, 121.0/255.0, 121.0/255.0, 1.0f);
 						NSString *perc_label = [NSString stringWithFormat:[[self.components objectAtIndex:j] labelFormat], value];
 						CGRect textFrame = CGRectMake(x-25,y1, 50,20);
 						[perc_label drawInRect:textFrame
@@ -226,7 +226,7 @@
 						y_level = y1 + 20;
 					}
 					else if (y2 < y_level+20 && y2 < self.frame.size.height-top_margin-bottom_margin) {
-						CGContextSetRGBFillColor(ctx, 0.0f, 0.0f, 0.0f, 1.0f);
+						CGContextSetRGBFillColor(ctx, 121.0/255.0, 121.0/255.0, 121.0/255.0, 1.0f);
 						NSString *perc_label = [NSString stringWithFormat:[[self.components objectAtIndex:j] labelFormat], value];
 						CGRect textFrame = CGRectMake(x-25,y2, 50,20);
 						[perc_label drawInRect:textFrame
@@ -236,7 +236,7 @@
 						y_level = y2 + 20;
 					}
 					else {
-						CGContextSetRGBFillColor(ctx, 0.0f, 0.0f, 0.0f, 1.0f);
+						CGContextSetRGBFillColor(ctx, 121.0/255.0, 121.0/255.0, 121.0/255.0, 1.0f);
 						NSString *perc_label = [NSString stringWithFormat:[[self.components objectAtIndex:j] labelFormat], value];
 						CGRect textFrame = CGRectMake(x-50,y-10, 50,20);
 						[perc_label drawInRect:textFrame
@@ -254,7 +254,7 @@
 	NSSortDescriptor *sortDesc = [NSSortDescriptor sortDescriptorWithKey:@"y" ascending:YES];
 	[legends sortUsingDescriptors:[NSArray arrayWithObject:sortDesc]];
 	
-	//CGContextSetRGBFillColor(ctx, 0.0f, 0.0f, 0.0f, 1.0f);
+	CGContextSetRGBFillColor(ctx, 121.0/255.0, 121.0/255.0, 121.0/255.0, 1.0f);
 	float y_level = 0;
 	for (NSMutableDictionary *legend in legends) {
 		UIColor *colour = [legend objectForKey:@"colour"];
@@ -274,4 +274,36 @@
 	}
 }
 
+-(void)setComponents:(NSMutableArray *)components
+{
+    float max = 0;
+    float min = 100000;
+    for (PCLineChartViewComponent *component in components)
+    {
+        for (int x_axis_index=0; x_axis_index<[component.points count]; x_axis_index++)
+        {
+            id object = [component.points objectAtIndex:x_axis_index];
+            
+            if (object!=[NSNull null] && object)
+            {
+                float value = [object floatValue];
+                if ( value > max)
+                    max = value;
+                
+                if (value < min) {
+                    min = value;
+                }
+            }
+        }
+    }
+    if (max <  self.maxValue || min < self.minValue) {
+        self.maxValue = max;
+        self.minValue = min;
+        self.interval = (max-min);
+        if (self.interval != 0) {
+            self.interval = self.interval /2;
+        }
+    }
+    components_ = components;
+}
 @end

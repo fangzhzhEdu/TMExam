@@ -11,6 +11,7 @@
 #import "TMTestResult.h"
 #import "PCPieChart.h"
 #import "PCLineChartView.h"
+#import "TMTestRecord.h"
 
 @interface TMScoreViewControllerStatistics()
 @property (nonatomic, strong) PCPieChart *pieChart;
@@ -20,55 +21,47 @@
 @implementation TMScoreViewControllerStatistics
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
+
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        [self loadPercent];
     }
     
     return self;
 }
 
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    [self loadPercent];
+    [self.percentBtn setImage:[UIImage imageNamed:@"x77--y865"] forState:UIControlStateNormal];
+    
+    [self.anserCntBtn setImage:[UIImage imageNamed:@"灰色_08"] forState:UIControlStateNormal];
+
+    [self.view setBackgroundColor:[UIColor colorWithWhite:1 alpha:1]];
+}
+
 -(void)loadAnswerTime
 {
-    
-    /*{
-     "data": [
-     {
-     "data": [
-     null,
-     null,
-     30,
-     45,
-     69,
-     70
-     ],
-     "title": "Smith"
-     } ],
-     "x_labels": [
-     2006,
-     2007,
-     2008,
-     2009,
-     2010,
-     2011
-     ]
-     }*/
-//    /*
-    [self.view setBackgroundColor:[UIColor colorWithWhite:1 alpha:1]];
-    [self setTitle:@"Line Chart"];
-    
-    self.lineChart = [[PCLineChartView alloc] initWithFrame:CGRectMake(10,10,[self.view bounds].size.width-20,[self.view bounds].size.height-20)];
+    self.pieChart.hidden = YES;
+    self.percentBack.hidden = YES;
+    self.anserCntBack.hidden = NO;
+
+
+    if (self.lineChart != nil && self.lineChart.hidden == NO) {
+        return;
+    }
+    self.lineChart = [[PCLineChartView alloc] initWithFrame:CGRectMake(25,150,[self.view bounds].size.width-30,[self.view bounds].size.height-230)];
     [self.lineChart setAutoresizingMask:UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight];
-    self.lineChart.minValue = -40;
+    self.lineChart.minValue = 0;
     self.lineChart.maxValue = 100;
     [self.view addSubview:self.lineChart];
+    self.anserCntBack.hidden = YES;
     
     NSMutableDictionary *sampleInfo = [[NSMutableDictionary alloc] initWithCapacity:10];
     NSMutableArray *timesArray = [[NSMutableArray alloc ] initWithCapacity:10];
 
     NSMutableArray *data = [[NSMutableArray alloc] initWithCapacity:10]; // dic 的数组, 每个dict有一个 array 的data, 一个string的title
-    
     
     // data的一个entry
     NSMutableDictionary *dataEntry = [[NSMutableDictionary alloc] initWithCapacity:2];
@@ -80,25 +73,20 @@
     {
         TMTestResult *result = [[TMTestResult alloc] initWithDict:dict];
         [dataEntryData addObject:[NSNumber numberWithInt:result.rightCnt]];
-        [timesArray addObject:[NSNumber numberWithInt:k]];
+        [timesArray addObject:[NSString stringWithFormat:@"%d",k]];
         ++k;
     }
     // title
-    [dataEntry setObject:@"正确题目" forKey:@"title"];
-
-    // 装配 sampleInfo
+    [dataEntry setObject:@"" forKey:@"title"];
+    // 装配data
     [data addObject:dataEntry];
+    
+    // 装配 sampleInfo
+
     [sampleInfo setObject:data forKey:@"data"];
-    [sampleInfo setObject:timesArray forKey:@"x_lables"];
+    [sampleInfo setObject:timesArray forKey:@"x_labels"];
     
 
-    
-    NSMutableArray *xLable = [[NSMutableArray alloc] initWithCapacity:1]; // 数字的 数组
-    
-    [sampleInfo setObject:data forKey:@"data"];
-    [sampleInfo setObject:xLable forKey:@"x_labels"];
-
-    
     NSMutableArray *components = [NSMutableArray array];
     for (int i=0; i<[[sampleInfo objectForKey:@"data"] count]; i++)
     {
@@ -138,10 +126,21 @@
 
 -(void)loadPercent
 {
+    self.percentBack.hidden = YES;
+    self.lineChart.hidden = YES;
+    self.anserCntBack.hidden = NO;
+
     int n = [[TMTestRecordManager sharedManager] testResultInfoArray].count;
     if (n <= 0) {
         return;
     }
+    
+    if (self.pieChart != nil && self.pieChart.hidden == NO) {
+        return;
+    }
+    
+
+
     NSDictionary *testResultsDict = [[[TMTestRecordManager sharedManager] testResultInfoArray] objectAtIndex:n-1];
     TMTestResult *result = [[TMTestResult alloc] initWithDict:testResultsDict];
     
@@ -149,14 +148,40 @@
     NSMutableArray *data = [[NSMutableArray alloc] initWithCapacity:10];
     [dict setObject:data forKey:@"data"];
     NSMutableDictionary *record = [[NSMutableDictionary alloc] initWithCapacity:2];
+    // 找正确, 错误, 未答题目的方式1,
+    int totalRight = 0;
+    int totalWrong = 0;
+    int totalNone = 0;
+    NSArray *array = [[TMTestRecordManager sharedManager].type2RecordArrayDict objectForKey:[NSNumber numberWithInt:RECORD_TYPE_SINGLE_SELECTION]];
+
+    for (TMTestRecord *record in array)
+    {
+        if (![record answered]) {
+            ++totalNone;
+            continue;
+        }
+        if ([record onceRighted])
+            ++totalRight;
+        else
+            ++totalWrong;
+    }
+
+    // 正确
+
     [record setObject:@"正确题目" forKey:@"title"];
-    [record setObject:[NSNumber numberWithInt:result.rightCnt] forKey:@"value"];
+    [record setObject:[NSNumber numberWithInt:totalRight] forKey:@"value"];
     [data addObject:record];
-    
+    // 错误
     record = [[NSMutableDictionary alloc] initWithCapacity:2];
     [record setObject:@"错误题目" forKey:@"title"];
-    [record setObject:[NSNumber numberWithInt:result.answeredCnt-result.rightCnt] forKey:@"value"];
+    [record setObject:[NSNumber numberWithInt:totalWrong] forKey:@"value"];
     [data addObject:record];
+    // 未答题
+    [record setObject:@"未做题目" forKey:@"title"];
+    [record setObject:[NSNumber numberWithInt:totalNone] forKey:@"value"];
+    [data addObject:record];
+
+    
     
     [self initWithDict:dict];
     
@@ -164,10 +189,7 @@
 
 - (void)initWithDict:(NSDictionary*)sampleInfo
 {
-    self.title =  @"成绩统计";
-    [self.view setBackgroundColor:[UIColor colorWithWhite:1 alpha:1]];
-    
-    
+
     int height = [self.view bounds].size.width/3*2.; // 220;
     int width = [self.view bounds].size.width; //320;
     self.pieChart = [[PCPieChart alloc] initWithFrame:CGRectMake(([self.view bounds].size.width-width)/2,([self.view bounds].size.height-height)/2,width,height)];
@@ -176,6 +198,8 @@
     [self.pieChart setSameColorLabel:YES];
     
     [self.view addSubview:self.pieChart];
+
+
     
     if ([[UIDevice currentDevice] userInterfaceIdiom]==UIUserInterfaceIdiomPad)
     {
@@ -217,8 +241,11 @@
 
 - (IBAction)percentButtonClicked:(id)sender
 {
+    if (self.pieChart.hidden == NO) {
+        return;
+    }
     [self loadPercent];
-    [self.percentBtn setImage:[UIImage imageNamed:@"x77--y865"] forState:UIControlStateSelected];
+
     [self.percentBtn setImage:[UIImage imageNamed:@"x77--y865"] forState:UIControlStateNormal];
 
     [self.anserCntBtn setImage:[UIImage imageNamed:@"灰色_08"] forState:UIControlStateNormal];
@@ -227,7 +254,7 @@
 - (IBAction)anserCnttonClicked:(id)sender
 {
     [self loadAnswerTime];
-    [self.anserCntBtn  setImage:[UIImage imageNamed:@"x319--y865"] forState:UIControlStateSelected];
+//    [self.anserCntBtn  setImage:[UIImage imageNamed:@"x319--y865"] forState:UIControlStateSelected];
     [self.anserCntBtn  setImage:[UIImage imageNamed:@"x319--y865"] forState:UIControlStateNormal];
 
     [self.percentBtn setImage:[UIImage imageNamed:@"灰色_07"] forState:UIControlStateNormal];
