@@ -11,8 +11,10 @@
 #import "TMScoreViewController.h"
 #import "TMTestDemoViewController.h"
 #import "TMScoreViewControllerStatistics.h"
+#import "TBViewController.h"
 
 @interface TMHomeViewController ()
+@property(strong, nonatomic) TBViewController *tableviewVC;
 
 @end
 
@@ -51,7 +53,7 @@
 
 - (IBAction)newsToolbarButtonClicked:(id)sender
 {
-    
+
 }
 
 - (IBAction)settingsToolbarButtonClicked:(id)sender
@@ -84,7 +86,11 @@
 
 - (IBAction)newsButtonClicked:(id)sender
 {
+    self.tableviewVC = [[TBViewController alloc] initWithNibName:@"TBViewController" bundle:nil];
     
+    self.tableviewVC.tableView.delegate = self.tableviewVC;
+    self.tableviewVC.tableView.dataSource = self.tableviewVC;
+    [self.navigationController pushViewController:self.tableviewVC animated:YES];
 }
 
 @end
