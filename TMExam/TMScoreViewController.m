@@ -11,7 +11,7 @@
 #import "TMTestRecordManager.h"
 #import "TMTestResult.h"
 #import "TMTestRecord.h"
-@interface TMScoreViewController ()
+@interface TMScoreViewController () <UIScrollViewDelegate>
 
 @end
 
@@ -156,8 +156,10 @@
     
     
     //  正确统计
-    decimal = result.answeredCnt / 10;
-    unit = result.answeredCnt % 10;
+//    decimal = result.answeredCnt / 10;
+    decimal = result.totalCnt / 10;
+//    unit = result.answeredCnt % 10;
+    unit = result.totalCnt % 10;
     
     if (decimal != 0) {
 
@@ -179,7 +181,8 @@
     
     
     // 正确率
-    int percent = result.rightCnt * 100 / result.answeredCnt ;
+//    int percent = result.rightCnt * 100 / result.answeredCnt ;
+    int percent = result.rightCnt * 100 / result.totalCnt ;
     decimal = percent / 10;
     unit = percent % 10;
     if (decimal < 10) {
@@ -215,160 +218,80 @@
     
     imageName = [NSString stringWithFormat:@"%d_23", unit];
     [self.testTimes1 setImage:[UIImage imageNamed:imageName]];
-    
-    
-    // 每一个题目
-    self.testRecordArray = [[NSMutableArray alloc] initWithObjects:
-        self.testRecord0,
-        self.testRecord1,
-        self.testRecord2,
-        self.testRecord3,
-        self.testRecord4,
-        self.testRecord5,
-        self.testRecord6,
-        self.testRecord7,
-        self.testRecord8,
-        self.testRecord9,
-        self.testRecord10,
-        self.testRecord11,
-        self.testRecord12,
-        self.testRecord13,
-        self.testRecord14,
-        self.testRecord15,
-        self.testRecord16,
-        self.testRecord17,
-        self.testRecord18,
-        self.testRecord19,
-        self.testRecord20,
-        self.testRecord21,
-        self.testRecord22,
-        self.testRecord23,
-        self.testRecord24,
-        self.testRecord25,
-        self.testRecord26,
-        self.testRecord27,
-        self.testRecord28,
-        self.testRecord29,
-        self.testRecord30,
-        self.testRecord31,
-        self.testRecord32,
-        self.testRecord33,
-        self.testRecord34,
-        nil];
 
+    
+    //分页显示每个题目的答题情况
+    NSUInteger pages = result.totalCnt / 35;
+    if (result.totalCnt % 35)
+        pages += 1;
+
+    NSUInteger PAGE_WIDTH = 320;
+    NSUInteger LEFT_X = 40;
+    NSUInteger SPAN_X = 40;
+    NSUInteger TOP_Y = 40;
+    NSUInteger SPAN_Y = 39;
+    NSUInteger DOT_WIDTH = 30;
+    NSUInteger DOT_HEIGHT = 30;
+
+    self.pageControl.numberOfPages = pages;
+    self.pageControl.currentPage = 0;
+    
+    self.scrollView.pagingEnabled = YES;
+	self.scrollView.contentSize = CGSizeMake(PAGE_WIDTH * pages, self.scrollView.frame.size.height);
+    self.scrollView.showsHorizontalScrollIndicator = NO;
+    self.scrollView.showsVerticalScrollIndicator = NO;
+    self.scrollView.scrollsToTop = NO;
+    self.scrollView.delegate = self;
+    
+    
     NSArray *array = [[TMTestRecordManager sharedManager].type2RecordArrayDict objectForKey:[NSNumber numberWithInt:RECORD_TYPE_SINGLE_SELECTION]];
 
-    int k = 0;
-    for (TMTestRecord *record in array)
+    BOOL done = NO;
+    for (NSUInteger i = 0; i < pages; i++)
     {
-        if ([record answered] && ![record isRight])
+        for (NSUInteger j = 0; j < 5; j++)
         {
-            UIImageView *imageView = [self.testRecordArray objectAtIndex:k];
-            [imageView setImage:[UIImage imageNamed:@"错误_10"]];
-            CGRect rect = imageView.frame;
-            int yoffset = 0;
-            if (k >= 0 && k < 7 )
-                yoffset = 3;
-            else if( k >= 7 && k < 14)
-                yoffset = 0;
-            else if( k >= 14 && k < 21)
-                yoffset = -1;
-            else if( k >= 21 && k < 28)
-                yoffset = 0;
-            else if( k >= 28 && k < 35)
-                yoffset = -3;
-
-            int xoffset = 0;
-            switch (k) {
-                case 0:
-                case 7:
-                case 14:
-                case 21:
-                case 28:
-                    xoffset = 4;
+            for (NSUInteger k = 0; k < 7; k++)
+            {
+                NSUInteger index = i * 35 + j * 7 + k;
+                if (index >= result.totalCnt)
+                {
+                    done = YES;
                     break;
-                case 1:
-                case 8:
-                case 15:
-                case 22:
-                case 29:
-                    xoffset = 4;
-                    break;
-                    
-                case 2:
-                case 9:
-                case 16:
-                case 23:
-                case 30:
-                    xoffset = 3.5;
-                    break;
-                case 3:
-                case 10:
-                case 17:
-                case 24:
-                case 31:
-                    xoffset = 3;
-                    break;
-                    
-                case 4:
-                case 11:
-                case 18:
-                case 25:
-                case 32:
-                case 5:
-                case 12:
-                case 19:
-                case 26:
-                case 33:
-                    xoffset = 0;
-                    break;
-                case 6:
-                case 13:
-                case 20:
-                case 27:
-                case 34:
-                    xoffset = -2.5;
-                    
-                default:
-                    break;
+                }
+                
+                NSInteger x = PAGE_WIDTH * i + LEFT_X + SPAN_X * k - DOT_WIDTH / 2;
+                NSInteger y = TOP_Y + SPAN_Y * j - DOT_HEIGHT / 2;
+                
+                CGRect imageFrame = CGRectMake(x, y, DOT_WIDTH, DOT_HEIGHT);
+                UIImageView *imageView = [[UIImageView alloc] initWithFrame:imageFrame];
+                TMTestRecord *record = array[index];
+                
+                NSString *imageName = nil;
+                if (!record.answered)
+                {
+                    imageName = @"DotUnanswered";
+                }
+                else if (record.isRight)
+                {
+                    imageName = @"DotRight";
+                }
+                else
+                {
+                    imageName = @"DotWrong";
+                }
+                
+                imageView.image = [UIImage imageNamed:imageName];
+                
+                [self.scrollView addSubview:imageView];
             }
-
-
-            [imageView setFrame:CGRectMake(rect.origin.x+xoffset, rect.origin.y + yoffset, rect.size.width, rect.size.height)];
+            
+            if (done)
+                break;
         }
-        
-        if (![record answered]) {
+        if (done)
             break;
-        }
-        ++k;
     }
-    
-    int panelCnt = k / 35;
-    
-    if (panelCnt == 1) {
-        self.testPage0.hidden = YES;
-        self.testPage1.hidden = YES;
-        self.testPage2.hidden = YES;
-    }
-    else if(panelCnt == 2)
-    {
-        self.testPage2.hidden = YES;
-    }
-    else if(panelCnt == 3)
-    {
-        
-    }
-    
-//    else if()
-    
-    for (; k < self.testRecordArray.count; ++k)
-    {
-        UIImageView *imageView = [self.testRecordArray objectAtIndex:k];
-        imageView.hidden = YES;
-    }
-    
-
-
 }
 
 - (IBAction)finishTestTouched:(id)sender
@@ -382,7 +305,15 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Table view data source
+#pragma mark -
+#pragma mark UIScrollViewDelegate methods
+
+- (void)scrollViewDidScroll:(UIScrollView *)sender
+{
+    CGFloat pageWidth = sender.frame.size.width;
+    int page = floor((sender.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
+    self.pageControl.currentPage = page;
+}
 
 
 @end
