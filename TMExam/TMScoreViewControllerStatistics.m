@@ -45,7 +45,7 @@
 {
     self.pieChart.hidden = YES;
     self.percentBack.hidden = YES;
-    self.anserCntBack.hidden = NO;
+    self.anserCntBack.hidden = YES;
 
 
     if (self.lineChart != nil && self.lineChart.hidden == NO) {
@@ -56,7 +56,6 @@
     self.lineChart.minValue = 0;
     self.lineChart.maxValue = 100;
     [self.view addSubview:self.lineChart];
-    self.anserCntBack.hidden = YES;
     
     NSMutableDictionary *sampleInfo = [[NSMutableDictionary alloc] initWithCapacity:10];
     NSMutableArray *timesArray = [[NSMutableArray alloc ] initWithCapacity:10];
@@ -128,7 +127,7 @@
 {
     self.percentBack.hidden = YES;
     self.lineChart.hidden = YES;
-    self.anserCntBack.hidden = NO;
+    self.anserCntBack.hidden = YES;
 
     int n = [[TMTestRecordManager sharedManager] testResultInfoArray].count;
     if (n <= 0) {
@@ -141,8 +140,7 @@
     
 
 
-    NSDictionary *testResultsDict = [[[TMTestRecordManager sharedManager] testResultInfoArray] objectAtIndex:n-1];
-    TMTestResult *result = [[TMTestResult alloc] initWithDict:testResultsDict];
+//    NSDictionary *testResultsDict = [[[TMTestRecordMa nager sharedManager] testResultInfoArray] objectAtIndex:n-1];
     
     NSMutableDictionary *dict = [[NSMutableDictionary alloc] initWithCapacity:10];
     NSMutableArray *data = [[NSMutableArray alloc] initWithCapacity:10];
@@ -191,8 +189,8 @@
 {
 
     int height = [self.view bounds].size.width/3*2.; // 220;
-    int width = [self.view bounds].size.width; //320;
-    self.pieChart = [[PCPieChart alloc] initWithFrame:CGRectMake(([self.view bounds].size.width-width)/2,([self.view bounds].size.height-height)/2,width,height)];
+    int width = [self.view bounds].size.width/3*2.8; //320;
+    self.pieChart = [[PCPieChart alloc] initWithFrame:CGRectMake(([self.view bounds].size.width-width)/10,([self.view bounds].size.height-height)/2,width,height)];
     [self.pieChart setAutoresizingMask:UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleBottomMargin];
     [self.pieChart setDiameter:width/2];
     [self.pieChart setSameColorLabel:YES];
