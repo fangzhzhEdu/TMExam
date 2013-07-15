@@ -31,7 +31,65 @@
 
 -(void)loadAnswerTime
 {
+    /*
+    [self.view setBackgroundColor:[UIColor colorWithWhite:1 alpha:1]];
+    [self setTitle:@"Line Chart"];
     
+    self.lineChart = [[PCLineChartView alloc] initWithFrame:CGRectMake(10,10,[self.view bounds].size.width-20,[self.view bounds].size.height-20)];
+    [self.lineChart setAutoresizingMask:UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight];
+    self.lineChart.minValue = -40;
+    self.lineChart.maxValue = 100;
+    [self.view addSubview:self.lineChart];
+    
+    NSMutableDictionary *sampleInfo = [[NSMutableDictionary alloc] initWithCapacity:10];
+    NSMutableArray *data = [[NSMutableArray alloc] initWithCapacity:10];
+    [sampleInfo setObject:data forKey:@"data"];
+    NSMutableDictionary *record = [[NSMutableDictionary alloc] initWithCapacity:2];
+    [record setObject:@"正确题目" forKey:@"title"];
+    [record setObject:[NSNumber numberWithInt:result.rightCnt] forKey:@"value"];
+    [data addObject:record];
+    
+    record = [[NSMutableDictionary alloc] initWithCapacity:2];
+    [record setObject:@"错误题目" forKey:@"title"];
+    [record setObject:[NSNumber numberWithInt:result.answeredCnt-result.rightCnt] forKey:@"value"];
+    [data addObject:record];
+
+    
+    NSMutableArray *components = [NSMutableArray array];
+    for (int i=0; i<[[sampleInfo objectForKey:@"data"] count]; i++)
+    {
+        NSDictionary *point = [[sampleInfo objectForKey:@"data"] objectAtIndex:i];
+        PCLineChartViewComponent *component = [[PCLineChartViewComponent alloc] init];
+        [component setTitle:[point objectForKey:@"title"]];
+        [component setPoints:[point objectForKey:@"data"]];
+        [component setShouldLabelValues:NO];
+        
+        if (i==0)
+        {
+            [component setColour:PCColorYellow];
+        }
+        else if (i==1)
+        {
+            [component setColour:PCColorGreen];
+        }
+        else if (i==2)
+        {
+            [component setColour:PCColorOrange];
+        }
+        else if (i==3)
+        {
+            [component setColour:PCColorRed];
+        }
+        else if (i==4)
+        {
+            [component setColour:PCColorBlue];
+        }
+        
+        [components addObject:component];
+    }
+    [self.lineChart setComponents:components];
+    [self.lineChart setXLabels:[sampleInfo objectForKey:@"x_labels"]];
+     */
 }
 
 -(void)loadPercent
