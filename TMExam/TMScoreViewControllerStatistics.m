@@ -31,7 +31,30 @@
 
 -(void)loadAnswerTime
 {
-    /*
+    
+    /*{
+     "data": [
+     {
+     "data": [
+     null,
+     null,
+     30,
+     45,
+     69,
+     70
+     ],
+     "title": "Smith"
+     } ],
+     "x_labels": [
+     2006,
+     2007,
+     2008,
+     2009,
+     2010,
+     2011
+     ]
+     }*/
+//    /*
     [self.view setBackgroundColor:[UIColor colorWithWhite:1 alpha:1]];
     [self setTitle:@"Line Chart"];
     
@@ -42,17 +65,38 @@
     [self.view addSubview:self.lineChart];
     
     NSMutableDictionary *sampleInfo = [[NSMutableDictionary alloc] initWithCapacity:10];
-    NSMutableArray *data = [[NSMutableArray alloc] initWithCapacity:10];
-    [sampleInfo setObject:data forKey:@"data"];
-    NSMutableDictionary *record = [[NSMutableDictionary alloc] initWithCapacity:2];
-    [record setObject:@"正确题目" forKey:@"title"];
-    [record setObject:[NSNumber numberWithInt:result.rightCnt] forKey:@"value"];
-    [data addObject:record];
+    NSMutableArray *timesArray = [[NSMutableArray alloc ] initWithCapacity:10];
+
+    NSMutableArray *data = [[NSMutableArray alloc] initWithCapacity:10]; // dic 的数组, 每个dict有一个 array 的data, 一个string的title
     
-    record = [[NSMutableDictionary alloc] initWithCapacity:2];
-    [record setObject:@"错误题目" forKey:@"title"];
-    [record setObject:[NSNumber numberWithInt:result.answeredCnt-result.rightCnt] forKey:@"value"];
-    [data addObject:record];
+    
+    // data的一个entry
+    NSMutableDictionary *dataEntry = [[NSMutableDictionary alloc] initWithCapacity:2];
+    // entry中data部分, 即每次的正确个数
+    NSMutableArray *dataEntryData = [[NSMutableArray alloc] initWithCapacity:2];
+    [dataEntry setObject: dataEntryData forKey:@"data"];
+    int k = 1;
+    for (NSDictionary *dict in [TMTestRecordManager sharedManager].testResultInfoArray)
+    {
+        TMTestResult *result = [[TMTestResult alloc] initWithDict:dict];
+        [dataEntryData addObject:[NSNumber numberWithInt:result.rightCnt]];
+        [timesArray addObject:[NSNumber numberWithInt:k]];
+        ++k;
+    }
+    // title
+    [dataEntry setObject:@"正确题目" forKey:@"title"];
+
+    // 装配 sampleInfo
+    [data addObject:dataEntry];
+    [sampleInfo setObject:data forKey:@"data"];
+    [sampleInfo setObject:timesArray forKey:@"x_lables"];
+    
+
+    
+    NSMutableArray *xLable = [[NSMutableArray alloc] initWithCapacity:1]; // 数字的 数组
+    
+    [sampleInfo setObject:data forKey:@"data"];
+    [sampleInfo setObject:xLable forKey:@"x_labels"];
 
     
     NSMutableArray *components = [NSMutableArray array];
@@ -89,7 +133,7 @@
     }
     [self.lineChart setComponents:components];
     [self.lineChart setXLabels:[sampleInfo objectForKey:@"x_labels"]];
-     */
+//     */
 }
 
 -(void)loadPercent
