@@ -49,7 +49,9 @@
 		PCPieChart *pieChart = [[PCPieChart alloc] initWithFrame:CGRectMake(([self.view bounds].size.width-width)/2,([self.view bounds].size.height-height)/2,width,height)];
 		[pieChart setAutoresizingMask:UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleBottomMargin];
 		[pieChart setDiameter:width/2];
-		[pieChart setSameColorLabel:YES];
+        [pieChart setShowArrow:NO];
+        [pieChart setSameColorLabel:YES];
+
 		
 		[self.view addSubview:pieChart];
 		

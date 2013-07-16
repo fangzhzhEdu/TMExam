@@ -194,6 +194,8 @@
     [self.pieChart setAutoresizingMask:UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleBottomMargin];
     [self.pieChart setDiameter:width/2];
     [self.pieChart setSameColorLabel:YES];
+    [self.pieChart setShowArrow:NO];
+
     
     [self.view addSubview:self.pieChart];
 

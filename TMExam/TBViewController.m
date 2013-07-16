@@ -23,7 +23,8 @@ PullingRefreshTableViewDelegate>
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+
+    self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"asbc" image:[UIImage imageNamed:@"DotRight"] tag:0];;
 	// Do any additional setup after loading the view, typically from a nib.
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"pic_background"]];
     
