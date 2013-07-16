@@ -74,6 +74,9 @@
 		8459AC9A177F33E700646992 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8459AC99177F33E700646992 /* Default-568h@2x.png */; };
 		8459ACB5177F362800646992 /* TMScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8459ACB4177F362800646992 /* TMScoreViewController.m */; };
 		8459ACB9177F39B800646992 /* model.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8459ACB8177F39B800646992 /* model.jpg */; };
+		849098381795A4F300D7AA46 /* TMNewsViewController-ip5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 849098371795A4F200D7AA46 /* TMNewsViewController-ip5.xib */; };
+		849098461795A8AE00D7AA46 /* TMNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849098441795A8AE00D7AA46 /* TMNewsViewController.m */; };
+		849098471795A8AE00D7AA46 /* TMNewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 849098451795A8AE00D7AA46 /* TMNewsViewController.xib */; };
 		84D19091179466A40031D43A /* DotRight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84D1908E179466A40031D43A /* DotRight@2x.png */; };
 		84D19092179466A40031D43A /* DotUnanswered@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84D1908F179466A40031D43A /* DotUnanswered@2x.png */; };
 		84D19093179466A40031D43A /* DotWrong@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84D19090179466A40031D43A /* DotWrong@2x.png */; };
@@ -320,6 +323,10 @@
 		8459ACB3177F362800646992 /* TMScoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMScoreViewController.h; sourceTree = "<group>"; };
 		8459ACB4177F362800646992 /* TMScoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMScoreViewController.m; sourceTree = "<group>"; };
 		8459ACB8177F39B800646992 /* model.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = model.jpg; sourceTree = "<group>"; };
+		849098371795A4F200D7AA46 /* TMNewsViewController-ip5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "TMNewsViewController-ip5.xib"; sourceTree = "<group>"; };
+		849098431795A8AD00D7AA46 /* TMNewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMNewsViewController.h; sourceTree = "<group>"; };
+		849098441795A8AE00D7AA46 /* TMNewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMNewsViewController.m; sourceTree = "<group>"; };
+		849098451795A8AE00D7AA46 /* TMNewsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TMNewsViewController.xib; sourceTree = "<group>"; };
 		84D1908E179466A40031D43A /* DotRight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DotRight@2x.png"; sourceTree = "<group>"; };
 		84D1908F179466A40031D43A /* DotUnanswered@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DotUnanswered@2x.png"; sourceTree = "<group>"; };
 		84D19090179466A40031D43A /* DotWrong@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DotWrong@2x.png"; sourceTree = "<group>"; };
@@ -632,6 +639,10 @@
 				843116CD17887CE70058547A /* TMTestDemoViewController.h */,
 				843116CE17887CE70058547A /* TMTestDemoViewController.m */,
 				843116F2178884DD0058547A /* TMTestDemoViewController-ip5.xib */,
+				849098431795A8AD00D7AA46 /* TMNewsViewController.h */,
+				849098441795A8AE00D7AA46 /* TMNewsViewController.m */,
+				849098371795A4F200D7AA46 /* TMNewsViewController-ip5.xib */,
+				849098451795A8AE00D7AA46 /* TMNewsViewController.xib */,
 			);
 			name = src;
 			sourceTree = "<group>";
@@ -1132,6 +1143,8 @@
 				878C84BB17947D6D00BE675C /* pic_plank_down@2x.png in Resources */,
 				878C84BC17947D6D00BE675C /* pic_plank_up.png in Resources */,
 				878C84BD17947D6D00BE675C /* pic_plank_up@2x.png in Resources */,
+				849098381795A4F300D7AA46 /* TMNewsViewController-ip5.xib in Resources */,
+				849098471795A8AE00D7AA46 /* TMNewsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1174,6 +1187,7 @@
 				878C847517947A1700BE675C /* PullingRefreshTableView.m in Sources */,
 				878C847A17947B4C00BE675C /* TBViewController.m in Sources */,
 				878C847B17947B4C00BE675C /* TTUITableViewZoomController.m in Sources */,
+				849098461795A8AE00D7AA46 /* TMNewsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

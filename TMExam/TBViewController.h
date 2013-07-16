@@ -10,10 +10,8 @@
 #import "TTUITableViewZoomController.h"
 
 @interface TBViewController : TTUITableViewZoomController
-{
 
-}
-
+@property (nonatomic, strong) IBOutlet UITableView *tableView;
 
 
 @end

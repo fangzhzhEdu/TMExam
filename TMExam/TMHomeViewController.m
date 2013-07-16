@@ -12,6 +12,7 @@
 #import "TMTestDemoViewController.h"
 #import "TMScoreViewControllerStatistics.h"
 #import "TBViewController.h"
+#import "TMNewsViewController.h"
 
 @interface TMHomeViewController ()
 @property(strong, nonatomic) TBViewController *tableviewVC;
@@ -86,11 +87,14 @@
 
 - (IBAction)newsButtonClicked:(id)sender
 {
-    self.tableviewVC = [[TBViewController alloc] initWithNibName:@"TBViewController" bundle:nil];
+//    self.tableviewVC = [[TBViewController alloc] initWithNibName:@"TBViewController" bundle:nil];
+//        self.tableviewVC = [[TBViewController alloc] initWithNibName:@"TMNewsViewController-ip5" bundle:nil];
+//    self.tableviewVC.tableView.delegate = self.tableviewVC;
+//    self.tableviewVC.tableView.dataSource = self.tableviewVC;
+//    [self.navigationController pushViewController:self.tableviewVC animated:YES];
     
-    self.tableviewVC.tableView.delegate = self.tableviewVC;
-    self.tableviewVC.tableView.dataSource = self.tableviewVC;
-    [self.navigationController pushViewController:self.tableviewVC animated:YES];
+    TMNewsViewController *newViewController = [[TMNewsViewController alloc] initWithNibName:@"TMNewsViewController-ip5" bundle:nil];
+    [self.navigationController pushViewController:newViewController animated:YES];
 }
 
 @end
