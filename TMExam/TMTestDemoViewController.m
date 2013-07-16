@@ -1,4 +1,4 @@
-//
+                                                //
 //  TMTestDemoViewController.m
 //  TMExam
 //
@@ -95,9 +95,8 @@
     
     if (record.selIdx == record.rightIdx)
     {
-        [self doNext];
         record.onceRighted = YES;
-
+        [self doNext];
     }
 }
 

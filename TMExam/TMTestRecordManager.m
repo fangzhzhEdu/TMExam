@@ -80,7 +80,7 @@
                 
                 
                 record = recordS;
-                ++k;
+
             }
             if (recordsOnceAnswerdArray != nil && recordsOnceAnswerdArray.count > k) {
                 bool onceAnswered = [recordsOnceAnswerdArray objectAtIndex:k];
@@ -104,6 +104,8 @@
             
             [array addObject:record];
             [self.guid2RecordDict setObject:record forKey:record.GUID];
+            
+            ++k;
         }
     }
     
