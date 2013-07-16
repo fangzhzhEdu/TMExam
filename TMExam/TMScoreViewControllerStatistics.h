@@ -17,6 +17,7 @@
 
 - (IBAction)percentButtonClicked:(id)sender;
 - (IBAction)anserCnttonClicked:(id)sender;
+- (IBAction)newsToolbarButtonClicked:(id)sender;
 
 
 @end
