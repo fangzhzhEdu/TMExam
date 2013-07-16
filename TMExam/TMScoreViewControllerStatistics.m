@@ -13,6 +13,7 @@
 #import "PCLineChartView.h"
 #import "TMTestRecord.h"
 #import "TBViewController.h"
+#import "TMNewsViewController.h"
 
 @interface TMScoreViewControllerStatistics()
 @property (nonatomic, strong) PCPieChart *pieChart;
@@ -269,11 +270,8 @@
 
 - (IBAction)newsToolbarButtonClicked:(id)sender
 {
-    TBViewController *tableviewVC = [[TBViewController alloc] initWithNibName:@"TBViewController" bundle:nil];
-    
-    tableviewVC.tableView.delegate = tableviewVC;
-    tableviewVC.tableView.dataSource = tableviewVC;
-    [self.navigationController pushViewController:tableviewVC animated:YES];
+    TMNewsViewController *newViewController = [[TMNewsViewController alloc] initWithNibName:@"TMNewsViewController-ip5" bundle:nil];
+    [self.navigationController pushViewController:newViewController animated:YES];
 }
 
 

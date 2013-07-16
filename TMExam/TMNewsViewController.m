@@ -249,5 +249,14 @@
     return _initialAlpha;
 }
 
+- (IBAction)homeToolbarButtonClicked:(id)sender
+{
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
+- (IBAction)newsToolbarButtonClicked:(id)sender
+{
+    return;
+}
 
 @end

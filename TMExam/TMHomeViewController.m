@@ -54,7 +54,8 @@
 
 - (IBAction)newsToolbarButtonClicked:(id)sender
 {
-
+    TMNewsViewController *newViewController = [[TMNewsViewController alloc] initWithNibName:@"TMNewsViewController-ip5" bundle:nil];
+    [self.navigationController pushViewController:newViewController animated:YES];
 }
 
 - (IBAction)settingsToolbarButtonClicked:(id)sender

@@ -11,7 +11,7 @@
 #import "TMTestRecord.h"
 #import "TMTestRecordSingleSelection.h"
 #import "TMScoreViewController.h"
-
+#import "TMNewsViewController.h"
 @interface TMTestDemoViewController ()
 
 @property (nonatomic, readwrite) NSInteger curTestRecordIdx;
@@ -72,7 +72,8 @@
 
 - (IBAction)newsToolbarButtonClicked:(id)sender
 {
-    
+    TMNewsViewController *newViewController = [[TMNewsViewController alloc] initWithNibName:@"TMNewsViewController-ip5" bundle:nil];
+    [self.navigationController pushViewController:newViewController animated:YES];
 }
 
 - (IBAction)settingsToolbarButtonClicked:(id)sender

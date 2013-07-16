@@ -10,6 +10,8 @@
 #import "PullingRefreshTableView.h"
 
 @interface TMNewsViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
+- (IBAction)homeToolbarButtonClicked:(id)sender;
+- (IBAction)newsToolbarButtonClicked:(id)sender;
 
 
 @end
