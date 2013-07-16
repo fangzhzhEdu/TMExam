@@ -188,7 +188,7 @@
 - (void)initWithDict:(NSDictionary*)sampleInfo
 {
 
-    int height = [self.view bounds].size.width/3*2.; // 220;
+    int height = [self.view bounds].size.width/3*3.; // 220;
     int width = [self.view bounds].size.width/3*2.8; //320;
     self.pieChart = [[PCPieChart alloc] initWithFrame:CGRectMake(([self.view bounds].size.width-width)/10,([self.view bounds].size.height-height)/2,width,height)];
     [self.pieChart setAutoresizingMask:UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleBottomMargin];

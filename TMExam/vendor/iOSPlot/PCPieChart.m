@@ -173,7 +173,7 @@
 			nextStartDeg = component.startDeg;
 			endDeg = component.endDeg;
 			
-			if (nextStartDeg > 180 ||  (nextStartDeg < 180 && endDeg> 270) )
+			if (0 && (nextStartDeg > 180 ||  (nextStartDeg < 180 && endDeg> 270) ))
 			{
 				// left
 				
@@ -336,12 +336,16 @@
 				}
 				//CGContextSetRGBStrokeColor(ctx, 1.0f, 1.0f, 1.0f, 1.0f);
 				//CGContextSetRGBFillColor(ctx, 1.0f, 1.0f, 1.0f, 1.0f);
-				CGContextSetShadow(ctx, CGSizeMake(0.0f, 0.0f), 2);
-				
+//				CGContextSetShadow(ctx, CGSizeMake(0.0f, 0.0f), 2);
+				CGSize optimumtitleSize = [component.title sizeWithFont:self.titleFont constrainedToSize:CGSizeMake(max_text_width,100)];
+
 				float text_x = x + self.diameter + 10;
 				NSString *percentageText = [NSString stringWithFormat:@"%.1f%%", component.value/total*100];
 				CGSize optimumSize = [percentageText sizeWithFont:self.percentageFont constrainedToSize:CGSizeMake(max_text_width,100)];
-				CGRect percFrame = CGRectMake(text_x, right_label_y, optimumSize.width, optimumSize.height);
+				CGRect percFrame = CGRectMake(x - 35 + (optimumSize.width * 1.5)*i,// + optimumtitleSize.width,
+                                              rect.origin.y + rect.size.height - optimumSize.height *1.5,
+                                              optimumSize.width,
+                                              optimumSize.height);
                 
                 if (self.hasOutline) {
                     CGContextSaveGState(ctx);
@@ -363,7 +367,10 @@
 				CGContextSetRGBFillColor(ctx, 0.4f, 0.4f, 0.4f, 1.0f);
 				right_label_y += optimumSize.height - 4;
 				optimumSize = [component.title sizeWithFont:self.titleFont constrainedToSize:CGSizeMake(max_text_width,100)];
-				CGRect titleFrame = CGRectMake(text_x, right_label_y, optimumSize.width, optimumSize.height);
+				CGRect titleFrame = CGRectMake(x - 35 + (percFrame.size.width * 1.5)*i,
+                                               rect.origin.y + rect.size.height - optimumSize.height ,
+                                               optimumSize.width,
+                                               optimumSize.height);
 				[component.title drawInRect:titleFrame withFont:self.titleFont];
 				right_label_y += optimumSize.height + 10;
 			}
