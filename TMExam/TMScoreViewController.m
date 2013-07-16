@@ -266,11 +266,9 @@
                 CGRect imageFrame = CGRectMake(x, y, DOT_WIDTH, DOT_HEIGHT);
                 UIImageView *imageView = [[UIImageView alloc] initWithFrame:imageFrame];
                 TMTestRecord *record = array[index];
-                NSString *number = [NSString stringWithFormat:@"%d", index];
+                NSString *number = [NSString stringWithFormat:@"%d", index + 1];
 
                 CGRect numberFrame = imageFrame;
-                 UIFont *percentageFont = [UIFont boldSystemFontOfSize:20];
-
 
                 NSString *imageName = nil;
                 if (!record.answered)
@@ -289,8 +287,15 @@
                 imageView.image = [UIImage imageNamed:imageName];
                 
                 [self.scrollView addSubview:imageView];
-                [number drawInRect:numberFrame withFont:percentageFont lineBreakMode:NSLineBreakByWordWrapping  alignment: NSTextAlignmentRight];
-
+                
+                UILabel *label = [[UILabel alloc] initWithFrame:numberFrame];
+                label.backgroundColor = [UIColor clearColor];
+                label.textAlignment = NSTextAlignmentCenter;
+                label.textColor = [UIColor whiteColor];
+                label.font = [UIFont boldSystemFontOfSize:18];
+                label.text = number;
+                
+                [self.scrollView addSubview:label];
             }
             
             if (done)
