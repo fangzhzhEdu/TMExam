@@ -77,8 +77,8 @@
     [super viewDidLoad];
 
     CGRect bounds = self.view.bounds;
-    bounds.origin.y += 42;
-    bounds.size.height -= 42;
+    bounds.origin.y += 60;
+    bounds.size.height -= 12;
     self.tableView = [[PullingRefreshTableView alloc] initWithFrame:bounds pullingDelegate:self];
     [self.view addSubview:self.tableView];
 
