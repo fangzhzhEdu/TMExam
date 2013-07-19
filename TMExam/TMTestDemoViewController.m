@@ -90,6 +90,7 @@
         return;
     
     record.answered = YES;
+    record.onceAnswered = YES;
     record.selIdx = 0;
 
     [self loadSingleSelectionRecord:record];
@@ -110,6 +111,7 @@
         return;
 
     record.answered = YES;
+    record.onceAnswered = YES;
     record.selIdx = 1;
     
     [self loadSingleSelectionRecord:record];
@@ -130,6 +132,8 @@
         return;
     
     record.answered = YES;
+    record.onceAnswered = YES;
+    
     record.selIdx = 2;
     
     [self loadSingleSelectionRecord:record];
@@ -151,6 +155,8 @@
         return;
 
     record.answered = YES;
+    record.onceAnswered = YES;
+
     record.selIdx = 3;
     
     [self loadSingleSelectionRecord:record];
@@ -183,14 +189,11 @@
 {
     TMTestRecordSingleSelection *record =  [self.curRecordArray objectAtIndex:self.curTestRecordIdx];
     if (!record.answered) {
-        if ([record isRight])
-            record.onceRighted = YES;
 
         record.selIdx = -1;
         record.answered = YES;
-        if (!record.onceAnswered) {
-            record.onceAnswered = YES;
-        }
+        record.onceAnswered = YES;
+
         [self loadSingleSelectionRecord:record];
         return;
     }

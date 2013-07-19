@@ -156,11 +156,11 @@
 
     for (TMTestRecord *record in array)
     {
-        if (![record answered]) {
+        if (![record answered] && ![record onceAnswered]) {
             ++totalNone;
             continue;
         }
-        if ([record onceRighted])
+        if ([record onceRighted] || [record isRight])
             ++totalRight;
         else
             ++totalWrong;
@@ -191,7 +191,7 @@
 {
 
     int height = [self.view bounds].size.width/3*3.; // 220;
-    int width = [self.view bounds].size.width/3*2.8; //320;
+    int width = [self.view bounds].size.width/3*2.9; //320;
     self.pieChart = [[PCPieChart alloc] initWithFrame:CGRectMake(([self.view bounds].size.width-width)/10,([self.view bounds].size.height-height)/2,width,height)];
     [self.pieChart setAutoresizingMask:UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleBottomMargin];
     [self.pieChart setDiameter:width/2];
@@ -218,11 +218,11 @@
         
         if (i==0)
         {
-            [component setColour:PCColorYellow];
+            [component setColour:PCColorGreen];
         }
         else if (i==1)
         {
-            [component setColour:PCColorGreen];
+            [component setColour:PCColorRed];
         }
         else if (i==2)
         {

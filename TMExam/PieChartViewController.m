@@ -70,11 +70,11 @@
 			
 			if (i==0)
 			{
-				[component setColour:PCColorYellow];
+				[component setColour:PCColorGreen];
 			}
 			else if (i==1)
 			{
-				[component setColour:PCColorGreen];
+				[component setColour:PCColorRed];
 			}
 			else if (i==2)
 			{
@@ -82,7 +82,7 @@
 			}
 			else if (i==3)
 			{
-				[component setColour:PCColorRed];
+				[component setColour:PCColorYellow];
 			}
 			else if (i==4)
 			{

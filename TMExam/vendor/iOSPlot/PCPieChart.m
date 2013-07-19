@@ -334,18 +334,15 @@
 				{
 					CGContextSetRGBFillColor(ctx, 0.1f, 0.1f, 0.1f, 1.0f);
 				}
-				//CGContextSetRGBStrokeColor(ctx, 1.0f, 1.0f, 1.0f, 1.0f);
-				//CGContextSetRGBFillColor(ctx, 1.0f, 1.0f, 1.0f, 1.0f);
-//				CGContextSetShadow(ctx, CGSizeMake(0.0f, 0.0f), 2);
-				CGSize optimumtitleSize = [component.title sizeWithFont:self.titleFont constrainedToSize:CGSizeMake(max_text_width,100)];
 
-				float text_x = x + self.diameter + 10;
 				NSString *percentageText = [NSString stringWithFormat:@"%.1f%%", component.value/total*100];
-				CGSize optimumSize = [percentageText sizeWithFont:self.percentageFont constrainedToSize:CGSizeMake(max_text_width,100)];
-				CGRect percFrame = CGRectMake(x - 35 + (optimumSize.width * 1.5)*i,// + optimumtitleSize.width,
-                                              rect.origin.y + rect.size.height - optimumSize.height *1.5,
-                                              optimumSize.width,
-                                              optimumSize.height);
+				CGSize optimumSizePercent = [percentageText sizeWithFont:self.percentageFont constrainedToSize:CGSizeMake(max_text_width*1.5,100) lineBreakMode:NSLineBreakByWordWrapping];
+				CGRect percFrame = CGRectMake(x - 25 + (optimumSizePercent.width * 2)*i,
+                                              rect.origin.y + rect.size.height - optimumSizePercent.height*1.5,
+                                              optimumSizePercent.width*1.5,
+                                              optimumSizePercent.height);
+                
+
                 
                 if (self.hasOutline) {
                     CGContextSaveGState(ctx);
@@ -355,23 +352,23 @@
                     CGContextSetTextDrawingMode (ctx, kCGTextFillStroke);
                     CGContextSetRGBStrokeColor(ctx, 0.2f, 0.2f, 0.2f, 0.8f);
                     
-                    [percentageText drawInRect:percFrame withFont:self.percentageFont];
+                    [percentageText drawInRect:CGRectMake(x - 35 + (percFrame.size.width * 1.5)*i, percFrame.origin.y, percFrame.size.width, percFrame.size.height) withFont:self.percentageFont lineBreakMode:NSLineBreakByWordWrapping alignment:NSTextAlignmentLeft];
                     
                     CGContextRestoreGState(ctx);
                 } else {
-                    [percentageText drawInRect:percFrame withFont:self.percentageFont];
+                    [percentageText drawInRect:CGRectMake(x - 25 + (percFrame.size.width * 1.5)*i, percFrame.origin.y, percFrame.size.width, percFrame.size.height) withFont:self.percentageFont lineBreakMode:NSLineBreakByWordWrapping alignment:NSTextAlignmentLeft];
                 }
-				
 				
 				// display title on the left
 				CGContextSetRGBFillColor(ctx, 0.4f, 0.4f, 0.4f, 1.0f);
-				right_label_y += optimumSize.height - 4;
-				optimumSize = [component.title sizeWithFont:self.titleFont constrainedToSize:CGSizeMake(max_text_width,100)];
-				CGRect titleFrame = CGRectMake(x - 35 + (percFrame.size.width * 1.5)*i,
+				right_label_y += optimumSizePercent.height - 4;
+                CGSize optimumSize = [component.title sizeWithFont:self.titleFont constrainedToSize:CGSizeMake(max_text_width,100)];
+				CGRect titleFrame = CGRectMake(x - 25 + (percFrame.size.width * 1.5)*i,
                                                rect.origin.y + rect.size.height - optimumSize.height ,
                                                optimumSize.width,
                                                optimumSize.height);
-				[component.title drawInRect:titleFrame withFont:self.titleFont];
+				[component.title drawInRect:titleFrame withFont:self.titleFont lineBreakMode:NSLineBreakByWordWrapping alignment:NSTextAlignmentLeft];
+
 				right_label_y += optimumSize.height + 10;
 			}
 			nextStartDeg = endDeg;
