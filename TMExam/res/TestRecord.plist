@@ -4,653 +4,157 @@
 <array>
 	<dict>
 		<key>body</key>
-		<string>在道路上骑电动自行车必须年满多少周岁？</string>
+		<string>高处作业：凡是坠落高度基准面以上有可能坠落的高处进行的作业称为高处作业。</string>
 		<key>rightIdx</key>
-		<string>1</string>
+		<string>3</string>
 		<key>selA</key>
-		<string>14周岁</string>
+		<string>8m（含8m）</string>
 		<key>selB</key>
-		<string>16周岁</string>
+		<string>6m（含6m）</string>
 		<key>selC</key>
-		<string>18周岁</string>
-		<key>type</key>
-		<integer>1</integer>
-	</dict>
-	<dict>
-		<key>body</key>
-		<string>当你骑电动自行车在非机动车道内行驶时，最高时速不得超过多少公里？</string>
-		<key>rightIdx</key>
-		<string>1</string>
-		<key>selA</key>
-		<string>10公里</string>
-		<key>selB</key>
-		<string>15公里</string>
-		<key>selC</key>
-		<string>20公里</string>
-		<key>type</key>
-		<integer>1</integer>
-	</dict>
-	<dict>
-		<key>body</key>
-		<string>注入水水质指标中属于控制指标的是</string>
-		<key>rightIdx</key>
-		<string>0</string>
-		<key>selA</key>
-		<string>溶解氧 和含油量</string>
-		<key>selB</key>
-		<string>含油量 和含铁量</string>
-		<key>selC</key>
-		<string>悬浮物含量和含油量 </string>
+		<string>4m（含4m）</string>
 		<key>selD</key>
-		<string>PH值和硫化氢</string>
+		<string>2m（含2m）</string>
 		<key>type</key>
 		<integer>1</integer>
 	</dict>
 	<dict>
 		<key>body</key>
-		<string>采油二厂注入水质标准中,悬浮固体含量控制在____mg/L?</string>
+		<string>干粉灭火器从出厂日期算起，达到的必须报废。</string>
 		<key>rightIdx</key>
-		<string>0</string>
+		<string>3</string>
 		<key>selA</key>
-		<string>≤1.0  </string>
+		<string>15年</string>
 		<key>selB</key>
-		<string>≥1.0</string>
+		<string>14年</string>
 		<key>selC</key>
-		<string>≤5.0</string>
+		<string>12年</string>
 		<key>selD</key>
-		<string>≤2.0</string>
+		<string>10年</string>
 		<key>type</key>
 		<integer>1</integer>
 	</dict>
 	<dict>
 		<key>body</key>
-		<string>水的PH值受____而变化，测定时应在规定的的下进行，或者校正温度。</string>
+		<string>动土作业规定：挖土、打桩、地锚入土深度，必须办理动土作业票。</string>
 		<key>rightIdx</key>
-		<string>1</string>
+		<string>3</string>
 		<key>selA</key>
-		<string>压力</string>
+		<string>2m </string>
 		<key>selB</key>
-		<string>温度</string>
+		<string>1m</string>
 		<key>selC</key>
-		<string>时间</string>
+		<string>0.8m</string>
 		<key>selD</key>
-		<string>地点</string>
+		<string>0.5m</string>
 		<key>type</key>
 		<integer>1</integer>
 	</dict>
 	<dict>
 		<key>body</key>
-		<string>被测定的物质的量较大时，相对误差比较小，测定准确程度也比较__</string>
-		<key>rightIdx</key>
-		<string>1</string>
-		<key>selA</key>
-		<string>低</string>
-		<key>selB</key>
-		<string>高</string>
-		<key>selC</key>
-		<string>恒定</string>
-		<key>selD</key>
-		<string>无法确定</string>
-		<key>type</key>
-		<integer>1</integer>
-	</dict>
-	<dict>
-		<key>body</key>
-		<string>玻璃温度计读数时，视线与温度计内____保持在同一水平面上</string>
-		<key>rightIdx</key>
-		<string>0</string>
-		<key>selA</key>
-		<string>液面</string>
-		<key>selB</key>
-		<string>水银</string>
-		<key>selC</key>
-		<string>液面上</string>
-		<key>selD</key>
-		<string>液面下</string>
-		<key>type</key>
-		<integer>1</integer>
-	</dict>
-	<dict>
-		<key>body</key>
-		<string>试样本身有挥发性，应放在____中称量</string>
+		<string>上罐作业人员一次最多不得超过。五级风以上、雨雪天、浓雾天及有雷雨时严禁上罐。</string>
 		<key>rightIdx</key>
 		<string>2</string>
 		<key>selA</key>
-		<string>烧杯</string>
+		<string>8人</string>
 		<key>selB</key>
-		<string>锥形瓶</string>
+		<string>6人</string>
 		<key>selC</key>
-		<string>称量瓶</string>
+		<string>5人</string>
 		<key>selD</key>
-		<string>量筒</string>
+		<string>3人</string>
 		<key>type</key>
 		<integer>1</integer>
 	</dict>
 	<dict>
 		<key>body</key>
-		<string>密度计法测定较粘稠的原油样品，须用____后方可测定</string>
-		<key>rightIdx</key>
-		<string>2</string>
-		<key>selA</key>
-		<string>水稀释</string>
-		<key>selB</key>
-		<string>油品混合</string>
-		<key>selC</key>
-		<string>煤油稀释</string>
-		<key>selD</key>
-		<string>汽油混合</string>
-		<key>type</key>
-		<integer>1</integer>
-	</dict>
-	<dict>
-		<key>body</key>
-		<string>原油中____是用沉降法就能分离出来的水</string>
-		<key>rightIdx</key>
-		<string>2</string>
-		<key>selA</key>
-		<string>乳化水</string>
-		<key>selB</key>
-		<string>悬浮水</string>
-		<key>selC</key>
-		<string>游离水</string>
-		<key>selD</key>
-		<string>溶解水</string>
-		<key>type</key>
-		<integer>1</integer>
-	</dict>
-	<dict>
-		<key>body</key>
-		<string>在道路上骑电动自行车必须年满多少周岁？</string>
-		<key>rightIdx</key>
-		<string>1</string>
-		<key>selA</key>
-		<string>14周岁</string>
-		<key>selB</key>
-		<string>16周岁</string>
-		<key>selC</key>
-		<string>18周岁</string>
-		<key>type</key>
-		<integer>1</integer>
-	</dict>
-	<dict>
-		<key>body</key>
-		<string>在道路上骑电动自行车必须年满多少周岁？</string>
-		<key>rightIdx</key>
-		<string>1</string>
-		<key>selA</key>
-		<string>14周岁</string>
-		<key>selB</key>
-		<string>16周岁</string>
-		<key>selC</key>
-		<string>18周岁</string>
-		<key>type</key>
-		<integer>1</integer>
-	</dict>
-	<dict>
-		<key>body</key>
-		<string>当你骑电动自行车在非机动车道内行驶时，最高时速不得超过多少公里？</string>
-		<key>rightIdx</key>
-		<string>1</string>
-		<key>selA</key>
-		<string>10公里</string>
-		<key>selB</key>
-		<string>15公里</string>
-		<key>selC</key>
-		<string>20公里</string>
-		<key>type</key>
-		<integer>1</integer>
-	</dict>
-	<dict>
-		<key>body</key>
-		<string>注入水水质指标中属于控制指标的是</string>
+		<string>每个设置点的灭火器数量不宜多于</string>
 		<key>rightIdx</key>
 		<string>0</string>
 		<key>selA</key>
-		<string>溶解氧 和含油量</string>
+		<string>5具</string>
 		<key>selB</key>
-		<string>含油量 和含铁量</string>
+		<string>4具</string>
 		<key>selC</key>
-		<string>悬浮物含量和含油量 </string>
+		<string>3具</string>
 		<key>selD</key>
-		<string>PH值和硫化氢</string>
+		<string>2具</string>
 		<key>type</key>
 		<integer>1</integer>
 	</dict>
 	<dict>
 		<key>body</key>
-		<string>采油二厂注入水质标准中,悬浮固体含量控制在____mg/L?</string>
+		<string>危险化学品安全管理方针是</string>
+		<key>rightIdx</key>
+		<string>1</string>
+		<key>selA</key>
+		<string>安全第一、预防为主 </string>
+		<key>selB</key>
+		<string>安全第一、预防为主、综合治理 </string>
+		<key>selC</key>
+		<string>安全第一、预防为主、防治结合</string>
+		<key>type</key>
+		<integer>1</integer>
+	</dict>
+	<dict>
+		<key>body</key>
+		<string>安全标签用的组合形式表示化学品所具有的危险性和安全注意事项。</string>
 		<key>rightIdx</key>
 		<string>0</string>
 		<key>selA</key>
-		<string>≤1.0  </string>
+		<string>文字、图形符号和编码</string>
 		<key>selB</key>
-		<string>≥1.0</string>
+		<string>文字、照片和编码</string>
 		<key>selC</key>
-		<string>≤5.0</string>
-		<key>selD</key>
-		<string>≤2.0</string>
+		<string>文字、图形和类别</string>
 		<key>type</key>
 		<integer>1</integer>
 	</dict>
 	<dict>
 		<key>body</key>
-		<string>水的PH值受____而变化，测定时应在规定的的下进行，或者校正温度。</string>
-		<key>rightIdx</key>
-		<string>1</string>
-		<key>selA</key>
-		<string>压力</string>
-		<key>selB</key>
-		<string>温度</string>
-		<key>selC</key>
-		<string>时间</string>
-		<key>selD</key>
-		<string>地点</string>
-		<key>type</key>
-		<integer>1</integer>
-	</dict>
-	<dict>
-		<key>body</key>
-		<string>水的PH值受____而变化，测定时应在规定的的下进行，或者校正温度。</string>
-		<key>rightIdx</key>
-		<string>1</string>
-		<key>selA</key>
-		<string>压力</string>
-		<key>selB</key>
-		<string>温度</string>
-		<key>selC</key>
-		<string>时间</string>
-		<key>selD</key>
-		<string>地点</string>
-		<key>type</key>
-		<integer>1</integer>
-	</dict>
-	<dict>
-		<key>body</key>
-		<string>被测定的物质的量较大时，相对误差比较小，测定准确程度也比较__</string>
-		<key>rightIdx</key>
-		<string>1</string>
-		<key>selA</key>
-		<string>低</string>
-		<key>selB</key>
-		<string>高</string>
-		<key>selC</key>
-		<string>恒定</string>
-		<key>selD</key>
-		<string>无法确定</string>
-		<key>type</key>
-		<integer>1</integer>
-	</dict>
-	<dict>
-		<key>body</key>
-		<string>玻璃温度计读数时，视线与温度计内____保持在同一水平面上</string>
-		<key>rightIdx</key>
-		<string>0</string>
-		<key>selA</key>
-		<string>液面</string>
-		<key>selB</key>
-		<string>水银</string>
-		<key>selC</key>
-		<string>液面上</string>
-		<key>selD</key>
-		<string>液面下</string>
-		<key>type</key>
-		<integer>1</integer>
-	</dict>
-	<dict>
-		<key>body</key>
-		<string>试样本身有挥发性，应放在____中称量</string>
+		<string>新《消防法》于起实施。</string>
 		<key>rightIdx</key>
 		<string>2</string>
 		<key>selA</key>
-		<string>烧杯</string>
+		<string>2008年5月1日</string>
 		<key>selB</key>
-		<string>锥形瓶</string>
+		<string>2008年5月5日</string>
 		<key>selC</key>
-		<string>称量瓶</string>
+		<string>2009年5月1日 </string>
 		<key>selD</key>
-		<string>量筒</string>
+		<string>2009年5月5日</string>
 		<key>type</key>
 		<integer>1</integer>
 	</dict>
 	<dict>
 		<key>body</key>
-		<string>密度计法测定较粘稠的原油样品，须用____后方可测定</string>
+		<string>安全色有四种。其中红色代表。</string>
 		<key>rightIdx</key>
 		<string>2</string>
 		<key>selA</key>
-		<string>水稀释</string>
+		<string>指令</string>
 		<key>selB</key>
-		<string>油品混合</string>
+		<string>警告</string>
 		<key>selC</key>
-		<string>煤油稀释</string>
+		<string>禁止</string>
 		<key>selD</key>
-		<string>汽油混合</string>
+		<string>安全</string>
 		<key>type</key>
 		<integer>1</integer>
 	</dict>
 	<dict>
 		<key>body</key>
-		<string>密度计法测定较粘稠的原油样品，须用____后方可测定</string>
+		<string>产生静电的基本环境是。</string>
 		<key>rightIdx</key>
 		<string>2</string>
 		<key>selA</key>
-		<string>水稀释</string>
+		<string>低温、低压、潮湿</string>
 		<key>selB</key>
-		<string>油品混合</string>
+		<string>高温、低压、干燥</string>
 		<key>selC</key>
-		<string>煤油稀释</string>
+		<string>高温、高压、干燥 </string>
 		<key>selD</key>
-		<string>汽油混合</string>
-		<key>type</key>
-		<integer>1</integer>
-	</dict>
-	<dict>
-		<key>body</key>
-		<string>原油中____是用沉降法就能分离出来的水</string>
-		<key>rightIdx</key>
-		<string>2</string>
-		<key>selA</key>
-		<string>乳化水</string>
-		<key>selB</key>
-		<string>悬浮水</string>
-		<key>selC</key>
-		<string>游离水</string>
-		<key>selD</key>
-		<string>溶解水</string>
-		<key>type</key>
-		<integer>1</integer>
-	</dict>
-	<dict>
-		<key>body</key>
-		<string>在道路上骑电动自行车必须年满多少周岁？</string>
-		<key>rightIdx</key>
-		<string>1</string>
-		<key>selA</key>
-		<string>14周岁</string>
-		<key>selB</key>
-		<string>16周岁</string>
-		<key>selC</key>
-		<string>18周岁</string>
-		<key>type</key>
-		<integer>1</integer>
-	</dict>
-	<dict>
-		<key>body</key>
-		<string>当你骑电动自行车在非机动车道内行驶时，最高时速不得超过多少公里？</string>
-		<key>rightIdx</key>
-		<string>1</string>
-		<key>selA</key>
-		<string>10公里</string>
-		<key>selB</key>
-		<string>15公里</string>
-		<key>selC</key>
-		<string>20公里</string>
-		<key>type</key>
-		<integer>1</integer>
-	</dict>
-	<dict>
-		<key>body</key>
-		<string>注入水水质指标中属于控制指标的是</string>
-		<key>rightIdx</key>
-		<string>0</string>
-		<key>selA</key>
-		<string>溶解氧 和含油量</string>
-		<key>selB</key>
-		<string>含油量 和含铁量</string>
-		<key>selC</key>
-		<string>悬浮物含量和含油量 </string>
-		<key>selD</key>
-		<string>PH值和硫化氢</string>
-		<key>type</key>
-		<integer>1</integer>
-	</dict>
-	<dict>
-		<key>body</key>
-		<string>采油二厂注入水质标准中,悬浮固体含量控制在____mg/L?</string>
-		<key>rightIdx</key>
-		<string>0</string>
-		<key>selA</key>
-		<string>≤1.0  </string>
-		<key>selB</key>
-		<string>≥1.0</string>
-		<key>selC</key>
-		<string>≤5.0</string>
-		<key>selD</key>
-		<string>≤2.0</string>
-		<key>type</key>
-		<integer>1</integer>
-	</dict>
-	<dict>
-		<key>body</key>
-		<string>水的PH值受____而变化，测定时应在规定的的下进行，或者校正温度。</string>
-		<key>rightIdx</key>
-		<string>1</string>
-		<key>selA</key>
-		<string>压力</string>
-		<key>selB</key>
-		<string>温度</string>
-		<key>selC</key>
-		<string>时间</string>
-		<key>selD</key>
-		<string>地点</string>
-		<key>type</key>
-		<integer>1</integer>
-	</dict>
-	<dict>
-		<key>body</key>
-		<string>水的PH值受____而变化，测定时应在规定的的下进行，或者校正温度。</string>
-		<key>rightIdx</key>
-		<string>1</string>
-		<key>selA</key>
-		<string>压力</string>
-		<key>selB</key>
-		<string>温度</string>
-		<key>selC</key>
-		<string>时间</string>
-		<key>selD</key>
-		<string>地点</string>
-		<key>type</key>
-		<integer>1</integer>
-	</dict>
-	<dict>
-		<key>body</key>
-		<string>被测定的物质的量较大时，相对误差比较小，测定准确程度也比较__</string>
-		<key>rightIdx</key>
-		<string>1</string>
-		<key>selA</key>
-		<string>低</string>
-		<key>selB</key>
-		<string>高</string>
-		<key>selC</key>
-		<string>恒定</string>
-		<key>selD</key>
-		<string>无法确定</string>
-		<key>type</key>
-		<integer>1</integer>
-	</dict>
-	<dict>
-		<key>body</key>
-		<string>玻璃温度计读数时，视线与温度计内____保持在同一水平面上</string>
-		<key>rightIdx</key>
-		<string>0</string>
-		<key>selA</key>
-		<string>液面</string>
-		<key>selB</key>
-		<string>水银</string>
-		<key>selC</key>
-		<string>液面上</string>
-		<key>selD</key>
-		<string>液面下</string>
-		<key>type</key>
-		<integer>1</integer>
-	</dict>
-	<dict>
-		<key>body</key>
-		<string>试样本身有挥发性，应放在____中称量</string>
-		<key>rightIdx</key>
-		<string>2</string>
-		<key>selA</key>
-		<string>烧杯</string>
-		<key>selB</key>
-		<string>锥形瓶</string>
-		<key>selC</key>
-		<string>称量瓶</string>
-		<key>selD</key>
-		<string>量筒</string>
-		<key>type</key>
-		<integer>1</integer>
-	</dict>
-	<dict>
-		<key>body</key>
-		<string>密度计法测定较粘稠的原油样品，须用____后方可测定</string>
-		<key>rightIdx</key>
-		<string>2</string>
-		<key>selA</key>
-		<string>水稀释</string>
-		<key>selB</key>
-		<string>油品混合</string>
-		<key>selC</key>
-		<string>煤油稀释</string>
-		<key>selD</key>
-		<string>汽油混合</string>
-		<key>type</key>
-		<integer>1</integer>
-	</dict>
-	<dict>
-		<key>body</key>
-		<string>原油中____是用沉降法就能分离出来的水</string>
-		<key>rightIdx</key>
-		<string>2</string>
-		<key>selA</key>
-		<string>乳化水</string>
-		<key>selB</key>
-		<string>悬浮水</string>
-		<key>selC</key>
-		<string>游离水</string>
-		<key>selD</key>
-		<string>溶解水</string>
-		<key>type</key>
-		<integer>1</integer>
-	</dict>
-	<dict>
-		<key>body</key>
-		<string>在道路上骑电动自行车必须年满多少周岁？</string>
-		<key>rightIdx</key>
-		<string>1</string>
-		<key>selA</key>
-		<string>14周岁</string>
-		<key>selB</key>
-		<string>16周岁</string>
-		<key>selC</key>
-		<string>18周岁</string>
-		<key>type</key>
-		<integer>1</integer>
-	</dict>
-	<dict>
-		<key>body</key>
-		<string>注入水水质指标中属于控制指标的是</string>
-		<key>rightIdx</key>
-		<string>0</string>
-		<key>selA</key>
-		<string>溶解氧 和含油量</string>
-		<key>selB</key>
-		<string>含油量 和含铁量</string>
-		<key>selC</key>
-		<string>悬浮物含量和含油量 </string>
-		<key>selD</key>
-		<string>PH值和硫化氢</string>
-		<key>type</key>
-		<integer>1</integer>
-	</dict>
-	<dict>
-		<key>body</key>
-		<string>当你骑电动自行车在非机动车道内行驶时，最高时速不得超过多少公里？</string>
-		<key>rightIdx</key>
-		<string>1</string>
-		<key>selA</key>
-		<string>10公里</string>
-		<key>selB</key>
-		<string>15公里</string>
-		<key>selC</key>
-		<string>20公里</string>
-		<key>type</key>
-		<integer>1</integer>
-	</dict>
-	<dict>
-		<key>body</key>
-		<string>当你骑电动自行车在非机动车道内行驶时，最高时速不得超过多少公里？</string>
-		<key>rightIdx</key>
-		<string>1</string>
-		<key>selA</key>
-		<string>10公里</string>
-		<key>selB</key>
-		<string>15公里</string>
-		<key>selC</key>
-		<string>20公里</string>
-		<key>type</key>
-		<integer>1</integer>
-	</dict>
-	<dict>
-		<key>body</key>
-		<string>注入水水质指标中属于控制指标的是</string>
-		<key>rightIdx</key>
-		<string>0</string>
-		<key>selA</key>
-		<string>溶解氧 和含油量</string>
-		<key>selB</key>
-		<string>含油量 和含铁量</string>
-		<key>selC</key>
-		<string>悬浮物含量和含油量 </string>
-		<key>selD</key>
-		<string>PH值和硫化氢</string>
-		<key>type</key>
-		<integer>1</integer>
-	</dict>
-	<dict>
-		<key>body</key>
-		<string>采油二厂注入水质标准中,悬浮固体含量控制在____mg/L?</string>
-		<key>rightIdx</key>
-		<string>0</string>
-		<key>selA</key>
-		<string>≤1.0  </string>
-		<key>selB</key>
-		<string>≥1.0</string>
-		<key>selC</key>
-		<string>≤5.0</string>
-		<key>selD</key>
-		<string>≤2.0</string>
-		<key>type</key>
-		<integer>1</integer>
-	</dict>
-	<dict>
-		<key>body</key>
-		<string>水的PH值受____而变化，测定时应在规定的的下进行，或者校正温度。</string>
-		<key>rightIdx</key>
-		<string>1</string>
-		<key>selA</key>
-		<string>压力</string>
-		<key>selB</key>
-		<string>温度</string>
-		<key>selC</key>
-		<string>时间</string>
-		<key>selD</key>
-		<string>地点</string>
-		<key>type</key>
-		<integer>1</integer>
-	</dict>
-	<dict>
-		<key>body</key>
-		<string>水的PH值受____而变化，测定时应在规定的的下进行，或者校正温度。</string>
-		<key>rightIdx</key>
-		<string>1</string>
-		<key>selA</key>
-		<string>压力</string>
-		<key>selB</key>
-		<string>温度</string>
-		<key>selC</key>
-		<string>时间</string>
-		<key>selD</key>
-		<string>地点</string>
+		<string>高温、低压、干燥</string>
 		<key>type</key>
 		<integer>1</integer>
 	</dict>
