@@ -174,12 +174,12 @@
     // 错误
     record = [[NSMutableDictionary alloc] initWithCapacity:2];
     [record setObject:@"错误题目" forKey:@"title"];
-    [record setObject:[NSNumber numberWithInt:totalWrong] forKey:@"value"];
+    [record setObject:[NSNumber numberWithInt:totalWrong+totalNone] forKey:@"value"];
     [data addObject:record];
-    // 未答题
-    [record setObject:@"未做题目" forKey:@"title"];
-    [record setObject:[NSNumber numberWithInt:totalNone] forKey:@"value"];
-    [data addObject:record];
+//    // 未答题
+//    [record setObject:@"未做题目" forKey:@"title"];
+//    [record setObject:[NSNumber numberWithInt:totalNone] forKey:@"value"];
+//    [data addObject:record];
 
     
     
