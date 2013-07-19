@@ -88,7 +88,7 @@
             }
 
             if (recordsOnceRightArray != nil && recordsOnceRightArray.count > k) {
-                bool onceRight = [recordsOnceRightArray objectAtIndex:k];
+                bool onceRight = [[recordsOnceRightArray objectAtIndex:k] boolValue];
                 record.onceRighted = onceRight;
             }
 
