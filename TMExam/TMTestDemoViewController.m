@@ -317,15 +317,15 @@
                 break;
             case 1:
                 [self.optionQuestionBButton setImage:[UIImage imageNamed:@"OptionBackRight"] forState:UIControlStateNormal];
-                [self.optionMarkBButton setImage:[UIImage imageNamed:@"OptionMarkWhiteA"] forState:UIControlStateNormal];
+                [self.optionMarkBButton setImage:[UIImage imageNamed:@"OptionMarkWhiteB"] forState:UIControlStateNormal];
                 break;
             case 2:
                 [self.optionQuestionCButton setImage:[UIImage imageNamed:@"OptionBackRight"] forState:UIControlStateNormal];
-                [self.optionMarkCButton setImage:[UIImage imageNamed:@"OptionMarkWhiteA"] forState:UIControlStateNormal];
+                [self.optionMarkCButton setImage:[UIImage imageNamed:@"OptionMarkWhiteC"] forState:UIControlStateNormal];
                 break;
             case 3:
                 [self.optionQuestionDButton setImage:[UIImage imageNamed:@"OptionBackRight"] forState:UIControlStateNormal];
-                [self.optionMarkDButton setImage:[UIImage imageNamed:@"OptionMarkWhiteA"] forState:UIControlStateNormal];
+                [self.optionMarkDButton setImage:[UIImage imageNamed:@"OptionMarkWhiteD"] forState:UIControlStateNormal];
                 break;
                 
             default:
