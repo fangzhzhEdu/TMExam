@@ -352,15 +352,6 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">newsToolbarButtonClicked:</string>
-						<reference key="source" ref="22476906"/>
-						<reference key="destination" ref="372490531"/>
-						<int key="IBEventType">7</int>
-					</object>
-					<int key="connectionID">339</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">settingsToolbarButtonClicked:</string>
 						<reference key="source" ref="126670814"/>
 						<reference key="destination" ref="372490531"/>
@@ -394,15 +385,6 @@
 						<int key="IBEventType">7</int>
 					</object>
 					<int key="connectionID">343</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">newsButtonClicked:</string>
-						<reference key="source" ref="278862438"/>
-						<reference key="destination" ref="372490531"/>
-						<int key="IBEventType">7</int>
-					</object>
-					<int key="connectionID">346</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
